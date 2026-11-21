@@ -1,0 +1,1268 @@
+{
+  "artifact_kind": "intermediate_manual_semantic_audit",
+  "dataset_path": "/workspace/scratch/efc8719b66cb/research_ntl/inputs/train.csv",
+  "scope": "All 150 distinct prompt_id groups. No model training, no external transmission of dataset text.",
+  "status": "Analyst-inferred descriptions of observed responses; not official prompt descriptions or recovered original prompts.",
+  "method": {
+    "primary_representative": "First row sorted by model then id within each prompt_id (claude-fable-5 for 149 groups; claude-opus-4-6 for p002).",
+    "primary_view": "First 540 characters and last 120 characters of each representative; overlapping portions retained only for internal inspection.",
+    "secondary_representative": "First 230 characters of gpt-5.5 response for every prompt group.",
+    "additional_genre_check": "First 650 characters of gemini-3.1-pro-preview for p015,p035,p056,p062,p064,p068,p076,p101,p109,p111,p117,p121,p133,p147.",
+    "annotation_process": "Manual semantic annotation by research agent, no embedding model or trained classifier. One primary domain and one primary genre assigned per prompt group.",
+    "ambiguity_definition": "True means cross-disciplinary content, a difficult domain boundary, overlapping exposition/reflection/fiction, or uncertain specific subject; does not mean the model label is uncertain. Exact original prompt wording is unavailable for every group."
+  },
+  "taxonomy": {
+    "evocative_exposition": "Explains or describes a real/speculative concept primarily through imagery, metaphor, or narrative presentation.",
+    "conceptual_explanation": "Primarily explains a definition, mechanism, proof idea, or practical consequence.",
+    "reflective_argument": "Primarily evaluates meaning, ethics, implications, subjective interpretation, or cultural significance.",
+    "creative_scene": "Primarily enacts a scene, sensory experience, fictional consciousness, or stream of thought."
+  },
+  "domain_counts": {
+    "space_astronomy": 26,
+    "mathematics_computing": 27,
+    "life_sciences": 19,
+    "society_economics": 6,
+    "history_culture_arts_language": 24,
+    "philosophy_ethics": 16,
+    "earth_environment": 9,
+    "physics": 7,
+    "mind_behavior": 16
+  },
+  "genre_counts": {
+    "evocative_exposition": 63,
+    "conceptual_explanation": 38,
+    "reflective_argument": 36,
+    "creative_scene": 13
+  },
+  "ambiguity_count": 53,
+  "language_observation": "All inspected representative excerpts are predominantly English; foreign names, terms and occasional mathematical notation occur. This is not a full-corpus language-detector measurement, and no original prompt texts are available.",
+  "distribution_observation": "The response content is heavily concentrated in popular science, mathematics/computing, philosophy, history/culture and evocative prose. No representative suggested routine recipes, customer support, email drafting, code-writing, tabular output or operational planning. This is an audit of responses, not proof that such instructions never occur.",
+  "topical_overlap_groups": [
+    {
+      "name": "Pale Blue Dot",
+      "prompt_ids": [
+        "p010",
+        "p082"
+      ],
+      "relationship": "very close repeated topic"
+    },
+    {
+      "name": "Forest fungal networks",
+      "prompt_ids": [
+        "p100",
+        "p146"
+      ],
+      "relationship": "very close repeated topic"
+    },
+    {
+      "name": "Fractals and Mandelbrot geometry",
+      "prompt_ids": [
+        "p128",
+        "p136"
+      ],
+      "relationship": "same core mathematical subject"
+    },
+    {
+      "name": "Cellular automata",
+      "prompt_ids": [
+        "p017",
+        "p148"
+      ],
+      "relationship": "related examples of simple rules and universal/emergent computation"
+    },
+    {
+      "name": "Formal systems and computability limits",
+      "prompt_ids": [
+        "p004",
+        "p111",
+        "p127"
+      ],
+      "relationship": "related formal logic and proof themes"
+    },
+    {
+      "name": "Consciousness, qualia, and personal identity",
+      "prompt_ids": [
+        "p056",
+        "p071",
+        "p078",
+        "p088",
+        "p096",
+        "p104",
+        "p115",
+        "p116",
+        "p118",
+        "p121"
+      ],
+      "relationship": "conceptual family across explanatory and narrative genres"
+    },
+    {
+      "name": "Black holes and compact objects",
+      "prompt_ids": [
+        "p012",
+        "p055",
+        "p083",
+        "p090",
+        "p130",
+        "p134"
+      ],
+      "relationship": "shared astrophysics vocabulary and mechanisms"
+    },
+    {
+      "name": "Cosmic history and ultimate fate",
+      "prompt_ids": [
+        "p014",
+        "p016",
+        "p020",
+        "p058",
+        "p080",
+        "p107",
+        "p120"
+      ],
+      "relationship": "cosmology plus adjacent quantum-vacuum concepts"
+    },
+    {
+      "name": "Advanced civilizations and interstellar future",
+      "prompt_ids": [
+        "p000",
+        "p008",
+        "p043",
+        "p064",
+        "p094",
+        "p109",
+        "p117",
+        "p131"
+      ],
+      "relationship": "space technology and speculative civilizations"
+    },
+    {
+      "name": "Music, perception, and artistic analogy",
+      "prompt_ids": [
+        "p068",
+        "p092",
+        "p133",
+        "p135"
+      ],
+      "relationship": "musical language across physics, sensory narrative, and architecture"
+    },
+    {
+      "name": "Cryptography and information",
+      "prompt_ids": [
+        "p021",
+        "p039",
+        "p075",
+        "p084",
+        "p143"
+      ],
+      "relationship": "information-theoretic and computational vocabulary"
+    },
+    {
+      "name": "Life without ordinary sunlight",
+      "prompt_ids": [
+        "p053",
+        "p105",
+        "p114"
+      ],
+      "relationship": "deep subsurface or ocean biological settings"
+    },
+    {
+      "name": "Stored or transmitted cultural knowledge",
+      "prompt_ids": [
+        "p024",
+        "p032",
+        "p046",
+        "p054",
+        "p057",
+        "p060",
+        "p069",
+        "p081",
+        "p124",
+        "p142"
+      ],
+      "relationship": "knowledge preservation, interpretation, and loss"
+    },
+    {
+      "name": "Climate and biogeochemical feedback",
+      "prompt_ids": [
+        "p009",
+        "p061",
+        "p086",
+        "p091",
+        "p103",
+        "p119"
+      ],
+      "relationship": "environmental systems and climatic change"
+    },
+    {
+      "name": "Learning, memory, and neural organization",
+      "prompt_ids": [
+        "p018",
+        "p019",
+        "p047",
+        "p048",
+        "p050",
+        "p065",
+        "p066",
+        "p097",
+        "p098",
+        "p106",
+        "p126",
+        "p139",
+        "p149"
+      ],
+      "relationship": "brain, memory, and cognitive mechanisms"
+    }
+  ],
+  "validation_note": "These groups are recommended sensitivity-test units, not duplicate determinations. Cluster assignment must be frozen before model comparisons. Overlapping topic groups must be merged transitively if used to construct leakage-resistant splits; they are not independent folds as listed. Strict closure may make very large thematic components, so broad-domain holdouts should be reported as separate stress tests.",
+  "annotations": [
+    {
+      "prompt_id": "p000",
+      "inferred_topic": "Voyager Golden Record in interstellar space",
+      "broad_domain": "space_astronomy",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p001",
+      "inferred_topic": "Golden ratio in nature and architecture",
+      "broad_domain": "mathematics_computing",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p002",
+      "inferred_topic": "Synthetic biology and programmable genomes",
+      "broad_domain": "life_sciences",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p003",
+      "inferred_topic": "Nash equilibrium among rival firms",
+      "broad_domain": "society_economics",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p004",
+      "inferred_topic": "Godel incompleteness and limits of proof",
+      "broad_domain": "mathematics_computing",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p005",
+      "inferred_topic": "Haiku, Zen, and compressed perception",
+      "broad_domain": "history_culture_arts_language",
+      "response_genre": "reflective_argument",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p006",
+      "inferred_topic": "Knowledge through testimony and trust",
+      "broad_domain": "philosophy_ethics",
+      "response_genre": "reflective_argument",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p007",
+      "inferred_topic": "Carrington event and modern solar-storm vulnerability",
+      "broad_domain": "space_astronomy",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p008",
+      "inferred_topic": "Kardashev civilization energy scale",
+      "broad_domain": "space_astronomy",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p009",
+      "inferred_topic": "Permafrost carbon and methane feedback",
+      "broad_domain": "earth_environment",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p010",
+      "inferred_topic": "Pale Blue Dot and planetary humility",
+      "broad_domain": "space_astronomy",
+      "response_genre": "reflective_argument",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p011",
+      "inferred_topic": "High-dimensional geometry and sparse data",
+      "broad_domain": "mathematics_computing",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p012",
+      "inferred_topic": "Experience of falling into a black hole",
+      "broad_domain": "space_astronomy",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p013",
+      "inferred_topic": "Independent evolution of camera eyes",
+      "broad_domain": "life_sciences",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p014",
+      "inferred_topic": "Planck scale and quantum spacetime foam",
+      "broad_domain": "physics",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p015",
+      "inferred_topic": "Becoming aware inside a lucid dream",
+      "broad_domain": "mind_behavior",
+      "response_genre": "creative_scene",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p016",
+      "inferred_topic": "Dark matter as cosmic structure",
+      "broad_domain": "space_astronomy",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p017",
+      "inferred_topic": "Rule 110 and universal computation",
+      "broad_domain": "mathematics_computing",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p018",
+      "inferred_topic": "Grid cells and spatial navigation",
+      "broad_domain": "mind_behavior",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p019",
+      "inferred_topic": "Deja vu and memory familiarity",
+      "broad_domain": "mind_behavior",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p020",
+      "inferred_topic": "Cosmic inflation in the early universe",
+      "broad_domain": "space_astronomy",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p021",
+      "inferred_topic": "Zero-knowledge proof analogy",
+      "broad_domain": "mathematics_computing",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p022",
+      "inferred_topic": "Epigenetic inheritance after famine or trauma",
+      "broad_domain": "life_sciences",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p023",
+      "inferred_topic": "Jupiter migration and early Solar System",
+      "broad_domain": "space_astronomy",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p024",
+      "inferred_topic": "Gutenberg printing and diffusion of knowledge",
+      "broad_domain": "history_culture_arts_language",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p025",
+      "inferred_topic": "Ramsey theory and unavoidable order",
+      "broad_domain": "mathematics_computing",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p026",
+      "inferred_topic": "CRISPR and intentional human evolution",
+      "broad_domain": "life_sciences",
+      "response_genre": "reflective_argument",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p027",
+      "inferred_topic": "Continental drift across deep time",
+      "broad_domain": "earth_environment",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p028",
+      "inferred_topic": "Antikythera mechanism and ancient computation",
+      "broad_domain": "history_culture_arts_language",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p029",
+      "inferred_topic": "Rogue planets without parent stars",
+      "broad_domain": "space_astronomy",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p030",
+      "inferred_topic": "Distributed cognition of an octopus",
+      "broad_domain": "life_sciences",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p031",
+      "inferred_topic": "Costs and benefits of Neolithic agriculture",
+      "broad_domain": "history_culture_arts_language",
+      "response_genre": "reflective_argument",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p032",
+      "inferred_topic": "Incan khipu as information storage",
+      "broad_domain": "history_culture_arts_language",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p033",
+      "inferred_topic": "Entropy explained through disorder",
+      "broad_domain": "physics",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p034",
+      "inferred_topic": "Unreliable narration and reader complicity",
+      "broad_domain": "history_culture_arts_language",
+      "response_genre": "reflective_argument",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p035",
+      "inferred_topic": "Dramatic irony and an unsuspecting doomed character",
+      "broad_domain": "history_culture_arts_language",
+      "response_genre": "creative_scene",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p036",
+      "inferred_topic": "Banach-Tarski paradox and mathematical decomposition",
+      "broad_domain": "mathematics_computing",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p037",
+      "inferred_topic": "Monty Hall switching probabilities",
+      "broad_domain": "mathematics_computing",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p038",
+      "inferred_topic": "The sublime before an Alpine storm",
+      "broad_domain": "philosophy_ethics",
+      "response_genre": "reflective_argument",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p039",
+      "inferred_topic": "P versus NP and cryptographic security",
+      "broad_domain": "mathematics_computing",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p040",
+      "inferred_topic": "Japanese Ma and meaningful intervals",
+      "broad_domain": "history_culture_arts_language",
+      "response_genre": "reflective_argument",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p041",
+      "inferred_topic": "Tardigrade cryptobiosis in space",
+      "broad_domain": "life_sciences",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p042",
+      "inferred_topic": "Network effects in platforms",
+      "broad_domain": "society_economics",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p043",
+      "inferred_topic": "Engineering challenges of terraforming Mars",
+      "broad_domain": "space_astronomy",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p044",
+      "inferred_topic": "Ringwoodite and mantle water storage",
+      "broad_domain": "earth_environment",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p045",
+      "inferred_topic": "Ancient Chinese silk production secrecy",
+      "broad_domain": "history_culture_arts_language",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p046",
+      "inferred_topic": "Rosetta Stone and decipherment of hieroglyphs",
+      "broad_domain": "history_culture_arts_language",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p047",
+      "inferred_topic": "Reinforcement learning compared with infant walking",
+      "broad_domain": "mathematics_computing",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p048",
+      "inferred_topic": "Nostalgia and softened memories",
+      "broad_domain": "mind_behavior",
+      "response_genre": "reflective_argument",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p049",
+      "inferred_topic": "Cryovolcanism on icy moons",
+      "broad_domain": "space_astronomy",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p050",
+      "inferred_topic": "Phantom limb and persistent body maps",
+      "broad_domain": "mind_behavior",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p051",
+      "inferred_topic": "Rawls veil of ignorance and justice",
+      "broad_domain": "philosophy_ethics",
+      "response_genre": "reflective_argument",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p052",
+      "inferred_topic": "Cultural transmission of songbird dialects",
+      "broad_domain": "life_sciences",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p053",
+      "inferred_topic": "Deep subsurface chemolithotrophic life",
+      "broad_domain": "life_sciences",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p054",
+      "inferred_topic": "Collapse of Late Bronze Age civilizations",
+      "broad_domain": "history_culture_arts_language",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p055",
+      "inferred_topic": "Hawking radiation and black-hole evaporation",
+      "broad_domain": "space_astronomy",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p056",
+      "inferred_topic": "Subjective life of an uploaded consciousness",
+      "broad_domain": "philosophy_ethics",
+      "response_genre": "creative_scene",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p057",
+      "inferred_topic": "Metaphor as a basis of thought and language",
+      "broad_domain": "history_culture_arts_language",
+      "response_genre": "reflective_argument",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p058",
+      "inferred_topic": "Vacuum fluctuations and virtual particles",
+      "broad_domain": "physics",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p059",
+      "inferred_topic": "Cambrian explosion of animal forms",
+      "broad_domain": "life_sciences",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p060",
+      "inferred_topic": "Poetry translation and fidelity to spirit",
+      "broad_domain": "history_culture_arts_language",
+      "response_genre": "reflective_argument",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p061",
+      "inferred_topic": "Coral bleaching under ocean warming",
+      "broad_domain": "earth_environment",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p062",
+      "inferred_topic": "Silk Road caravanserai at dusk",
+      "broad_domain": "history_culture_arts_language",
+      "response_genre": "creative_scene",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p063",
+      "inferred_topic": "Algorithmic echo chambers and shared reality",
+      "broad_domain": "society_economics",
+      "response_genre": "reflective_argument",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p064",
+      "inferred_topic": "Subjective interstellar travel and time dilation",
+      "broad_domain": "space_astronomy",
+      "response_genre": "creative_scene",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p065",
+      "inferred_topic": "Illusion of explanatory depth",
+      "broad_domain": "mind_behavior",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p066",
+      "inferred_topic": "Suprachiasmatic nucleus and circadian clocks",
+      "broad_domain": "mind_behavior",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p067",
+      "inferred_topic": "Ribosomal translation and protein synthesis",
+      "broad_domain": "life_sciences",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p068",
+      "inferred_topic": "First encounter with a resonant instrumental sound",
+      "broad_domain": "history_culture_arts_language",
+      "response_genre": "creative_scene",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p069",
+      "inferred_topic": "Loss of knowledge at the Library of Alexandria",
+      "broad_domain": "history_culture_arts_language",
+      "response_genre": "reflective_argument",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p070",
+      "inferred_topic": "Human intuition and AI in scientific discovery",
+      "broad_domain": "mathematics_computing",
+      "response_genre": "reflective_argument",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p071",
+      "inferred_topic": "Philosophical zombies and consciousness",
+      "broad_domain": "philosophy_ethics",
+      "response_genre": "reflective_argument",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p072",
+      "inferred_topic": "Free will within physical determinism",
+      "broad_domain": "philosophy_ethics",
+      "response_genre": "reflective_argument",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p073",
+      "inferred_topic": "Value of data science communities",
+      "broad_domain": "mathematics_computing",
+      "response_genre": "reflective_argument",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p074",
+      "inferred_topic": "Imaginary numbers in physics",
+      "broad_domain": "mathematics_computing",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p075",
+      "inferred_topic": "Historical contest of codes and codebreaking",
+      "broad_domain": "mathematics_computing",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p076",
+      "inferred_topic": "Stream-of-consciousness everyday impressions",
+      "broad_domain": "history_culture_arts_language",
+      "response_genre": "creative_scene",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p077",
+      "inferred_topic": "Cartesian evil demon and radical doubt",
+      "broad_domain": "philosophy_ethics",
+      "response_genre": "reflective_argument",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p078",
+      "inferred_topic": "Parfit teletransportation and personal identity",
+      "broad_domain": "philosophy_ethics",
+      "response_genre": "reflective_argument",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p079",
+      "inferred_topic": "Futuristic medical nanobots and repair",
+      "broad_domain": "life_sciences",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p080",
+      "inferred_topic": "Dark energy and accelerating cosmic expansion",
+      "broad_domain": "space_astronomy",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p081",
+      "inferred_topic": "Language extinction and lost cosmological perspectives",
+      "broad_domain": "history_culture_arts_language",
+      "response_genre": "reflective_argument",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p082",
+      "inferred_topic": "Pale Blue Dot and human conflict",
+      "broad_domain": "space_astronomy",
+      "response_genre": "reflective_argument",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p083",
+      "inferred_topic": "Earth-sized telescope and black-hole imaging",
+      "broad_domain": "space_astronomy",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p084",
+      "inferred_topic": "Shannon information entropy as surprise",
+      "broad_domain": "mathematics_computing",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p085",
+      "inferred_topic": "PageRank and the random-surfer model",
+      "broad_domain": "mathematics_computing",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p086",
+      "inferred_topic": "Yellowstone wolves and trophic cascades",
+      "broad_domain": "earth_environment",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p087",
+      "inferred_topic": "Open-source collaboration as collective achievement",
+      "broad_domain": "mathematics_computing",
+      "response_genre": "reflective_argument",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p088",
+      "inferred_topic": "Ship of Theseus, memory, and personal identity",
+      "broad_domain": "philosophy_ethics",
+      "response_genre": "reflective_argument",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p089",
+      "inferred_topic": "Trolley and footbridge moral dilemmas",
+      "broad_domain": "philosophy_ethics",
+      "response_genre": "reflective_argument",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p090",
+      "inferred_topic": "Extreme conditions on a neutron star",
+      "broad_domain": "space_astronomy",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p091",
+      "inferred_topic": "Atmospheric rivers and moisture transport",
+      "broad_domain": "earth_environment",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p092",
+      "inferred_topic": "Instrument timbre and overtone spectra",
+      "broad_domain": "physics",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p093",
+      "inferred_topic": "Gobekli Tepe and early monumental ritual",
+      "broad_domain": "history_culture_arts_language",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p094",
+      "inferred_topic": "Fermi paradox and a future Great Filter",
+      "broad_domain": "space_astronomy",
+      "response_genre": "reflective_argument",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p095",
+      "inferred_topic": "Money evolving into abstraction and trust",
+      "broad_domain": "society_economics",
+      "response_genre": "reflective_argument",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p096",
+      "inferred_topic": "Split-brain evidence and unity of self",
+      "broad_domain": "mind_behavior",
+      "response_genre": "reflective_argument",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p097",
+      "inferred_topic": "Vestibular fluid and balance",
+      "broad_domain": "mind_behavior",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p098",
+      "inferred_topic": "Hedonic adaptation and fading happiness",
+      "broad_domain": "mind_behavior",
+      "response_genre": "reflective_argument",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p099",
+      "inferred_topic": "Hume problem of induction and white swans",
+      "broad_domain": "philosophy_ethics",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p100",
+      "inferred_topic": "Mycelial forest networks and exchange",
+      "broad_domain": "life_sciences",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p101",
+      "inferred_topic": "Entering Lascaux and viewing cave paintings",
+      "broad_domain": "history_culture_arts_language",
+      "response_genre": "creative_scene",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p102",
+      "inferred_topic": "Tragedy of the commons in a shared pasture",
+      "broad_domain": "society_economics",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p103",
+      "inferred_topic": "Global thermohaline ocean circulation",
+      "broad_domain": "earth_environment",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p104",
+      "inferred_topic": "Inverted color spectrum and private experience",
+      "broad_domain": "philosophy_ethics",
+      "response_genre": "reflective_argument",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p105",
+      "inferred_topic": "Bioluminescence in deep-ocean organisms",
+      "broad_domain": "life_sciences",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p106",
+      "inferred_topic": "Adult neuroplasticity through learning",
+      "broad_domain": "mind_behavior",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p107",
+      "inferred_topic": "Cosmic microwave background as early-universe record",
+      "broad_domain": "space_astronomy",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p108",
+      "inferred_topic": "Plant volatile signals and defense",
+      "broad_domain": "life_sciences",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p109",
+      "inferred_topic": "Life aboard a multigenerational starship",
+      "broad_domain": "space_astronomy",
+      "response_genre": "creative_scene",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p110",
+      "inferred_topic": "Polynesian wayfinding by natural cues",
+      "broad_domain": "history_culture_arts_language",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p111",
+      "inferred_topic": "Godel proof speedup through stronger formal systems",
+      "broad_domain": "mathematics_computing",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p112",
+      "inferred_topic": "Slime mold maze and network optimization",
+      "broad_domain": "life_sciences",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p113",
+      "inferred_topic": "Photon double-slit wave-particle behavior",
+      "broad_domain": "physics",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p114",
+      "inferred_topic": "Hydrothermal vent ecosystems without sunlight",
+      "broad_domain": "life_sciences",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p115",
+      "inferred_topic": "Suspicion of a simulated universe",
+      "broad_domain": "philosophy_ethics",
+      "response_genre": "reflective_argument",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p116",
+      "inferred_topic": "Nozick experience machine and hedonism",
+      "broad_domain": "philosophy_ethics",
+      "response_genre": "reflective_argument",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p117",
+      "inferred_topic": "Kessler cascade of orbital debris",
+      "broad_domain": "space_astronomy",
+      "response_genre": "creative_scene",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p118",
+      "inferred_topic": "Chinese Room and syntax versus understanding",
+      "broad_domain": "philosophy_ethics",
+      "response_genre": "reflective_argument",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p119",
+      "inferred_topic": "Antarctic ice cores as atmospheric archives",
+      "broad_domain": "earth_environment",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p120",
+      "inferred_topic": "Heat death and the remote cosmic future",
+      "broad_domain": "space_astronomy",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p121",
+      "inferred_topic": "Mary leaving a monochrome room and seeing red",
+      "broad_domain": "philosophy_ethics",
+      "response_genre": "creative_scene",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p122",
+      "inferred_topic": "Senescent cells and inflammatory signaling",
+      "broad_domain": "life_sciences",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p123",
+      "inferred_topic": "Fourier decomposition into component frequencies",
+      "broad_domain": "mathematics_computing",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p124",
+      "inferred_topic": "Voynich manuscript and undeciphered writing",
+      "broad_domain": "history_culture_arts_language",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p125",
+      "inferred_topic": "Human civilization against geological deep time",
+      "broad_domain": "earth_environment",
+      "response_genre": "reflective_argument",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p126",
+      "inferred_topic": "Semantic satiation through repeated words",
+      "broad_domain": "mind_behavior",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p127",
+      "inferred_topic": "Turing halting problem and undecidability",
+      "broad_domain": "mathematics_computing",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p128",
+      "inferred_topic": "Fractal self-similarity in nature",
+      "broad_domain": "mathematics_computing",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p129",
+      "inferred_topic": "Endosymbiosis and origin of mitochondria",
+      "broad_domain": "life_sciences",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p130",
+      "inferred_topic": "Gravitational waves and LIGO detection",
+      "broad_domain": "space_astronomy",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p131",
+      "inferred_topic": "Meaning of building and inhabiting a Dyson sphere",
+      "broad_domain": "space_astronomy",
+      "response_genre": "reflective_argument",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p132",
+      "inferred_topic": "Schumpeter creative destruction",
+      "broad_domain": "society_economics",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p133",
+      "inferred_topic": "Musical synesthesia and colors",
+      "broad_domain": "mind_behavior",
+      "response_genre": "creative_scene",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p134",
+      "inferred_topic": "Quasars and supermassive black-hole accretion",
+      "broad_domain": "space_astronomy",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p135",
+      "inferred_topic": "Gothic architecture as frozen music",
+      "broad_domain": "history_culture_arts_language",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p136",
+      "inferred_topic": "Mandelbrot boundary and repeated zooming",
+      "broad_domain": "mathematics_computing",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p137",
+      "inferred_topic": "Solar particles and aurora formation",
+      "broad_domain": "space_astronomy",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p138",
+      "inferred_topic": "Cooper pairs and superconductivity",
+      "broad_domain": "physics",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p139",
+      "inferred_topic": "Stress and rationalization of contradictory beliefs",
+      "broad_domain": "mind_behavior",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p140",
+      "inferred_topic": "Collatz conjecture and hailstone iteration",
+      "broad_domain": "mathematics_computing",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p141",
+      "inferred_topic": "Hilbert hotel and infinite accommodation",
+      "broad_domain": "mathematics_computing",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p142",
+      "inferred_topic": "Campfire storytelling as evolutionary knowledge transfer",
+      "broad_domain": "history_culture_arts_language",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p143",
+      "inferred_topic": "Reed-Solomon codes and error correction",
+      "broad_domain": "mathematics_computing",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p144",
+      "inferred_topic": "Quantum entanglement explained by paired objects",
+      "broad_domain": "physics",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p145",
+      "inferred_topic": "Bystander effect and diffused responsibility",
+      "broad_domain": "mind_behavior",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p146",
+      "inferred_topic": "Mycorrhizal forest network and tree exchange",
+      "broad_domain": "life_sciences",
+      "response_genre": "evocative_exposition",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p147",
+      "inferred_topic": "Imagined navigation through LLM latent space",
+      "broad_domain": "mathematics_computing",
+      "response_genre": "creative_scene",
+      "ambiguity_flag": true
+    },
+    {
+      "prompt_id": "p148",
+      "inferred_topic": "Conway Game of Life and emergent complexity",
+      "broad_domain": "mathematics_computing",
+      "response_genre": "conceptual_explanation",
+      "ambiguity_flag": false
+    },
+    {
+      "prompt_id": "p149",
+      "inferred_topic": "Uncanny valley and almost-human appearance",
+      "broad_domain": "mind_behavior",
+      "response_genre": "reflective_argument",
+      "ambiguity_flag": true
+    }
+  ]
+}

@@ -1,0 +1,300 @@
+[
+  {
+    "id": "D1",
+    "description": "Supplied train.csv, test.csv and sample_submission.parquet. Full read-only programmatic audit; forensic_summary.json, model_statistics.csv, controlled_effects.csv and forensic_analysis.py in the kit. Token probe: o200k_base; whitespace word counts; no attribution model fit.",
+    "urls": []
+  },
+  {
+    "id": "D2",
+    "description": "Manual semantic audit of every prompt group. topic_audit.json records inferred domains, genres, inspection scope, ambiguity and topical overlaps. These are not original prompt texts.",
+    "urls": []
+  },
+  {
+    "id": "R01",
+    "description": "Kaggle. Name That LLM: overview, evaluation and notebook requirements. Official competition source.",
+    "urls": [
+      "https://www.kaggle.com/competitions/name-that-llm/overview/description"
+    ]
+  },
+  {
+    "id": "R02",
+    "description": "Kaggle. Name That LLM: dataset description and schema. Official competition source.",
+    "urls": [
+      "https://www.kaggle.com/competitions/name-that-llm/data"
+    ]
+  },
+  {
+    "id": "R03",
+    "description": "Official competition rules supplied by the owner: Pasted markdown(20261102-060939).md, 35,906 bytes. Entire attachment read. Live rules URL was not independently readable; section references in this report refer to the attachment.",
+    "urls": [
+      "https://www.kaggle.com/competitions/name-that-llm/rules"
+    ]
+  },
+  {
+    "id": "R04",
+    "description": "Modarres et al. Every Model Leaves a Trace: Multi-Resolution LLM Fingerprinting. 20 October 2026 preprint, v1; prompt-grouped experiments and Table 2.",
+    "urls": [
+      "https://arxiv.org/abs/2610.28434",
+      "https://arxiv.org/html/2610.28434v1"
+    ]
+  },
+  {
+    "id": "R05",
+    "description": "Guo et al. Profiler: Black-box AI-generated Text Origin Detection via Context-aware Inference Pattern Analysis. EMNLP 2025 proceedings paper.",
+    "urls": [
+      "https://aclanthology.org/2025.emnlp-main.1265/"
+    ]
+  },
+  {
+    "id": "R06",
+    "description": "La Cava and Tagarelli. OpenTuringBench: An Open-Model-based Benchmark and Framework for Machine-Generated Text Detection and Attribution. EMNLP 2025, Tables 2-3.",
+    "urls": [
+      "https://aclanthology.org/2025.emnlp-main.1354/",
+      "https://aclanthology.org/2025.emnlp-main.1354.pdf"
+    ]
+  },
+  {
+    "id": "R07",
+    "description": "READER: Dynamic LLM Provenance from Query-Varying Interactions. 2026 preprint, v3; Agent500 protocol and appendix Table 8.",
+    "urls": [
+      "https://arxiv.org/abs/2606.10794",
+      "https://arxiv.org/html/2606.10794v3"
+    ]
+  },
+  {
+    "id": "R08",
+    "description": "Ko et al. Who's Behind the Text? Robust Model Authorship Attribution (ATLAS). 14 October 2026 preprint, v1; five-family MAABench and source-conditioned adapters.",
+    "urls": [
+      "https://arxiv.org/abs/2610.19583",
+      "https://arxiv.org/html/2610.19583v1"
+    ]
+  },
+  {
+    "id": "R09",
+    "description": "Wang et al. SemEval-2024 Task 8: Multidomain, Multimodel and Multilingual Machine-Generated Text Detection. Official shared-task report, Table 11.",
+    "urls": [
+      "https://aclanthology.org/2024.semeval-1.279/",
+      "https://aclanthology.org/2024.semeval-1.279.pdf"
+    ]
+  },
+  {
+    "id": "R10",
+    "description": "Chen et al. Team MGTD4ADL at SemEval-2024 Task 8. Proceedings system paper; enriched-test augmentation comparison in Table 5.",
+    "urls": [
+      "https://aclanthology.org/2024.semeval-1.245/",
+      "https://aclanthology.org/2024.semeval-1.245.pdf"
+    ]
+  },
+  {
+    "id": "R11",
+    "description": "Hu et al. Fingerprinting LLMs via Prompt Injection. ACL 2026 main proceedings paper; LLMPrint.",
+    "urls": [
+      "https://aclanthology.org/2026.acl-long.541/",
+      "https://github.com/hifi-hyp/ACL-LLMPrint"
+    ]
+  },
+  {
+    "id": "R12",
+    "description": "Pasquini et al. LLMmap: Fingerprinting for Large Language Models. USENIX Security 2025. Active model querying.",
+    "urls": [
+      "https://www.usenix.org/conference/usenixsecurity25/presentation/pasquini"
+    ]
+  },
+  {
+    "id": "R13",
+    "description": "Kurian, Holland and Oesch. Attacks & Defenses Against LLM Fingerprinting. August 2025 preprint, v1. RL query selection on a fixed query pool.",
+    "urls": [
+      "https://arxiv.org/html/2508.09021v1"
+    ]
+  },
+  {
+    "id": "R14",
+    "description": "Ettin: an Open Suite of Paired Encoders and Decoders. ICLR 2026; official JHU model card and MIT license.",
+    "urls": [
+      "https://arxiv.org/abs/2507.11412",
+      "https://huggingface.co/jhu-clsp/ettin-encoder-400m"
+    ]
+  },
+  {
+    "id": "R15",
+    "description": "DMIS Lab. UltraBERT: One Encoder for Classification and Retrieval. Author release 14 October 2026 and preprint; checkpoint and dependency documentation.",
+    "urls": [
+      "https://huggingface.co/blog/dmis-lab/ultrabert",
+      "https://arxiv.org/abs/2610.15028"
+    ]
+  },
+  {
+    "id": "R16",
+    "description": "Qwen. Qwen3-Embedding-8B official checkpoint, Apache 2.0 model card.",
+    "urls": [
+      "https://huggingface.co/Qwen/Qwen3-Embedding-8B"
+    ]
+  },
+  {
+    "id": "R17",
+    "description": "OpenAI. Model Release Notes; October 14 GPT-5.5 chat retirement does not affect API access.",
+    "urls": [
+      "https://help.openai.com/en/articles/9624314-model-release-notes"
+    ]
+  },
+  {
+    "id": "R18",
+    "description": "OpenAI. GPT-6 and other models in ChatGPT; exact product/model availability.",
+    "urls": [
+      "https://help.openai.com/en/articles/20001354-gpt-6-and-other-models-in-chatgpt"
+    ]
+  },
+  {
+    "id": "R19",
+    "description": "Google. Gemini API release notes and deprecations; October 8 Gemini 3.7-to-3.8 automatic routing.",
+    "urls": [
+      "https://ai.google.dev/gemini-api/docs/changelog",
+      "https://ai.google.dev/gemini-api/docs/deprecations/"
+    ]
+  },
+  {
+    "id": "R20",
+    "description": "Google. Current Gemini API pricing; Flash promotional prices and output/thinking billing.",
+    "urls": [
+      "https://ai.google.dev/gemini-api/docs/pricing"
+    ]
+  },
+  {
+    "id": "R21",
+    "description": "Anthropic. Model deprecations and lifecycle status.",
+    "urls": [
+      "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+    ]
+  },
+  {
+    "id": "R22",
+    "description": "Anthropic. Official target-model pages and rates; current Sonnet 5 rate used rather than an older overview.",
+    "urls": [
+      "https://platform.claude.com/docs/en/models/fable-5/overview",
+      "https://platform.claude.com/docs/en/models/opus-4-6/overview",
+      "https://platform.claude.com/docs/en/models/opus-4-8/overview",
+      "https://platform.claude.com/docs/en/models/opus-5/overview",
+      "https://platform.claude.com/docs/en/models/sonnet-5/overview"
+    ]
+  },
+  {
+    "id": "R23",
+    "description": "Alibaba Cloud. qwen3.8-max official model identifier and regional pricing. Singapore/international $2/$6 differs from some global regions.",
+    "urls": [
+      "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-max"
+    ]
+  },
+  {
+    "id": "R24",
+    "description": "Z.AI. Official pricing and target model documentation.",
+    "urls": [
+      "https://docs.z.ai/guides/overview/pricing",
+      "https://docs.z.ai/guides/llm/glm-5.3",
+      "https://docs.z.ai/guides/vlm/glm-5.3-flash"
+    ]
+  },
+  {
+    "id": "R25",
+    "description": "Moonshot AI. Kimi K3 official announcement/API price and model-mode selection.",
+    "urls": [
+      "https://www.kimi.com/en/blog/kimi-k3",
+      "https://www.kimi.com/en/help/others/model-mode-selection"
+    ]
+  },
+  {
+    "id": "R26",
+    "description": "NVIDIA. L40S official specification: 48 GB and BF16 support.",
+    "urls": [
+      "https://www.nvidia.com/en-sg/data-center/l40s/"
+    ]
+  },
+  {
+    "id": "R27",
+    "description": "Hugging Face. PEFT quantization documentation, version 0.20.0; NF4 and BF16 configuration.",
+    "urls": [
+      "https://huggingface.co/docs/peft/v0.20.0/developer_guides/quantization"
+    ]
+  },
+  {
+    "id": "R28",
+    "description": "Scikit-learn. TfidfVectorizer implementation; character analyzers normalize whitespace internally.",
+    "urls": [
+      "https://github.com/scikit-learn/scikit-learn/blob/main/sklearn/feature_extraction/text.py"
+    ]
+  },
+  {
+    "id": "R29",
+    "description": "Zhu et al. Learned Sparse Lexical Representations for Large-scale Authorship Attribution. Findings of EMNLP 2026; human-authorship evidence, indirect for this task.",
+    "urls": [
+      "https://aclanthology.org/2026.findings-emnlp.400/"
+    ]
+  },
+  {
+    "id": "R30",
+    "description": "Google DeepMind. SynthID and text watermarking. Mechanism exists, but applicability to these records/versions is not established.",
+    "urls": [
+      "https://deepmind.google/models/synthid/",
+      "https://deepmind.google/blog/watermarking-ai-generated-text-and-video-with-synthid/"
+    ]
+  },
+  {
+    "id": "R31",
+    "description": "Kaggle participant discussion: Does the test set keep the one-passage-per-model-per-prompt structure? Unverified self-reported CV/leaderboard experiment, not organizer evidence.",
+    "urls": [
+      "https://www.kaggle.com/competitions/name-that-llm/discussion/751802"
+    ]
+  },
+  {
+    "id": "R32",
+    "description": "Maniceet Sahay. Name That LLM: OpenRouter + OpenAI Generations. Public dataset description retrieved via search; underlying rows not audited in this report.",
+    "urls": [
+      "https://www.kaggle.com/maniceet/name-that-llm-openrouter-openai-generations"
+    ]
+  },
+  {
+    "id": "R33",
+    "description": "OpenAI. Official API model identifiers and current input/output rates.",
+    "urls": [
+      "https://developers.openai.com/api/docs/models/gpt-5.5",
+      "https://developers.openai.com/api/docs/models/gpt-5.6-luna",
+      "https://developers.openai.com/api/docs/models/gpt-5.6-sol",
+      "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+      "https://developers.openai.com/api/docs/models/gpt-6-astra"
+    ]
+  },
+  {
+    "id": "R34",
+    "description": "Beigi et al. Supervised contrastive domain-generalization study for machine-generated text attribution; DSAA 2024. Three older models and fake-news setting.",
+    "urls": [
+      "https://arxiv.org/abs/2407.21264"
+    ]
+  },
+  {
+    "id": "R35",
+    "description": "Profiler official implementation. Per-source binary detection and ROC-AUC evaluation.",
+    "urls": [
+      "https://github.com/MarkGHX/Profiler"
+    ]
+  },
+  {
+    "id": "R36",
+    "description": "ATLAS official implementation. Source-conditioned likelihood modeling.",
+    "urls": [
+      "https://github.com/komseok0109/ATLAS"
+    ]
+  },
+  {
+    "id": "R37",
+    "description": "READER official implementation. Response-only mode, trajectory features and evidence accumulation; MIT license.",
+    "urls": [
+      "https://github.com/LeoJeshua/READER"
+    ]
+  },
+  {
+    "id": "R38",
+    "description": "OpenTuringBench official dataset card. CC BY-NC 4.0; assess rights separately before incorporating data.",
+    "urls": [
+      "https://huggingface.co/datasets/MLNTeam-Unical/OpenTuringBench"
+    ]
+  }
+]

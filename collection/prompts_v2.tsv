@@ -1,0 +1,161 @@
+prompt_id	wave	domain	genre	band	content
+X001	2	space	evocative exposition	40-70	Describe the night side of Earth as seen from orbit, where city lights trace coastlines, rivers and roads.
+X002	2	space	evocative exposition	90-130	Describe looking at a distant galaxy as looking into the past, and convey how its light carries a history older than the Earth.
+X003	2	space	evocative exposition	160-210	Describe a neutron star, where a spoonful of matter would outweigh a mountain, and convey how such density changes the rules of ordinary matter.
+X004	2	space	reflective argument	40-70	Would finding simple microbial life on another planet change how people think about life on Earth?
+X005	2	space	evocative exposition	90-130	Describe a comet's long journey from the frozen outer solar system to the glowing tail it grows near the Sun.
+X006	2	space	conceptual explanation	40-70	Why do astronauts aboard an orbiting space station float, even though gravity at that height is still strong?
+X007	2	space	creative scene	160-210	Write a scene in which an amateur astronomer realizes that a faint smudge in the eyepiece was not there the night before.
+X008	2	mathematics	conceptual explanation	90-130	Explain why there must be infinitely many prime numbers, using an argument a curious teenager could follow.
+X009	2	mathematics	evocative exposition	40-70	Describe the number zero as an invention that changed how people count, trade and calculate.
+X010	2	mathematics	reflective argument	220-250	Is mathematics discovered or invented? Explore one consideration on each side without settling the question.
+X011	2	mathematics	conceptual explanation	40-70	Explain why a random sample of a thousand people can say something useful about a country of millions.
+X012	2	computing	conceptual explanation	90-130	Explain why a long password made of ordinary words can be harder to guess than a short one full of symbols.
+X013	2	computing	evocative exposition	160-210	Describe the journey of a single email from the moment it is sent to the moment it appears on a screen on another continent.
+X014	2	computing	reflective argument	90-130	Should software that makes decisions about people always be able to explain its reasons? Explore one tension in this question.
+X015	2	history/culture	evocative exposition	90-130	Describe how the street names of an old market town can still reveal what was once made and sold there.
+X016	2	history/culture	conceptual explanation	40-70	Why did the printing press change who could take part in arguments about ideas?
+X017	2	history/culture	evocative exposition	160-210	Describe the building of a great cathedral across several generations, when no single worker would live to see it finished.
+X018	2	arts/language	reflective argument	40-70	Why can a single line of poetry stay with someone for years while a whole novel fades from memory?
+X019	2	arts/language	evocative exposition	90-130	Describe how a familiar song changes in feeling when it is played slowly in a minor key.
+X020	2	arts/language	evocative exposition	160-210	Describe how a borrowed word travels from one language into another and gradually changes once it settles in.
+X021	2	life science	evocative exposition	40-70	Describe the inside of a beehive in winter, when the colony survives by clustering together and shivering to make heat.
+X022	2	life science	conceptual explanation	90-130	Explain how a vaccine trains the immune system without causing the disease it protects against.
+X023	2	life science	evocative exposition	160-210	Describe the migration of monarch butterflies, a round trip so long that it takes several generations to complete.
+X024	2	life science	conceptual explanation	40-70	Why do the leaves of many trees change color in autumn?
+X025	2	life science	reflective argument	220-250	Should extinct species be brought back if science makes it possible? Explore what such an effort might gain and what it might overlook.
+X026	2	philosophy	reflective argument	90-130	Is it possible to owe gratitude to someone who helped you without meaning to?
+X027	2	philosophy	reflective argument	40-70	Can a perfect copy of a famous painting ever be as valuable as the original?
+X028	2	philosophy	evocative exposition	160-210	Describe the puzzle of a wooden ship that is repaired plank by plank for a century until none of its original timber remains, and convey why the puzzle is hard to settle.
+X029	2	philosophy	conceptual explanation	90-130	Explain the difference between something being legal and something being right, using an everyday example.
+X030	2	mind/behavior	conceptual explanation	40-70	Why do people tend to remember the beginning and end of a list better than the middle?
+X031	2	mind/behavior	evocative exposition	90-130	Describe the moment of falling asleep, when thoughts loosen and drift into dream-like images.
+X032	2	mind/behavior	reflective argument	220-250	Why do people sometimes prefer a familiar disappointment to an uncertain improvement? Explore the roles of fear, habit and identity.
+X033	2	mind/behavior	creative scene	40-70	Write a scene in which a song playing in a shop suddenly returns someone to a forgotten summer.
+X034	2	earth/environment	evocative exposition	40-70	Describe a glacier as a slow river of ice that carries the record of past winters.
+X035	2	earth/environment	conceptual explanation	90-130	Explain why some stretches of coastline erode quickly while others nearby barely change.
+X036	2	earth/environment	evocative exposition	220-250	Describe a volcanic island from its first eruption to the arrival of plants, birds and eventually people.
+X037	2	physics	conceptual explanation	40-70	Why does a spinning top stay upright while it spins quickly but topple as it slows down?
+X038	2	physics	evocative exposition	90-130	Describe a rainbow as sunlight that has been bent and sorted inside countless falling drops.
+X039	2	society/economics	reflective argument	40-70	Why might a city with many empty homes still have people who cannot find anywhere to live?
+X040	2	society/economics	creative scene	160-210	Write a scene in which a market trader packs up a stall for the last time after forty years.
+X041	3	space	evocative exposition	40-70	Describe the rings of Saturn as a thin, restless disk of ice that looks solid only from far away.
+X042	3	space	conceptual explanation	90-130	Explain how a spacecraft can use a planet's gravity to gain speed without burning extra fuel.
+X043	3	space	evocative exposition	160-210	Describe the surface of Mars at dawn, from the thin pink sky to the frost that vanishes as the ground warms.
+X044	3	space	reflective argument	220-250	If people built a permanent settlement on the Moon, who should decide how its land and resources are used? Explore one tension without proposing a final plan.
+X045	3	space	evocative exposition	90-130	Describe a total solar eclipse as experienced by a crowd in an open field, from the first bite out of the Sun to the sudden dusk.
+X046	3	space	conceptual explanation	40-70	Why does the Moon always show the same face to Earth?
+X047	3	space	creative scene	160-210	Write a scene in which two researchers at a remote observatory argue quietly about whether a strange reading is worth waking the director for.
+X048	3	mathematics	evocative exposition	90-130	Describe the idea of infinity through the image of a hotel with endless rooms that is completely full yet can always take one more guest.
+X049	3	mathematics	conceptual explanation	40-70	Explain why dividing a number by zero has no sensible answer.
+X050	3	mathematics	reflective argument	160-210	Why do mathematicians value an elegant proof even when a longer proof already shows the same result is true?
+X051	3	mathematics	conceptual explanation	90-130	Explain what it means for two quantities to be correlated without one causing the other, using an everyday example.
+X052	3	computing	conceptual explanation	40-70	Explain why a computer can sort a million names faster than a person could sort a hundred.
+X053	3	computing	evocative exposition	90-130	Describe the inside of a data center at night, where rows of machines hum and blink while most of the world sleeps.
+X054	3	computing	reflective argument	160-210	Can a machine that composes music be called creative? Explore what we mean by creativity when we ask the question.
+X055	3	history/culture	evocative exposition	40-70	Describe an ancient road whose stones have been worn into grooves by centuries of cart wheels.
+X056	3	history/culture	conceptual explanation	90-130	Explain how historians can estimate the population of an ancient city that left no census.
+X057	3	history/culture	reflective argument	160-210	Why do people keep and pass down objects that have no practical use, such as a grandparent's broken watch? Explore what such objects carry.
+X058	3	arts/language	evocative exposition	90-130	Describe how a dancer can tell a whole story without a single spoken word.
+X059	3	arts/language	conceptual explanation	40-70	Why do some words seem to sound like what they mean, such as buzz or whisper?
+X060	3	arts/language	evocative exposition	160-210	Describe the restoration of a faded mural, as conservators uncover colors that no living person has seen.
+X061	3	life science	evocative exposition	40-70	Describe a coral reef at night, when the daytime colors fade and hidden creatures emerge.
+X062	3	life science	conceptual explanation	90-130	Explain how a tiny change in a single gene can make a large difference to how an organism looks or behaves.
+X063	3	life science	evocative exposition	160-210	Describe the life of a tree across five hundred years, measured in rings, storms and the creatures it has sheltered.
+X064	3	life science	conceptual explanation	40-70	Why do some animals sleep through the winter while others stay active?
+X065	3	life science	reflective argument	220-250	Should people try to protect every species from extinction, or accept that some loss is part of how nature changes? Explore one difficulty with each view.
+X066	3	philosophy	reflective argument	90-130	Is a promise made under pressure still a promise?
+X067	3	philosophy	reflective argument	40-70	Does a person whose good outcome came from luck deserve less praise than one who planned it?
+X068	3	philosophy	evocative exposition	160-210	Describe the experience of making a difficult choice as standing at a fork in a road where both paths disappear into fog.
+X069	3	philosophy	conceptual explanation	90-130	Explain the difference between knowing that something is true and believing it for good reasons.
+X070	3	mind/behavior	conceptual explanation	40-70	Why does time seem to pass more quickly as people grow older?
+X071	3	mind/behavior	evocative exposition	90-130	Describe what happens in the mind when a word is on the tip of the tongue but will not come.
+X072	3	mind/behavior	reflective argument	220-250	Can people ever truly know what another person is feeling? Explore what empathy can and cannot reach.
+X073	3	mind/behavior	creative scene	40-70	Write a scene in which someone recognizes a stranger's laugh across a crowded train platform.
+X074	3	earth/environment	evocative exposition	40-70	Describe a desert after a rare heavy rain, when dormant seeds and creatures burst into life.
+X075	3	earth/environment	conceptual explanation	90-130	Explain how ocean currents carry heat around the planet and why that matters for climate.
+X076	3	earth/environment	evocative exposition	220-250	Describe the slow formation of a cave over thousands of years, from the first trickle of water to stalactites and echoing chambers.
+X077	3	physics	conceptual explanation	40-70	Why does a straw look bent when it stands in a glass of water?
+X078	3	physics	evocative exposition	90-130	Describe sound as a traveling ripple of pressure by following a single clap across a quiet valley.
+X079	3	society/economics	reflective argument	40-70	Why can a rule that treats everyone exactly the same still feel unfair to some people?
+X080	3	society/economics	creative scene	160-210	Write a scene in which neighbors gather in the street during a power cut and talk to each other properly for the first time.
+X081	4	space	evocative exposition	40-70	Describe the light of a star that may no longer exist by the time it reaches someone looking up tonight.
+X082	4	space	conceptual explanation	90-130	Explain how scientists can tell what a distant star is made of without ever going there.
+X083	4	space	evocative exposition	160-210	Describe the birth of a star inside a cold cloud of gas and dust, from slow collapse to the first ignition.
+X084	4	space	reflective argument	90-130	Should humanity send messages into space announcing its presence, or listen quietly first? Explore one argument on each side.
+X085	4	space	evocative exposition	220-250	Describe a probe drifting through the outer solar system, photographing small icy worlds that have barely changed since the planets formed.
+X086	4	space	conceptual explanation	40-70	Why is the night sky dark even though there are countless stars?
+X087	4	space	creative scene	160-210	Write a scene in which a family watches a rocket launch from a distant beach, each of them thinking about something different.
+X088	4	mathematics	conceptual explanation	90-130	Explain why, in a room of just twenty-three people, the chance that two share a birthday is better than even.
+X089	4	mathematics	evocative exposition	40-70	Describe a spiral seashell as a shape that keeps growing without changing its form.
+X090	4	mathematics	reflective argument	160-210	Can a mathematical model of a city's traffic ever be true, or only useful? Explore what models leave out and why that can be a strength.
+X091	4	mathematics	conceptual explanation	40-70	Explain how rounding small amounts many times can add up to a large error.
+X092	4	computing	conceptual explanation	90-130	Explain why a digital file can be copied perfectly while copies of a cassette tape slowly lose quality.
+X093	4	computing	evocative exposition	40-70	Describe the internet as a web of undersea cables, switching stations and blinking lights that most people never see.
+X094	4	computing	reflective argument	160-210	Should old websites and digital records be preserved forever, even when the people who made them would prefer them forgotten?
+X095	4	history/culture	conceptual explanation	40-70	Why did so many ancient cities grow up beside rivers?
+X096	4	history/culture	evocative exposition	90-130	Describe a nineteenth-century lighthouse keeper's daily routine, when the light depended entirely on human hands.
+X097	4	history/culture	reflective argument	160-210	How should a museum decide whether to return an object to the community it was taken from? Explore the values that pull in different directions.
+X098	4	arts/language	evocative exposition	90-130	Describe how a photograph can freeze a moment that no one present noticed at the time.
+X099	4	arts/language	evocative exposition	160-210	Describe how a child picks up a new language by playing every day with children who speak it.
+X100	4	arts/language	reflective argument	40-70	Can a translation of a poem become a new poem in its own right?
+X101	4	life science	evocative exposition	40-70	Describe an octopus changing color and texture as it moves across the sea floor.
+X102	4	life science	conceptual explanation	90-130	Explain why antibiotics stop working well when bacteria are exposed to them too often.
+X103	4	life science	evocative exposition	160-210	Describe the hidden life in a handful of garden soil, from earthworms to microbes, and how it keeps plants alive.
+X104	4	life science	conceptual explanation	40-70	Why do people get goosebumps when they are cold or deeply moved by music?
+X105	4	life science	reflective argument	220-250	If science could greatly extend the human lifespan, should it? Explore what a much longer life might change for individuals and for societies.
+X106	4	philosophy	reflective argument	90-130	Is it wrong to tell a comforting lie to someone who is dying?
+X107	4	philosophy	evocative exposition	40-70	Describe the idea that the present moment is all we ever directly experience, using the image of a single footprint on a beach.
+X108	4	philosophy	conceptual explanation	90-130	Explain the difference between being free to act as you want and being free to choose what you want, using a simple example.
+X109	4	philosophy	reflective argument	90-130	Can someone be responsible for a harm they could not have foreseen?
+X110	4	mind/behavior	conceptual explanation	40-70	Why do people sometimes see faces in clouds, rocks or electrical outlets?
+X111	4	mind/behavior	evocative exposition	90-130	Describe reading a gripping book late at night, when the room disappears and the story takes over.
+X112	4	mind/behavior	reflective argument	160-210	Does boredom serve a purpose? Explore what might be lost if people were never bored.
+X113	4	mind/behavior	creative scene	220-250	Write a scene in which an elderly musician whose memory is fading sits at a piano and finds that their hands still remember.
+X114	4	earth/environment	evocative exposition	40-70	Describe the moment a thunderstorm breaks over dry fields after weeks of heat.
+X115	4	earth/environment	conceptual explanation	90-130	Explain how scientists learn about past climates from air bubbles trapped in ancient ice.
+X116	4	earth/environment	evocative exposition	160-210	Describe a mangrove forest as a place where land and sea renegotiate their boundary twice a day.
+X117	4	physics	conceptual explanation	40-70	Why does a heavy steel ship float while a small pebble sinks?
+X118	4	physics	evocative exposition	90-130	Describe magnetism as an invisible force by following iron filings as they arrange themselves around a magnet.
+X119	4	society/economics	conceptual explanation	90-130	Explain why prices in a shop can rise even when nothing about the products has changed.
+X120	4	society/economics	creative scene	40-70	Write a scene in which a librarian helps a stranger find a book they only half remember.
+X121	5	space	evocative exposition	40-70	Describe the aurora as seen from a frozen lake, where particles from the Sun meet the upper atmosphere.
+X122	5	space	conceptual explanation	90-130	Explain how astronomers know that the universe is expanding.
+X123	5	space	evocative exposition	160-210	Describe Jupiter's Great Red Spot as a storm larger than Earth that has raged for centuries.
+X124	5	space	conceptual explanation	40-70	Why do planets keep orbiting the Sun instead of falling straight into it?
+X125	5	space	evocative exposition	90-130	Describe what a sunset might look like on a planet that orbits two suns.
+X126	5	space	reflective argument	160-210	Is exploring space worth its cost when there are urgent problems on Earth? Explore one tension honestly.
+X127	5	space	creative scene	40-70	Write a scene in which a child at a planetarium show asks a question that silences the presenter for a moment.
+X128	5	mathematics	evocative exposition	90-130	Describe the idea of mathematical symmetry through the image of a snowflake, where every arm repeats the others.
+X129	5	mathematics	conceptual explanation	40-70	Explain why multiplying a negative number by a negative number gives a positive number.
+X130	5	mathematics	reflective argument	220-250	Why do some people find mathematics beautiful while others find it cold? Explore what beauty in mathematics might mean.
+X131	5	mathematics	conceptual explanation	90-130	Explain what a weather forecast means when it gives a seventy percent chance of rain, and what that number does not tell you.
+X132	5	computing	evocative exposition	40-70	Describe a single pixel on a screen as a tiny window that changes color many times every second.
+X133	5	computing	conceptual explanation	160-210	Explain why recognizing a cat in a photograph is hard for a computer even though a toddler does it easily.
+X134	5	computing	reflective argument	90-130	Should people be able to delete everything a company has stored about them? Explore one tension in this question.
+X135	5	history/culture	evocative exposition	90-130	Describe a caravan on an ancient trade route crossing a desert, carrying goods, languages and ideas between distant cultures.
+X136	5	history/culture	conceptual explanation	40-70	Why did early mapmakers sometimes draw islands that later sailors could never find?
+X137	5	history/culture	reflective argument	160-210	How do festivals keep old traditions alive while changing them with each generation? Explore whether a tradition that keeps changing is still the same tradition.
+X138	5	arts/language	conceptual explanation	90-130	Explain how rhyme and rhythm can make a sentence easier to remember.
+X139	5	arts/language	evocative exposition	160-210	Describe the silence just before an orchestra begins to play, and how it shapes what the audience hears next.
+X140	5	arts/language	reflective argument	40-70	Is a story still the same story when it is retold with a different ending?
+X141	5	life science	evocative exposition	40-70	Describe a spider spinning its web at dawn, thread by thread, in a few patient minutes.
+X142	5	life science	conceptual explanation	90-130	Explain how the human eye adjusts when someone walks from bright sunlight into a dark room.
+X143	5	life science	evocative exposition	160-210	Describe a salmon's return upstream to the river where it hatched, guided by the memory of a smell.
+X144	5	life science	conceptual explanation	40-70	Why do some plants fold their leaves at night?
+X145	5	life science	reflective argument	220-250	Do animals experience joy? Explore what kind of evidence could count and why the question is so hard to answer.
+X146	5	philosophy	reflective argument	90-130	Is it better to admit a mistake that no one would ever discover?
+X147	5	philosophy	evocative exposition	40-70	Describe the idea of fairness through the image of two children dividing a cake.
+X148	5	philosophy	conceptual explanation	160-210	Explain how a thought experiment can teach us something even though it describes a situation that could never happen.
+X149	5	philosophy	reflective argument	90-130	Is a life well lived one that is happy, one that is meaningful, or something else? Explore one tension.
+X150	5	mind/behavior	conceptual explanation	40-70	Why do people often yawn after seeing someone else yawn?
+X151	5	mind/behavior	evocative exposition	90-130	Describe the experience of déjà vu, when a new moment feels strangely like a memory.
+X152	5	mind/behavior	reflective argument	160-210	Are habits a kind of freedom, because they free our attention, or a kind of cage? Explore both sides.
+X153	5	mind/behavior	creative scene	40-70	Write a scene in which someone finds an old note in their own handwriting that they do not remember writing.
+X154	5	earth/environment	evocative exposition	40-70	Describe the first snowfall of winter settling on a busy city and briefly quieting it.
+X155	5	earth/environment	conceptual explanation	90-130	Explain why earthquakes happen much more often in some parts of the world than in others.
+X156	5	earth/environment	evocative exposition	220-250	Describe a rainforest canopy as a world above the world, from the tops of the tallest trees down to the shaded forest floor.
+X157	5	physics	conceptual explanation	40-70	Why does a microwave oven heat soup quickly while the bowl often stays cooler?
+X158	5	physics	evocative exposition	90-130	Describe the moment a kettle begins to sing, as bubbles of steam form and collapse at the bottom of the water.
+X159	5	society/economics	reflective argument	40-70	Why do people trust a recommendation from a friend more than an advertisement?
+X160	5	society/economics	creative scene	160-210	Write a scene in which a newly arrived family tries to buy groceries in a country whose language they do not yet speak.

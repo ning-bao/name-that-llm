@@ -1,0 +1,474 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Name That LLM collection record, version 1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "record_id",
+    "schema_version",
+    "target_label",
+    "served_model_id",
+    "provider",
+    "interface",
+    "collected_at_utc",
+    "prompt_id",
+    "prompt_family_id",
+    "template_family_id",
+    "prompt_bank_version",
+    "prompt_text",
+    "raw_response",
+    "source_verification",
+    "session",
+    "settings",
+    "provenance",
+    "quality",
+    "split"
+  ],
+  "properties": {
+    "record_id": {
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "1.0"
+    },
+    "target_label": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "served_model_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "displayed_model_label": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "snapshot_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "provider": {
+      "type": "string"
+    },
+    "interface": {
+      "type": "string"
+    },
+    "interface_version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "endpoint_or_product_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "region": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "collected_at_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "prompt_id": {
+      "type": "string"
+    },
+    "prompt_family_id": {
+      "type": "string"
+    },
+    "template_family_id": {
+      "type": "string"
+    },
+    "wrapper_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "prompt_bank_version": {
+      "type": "string"
+    },
+    "prompt_text": {
+      "type": "string"
+    },
+    "raw_response": {
+      "type": "string"
+    },
+    "rendered_text_export": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "raw_response_sha256": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "visible_reasoning": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "final_answer_span": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_verification": {
+      "type": "object",
+      "required": [
+        "status",
+        "evidence",
+        "routing_uncertainty",
+        "competition_snapshot_match"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "snapshot_verified",
+            "nominal_target_verified",
+            "ui_label_verified",
+            "family_proxy",
+            "rejected_exact_label"
+          ]
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "routing_uncertainty": {
+          "type": "string"
+        },
+        "competition_snapshot_match": {
+          "enum": [
+            "verified",
+            "unknown",
+            "mismatch"
+          ]
+        },
+        "verification_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "session": {
+      "type": "object",
+      "required": [
+        "fresh_conversation",
+        "prior_turn_count",
+        "memory",
+        "personalization",
+        "custom_instructions",
+        "system_instructions_status",
+        "tools"
+      ],
+      "properties": {
+        "fresh_conversation": {
+          "type": "boolean"
+        },
+        "prior_turn_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "session_id_hash": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "memory": {
+          "enum": [
+            "off",
+            "on",
+            "unknown"
+          ]
+        },
+        "personalization": {
+          "enum": [
+            "off",
+            "on",
+            "unknown"
+          ]
+        },
+        "custom_instructions": {
+          "enum": [
+            "empty",
+            "present_recorded",
+            "unknown"
+          ]
+        },
+        "system_instructions_status": {
+          "enum": [
+            "known_recorded",
+            "provider_default_unknown",
+            "partially_known"
+          ]
+        },
+        "known_system_instructions": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "tools": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "model_fallback_observed": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      }
+    },
+    "settings": {
+      "type": "object",
+      "required": [
+        "temperature",
+        "top_p",
+        "seed",
+        "max_output_tokens",
+        "reasoning_effort"
+      ],
+      "properties": {
+        "temperature": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "top_p": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "seed": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "max_output_tokens": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "reasoning_effort": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "settings_source": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "collection_method",
+        "copy_method",
+        "collector_id",
+        "license_or_terms_url",
+        "eligibility_status",
+        "transforms",
+        "attempt_index",
+        "parent_record_id"
+      ],
+      "properties": {
+        "collection_method": {
+          "enum": [
+            "manual_chat",
+            "manual_playground",
+            "api",
+            "public_corpus"
+          ]
+        },
+        "copy_method": {
+          "type": "string"
+        },
+        "collector_id": {
+          "type": "string"
+        },
+        "original_artifact_reference": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "license_or_terms_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_dataset_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "eligibility_status": {
+          "enum": [
+            "pending_clarification",
+            "organizer_confirmed",
+            "public_source_reviewed",
+            "not_eligible"
+          ]
+        },
+        "eligibility_evidence": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "transforms": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "attempt_index": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "parent_record_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "request_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "quality": {
+      "type": "object",
+      "required": [
+        "word_count",
+        "complete",
+        "refusal",
+        "tool_use_observed",
+        "duplicate_of",
+        "issues"
+      ],
+      "properties": {
+        "word_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "tokenizer_probe": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "token_count": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "complete": {
+          "type": "boolean"
+        },
+        "refusal": {
+          "type": "boolean"
+        },
+        "tool_use_observed": {
+          "type": "boolean"
+        },
+        "duplicate_of": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "cost": {
+      "type": "object",
+      "properties": {
+        "input_tokens": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "output_tokens": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "reasoning_tokens": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "usd": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "operator_minutes": {
+          "type": [
+            "number",
+            "null"
+          ]
+        }
+      }
+    },
+    "split": {
+      "enum": [
+        "train",
+        "external_holdout",
+        "diagnostic",
+        "quarantine"
+      ]
+    }
+  }
+}

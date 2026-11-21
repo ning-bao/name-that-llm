@@ -1,0 +1,22 @@
+# Competition data: the rules restrict access and redistribution. Never commit it.
+data/
+
+# Run artifacts, checkpoints and submissions
+outputs/
+*.ckpt
+*.safetensors
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

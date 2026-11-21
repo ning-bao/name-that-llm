@@ -1,0 +1,412 @@
+# Name That LLM: independent research and experiment plan
+Research cutoff: 2 November 2026
+Scope: passive attribution of a single passage to one of 18 exact competition labels.
+Status: read-only data analysis and research completed. No attribution model was trained, no source model was queried for new examples, and no predictions were submitted.
+
+## A. Executive recommendation
+
+The best-supported starting strategy is a style-preserving, direct 18-class classifier, evaluated against a strong character/word baseline on unseen prompt groups. The likely final candidate is a small ensemble of genuinely complementary branches: a fine-tuned encoder; raw character/word features; and, only if it adds held-out value, frozen proxy-model likelihood or hidden-state features. This is a ranked hypothesis, not a claim that an untested ensemble is already the winner.
+
+Begin with regularized TF-IDF classifiers and a compact stylometric model. Compare a modern 150M-400M encoder and a contrasting older encoder under the same splits and tuning budget. Test cross-entropy (CE) before adding supervised contrastive learning (SupCon). The cleanest advanced experiment is CE versus CE+SupCon on the same backbone, using same-model/different-prompt positives and same-prompt/different-model negatives. A source-conditioned generative model inspired by ATLAS is the highest-upside alternative mechanism, but its published family-attribution results do not establish exact-version superiority here. [R04-R10, R14-R16]
+
+The actual corpus changes the priorities. All 2,699 training passages are single-line prose. Typography differs sharply across providers, and lexical word length and punctuation retain substantial model association after an additive prompt/length adjustment. Yet adjacent versions still share many family signatures. Preserve raw Unicode and punctuation; do not make generic normalization or paraphrase augmentation the default. Data collection should emphasize short science/humanities explanations, reflective prose and evocative descriptions, not a broad instruction-tuning mixture of emails, recipes and code.
+
+The most urgent external-data issue is source identity. Google documents that gemini-3.7-flash requests now route to gemini-3.8-flash. GPT-5.5 has left ChatGPT but remains documented in the API. Several other targets are documented API models without verified current consumer-chat selection. Seventeen nominal target endpoints have official API documentation, but equality with the competition's historical checkpoint and serving conditions remains unverified. A generic provider name or a model's self-description is insufficient provenance. [R17-R25, R33]
+
+Do not prioritize reinforcement learning. Passive classification has no query-action loop. For choosing collection prompts, first compare a fixed matched panel and simple error-driven acquisition. RL would need to beat these on downstream balanced accuracy at equal collection cost, not merely identify an interactively queried model. [R11-R13]
+
+The leading recommendation would be falsified if the lexical baseline consistently wins on new prompts, a generative method improves exact-version recall across the same splits, or a frozen feature model achieves comparable accuracy with less variance and runtime. No defensible private-leaderboard score forecast can be made before those experiments.
+
+## B. Dataset findings and what they imply
+
+### B1. Verified structure and limits of verification
+
+The supplied train.csv has 2,699 rows and columns id, prompt_id, text, model. It contains 150 distinct prompt groups and exactly the 18 labels in the request. There are 149 complete groups of 18; p002 lacks claude-fable-5. Every other class has 150 examples and that class has 149. There are no empty fields, duplicate IDs, or repeated prompt/model cells. The original files were read in full programmatically and left unchanged. The kit records SHA-256 hashes. [D1]
+
+The supplied test.csv contains three example rows and columns id, text. The supplied Parquet sample contains the same three IDs and string-valued id/model columns. It is a format demonstration, not the hidden test. Official pages specify approximately 4,000 hidden passages from unseen prompts, balanced accuracy, unequal class frequencies and different public/private mixtures. The overview says one interactive example while the data page says three; the supplied file resolves that minor documentation discrepancy. The hidden test has no documented prompt_id column. [D1, R01-R02]
+
+### B2. Length, sentence and formatting measurements
+
+Whitespace-delimited word counts range from 36 to 274, with median 101, mean 114.66 and 95th percentile 224. There are 41 passages outside the advertised approximate 40-250-word interval. These are not grounds to delete records. Using o200k_base as a common token-count probe gives median 128, mean 145.34, 95th percentile 280.1 and maximum 376. This is neither the original source tokenizer nor a guarantee that every encoder fits a 384-token cap; audit each candidate tokenizer separately. [D1]
+
+Every passage has one line, no tabs, no leading/trailing whitespace and no runs of multiple spaces. The implemented checks find no headings, bold markup, line-start bullet/numbered lists, code fences or URLs. Five passages match a LaTeX-marker heuristic, fifteen contain an asterisk, and twelve change under NFKC normalization. Sentence-boundary heuristics give a median of five, with a 0-14 range; the zero count denotes missing terminal punctuation rather than absence of linguistic sentences. [D1]
+
+These observations support short sequence lengths and dynamic padding. They do not establish whether a shared prompt template, provider behavior, or organizer cleanup produced the plain paragraphs. Keep one raw-text path; use alternate normalization only as a controlled ablation. Drop zero-variance numeric features within training folds. General chat lists and code blocks should be a small, separately identified collection arm.
+
+### B3. Exact-label fingerprints
+
+The table reports the proportion of passages containing each punctuation mark, not a rule for identifying an individual passage. Word means use whitespace splitting. Each row has 150 samples except Fable, which has 149. [D1]
+
+[[MODEL_STATS]]
+
+[[FINGERPRINT_FIGURE]]
+
+Across the five Anthropic labels, 75.17% of passages contain an em dash and none contains a curly apostrophe. ZAI is similar: 80.67% with an em dash and none with a curly apostrophe. Google has an em dash in just one of 600 passages. OpenAI passages contain curly apostrophes in 47.33% of cases, while em-dash frequency varies substantially between versions. These features distinguish some families better than siblings; they cannot reliably separate Anthropic from ZAI on their own. [D1]
+
+Within-family examples suggest additional hypotheses. Claude Opus 5 has a mean lexical word length of 5.03 characters versus 5.59 for Opus 4.6; semicolons appear in 54.0% versus 15.3% of their passages. Gemini 3.7 and 3.8 use longer lexical words on average than 3.1 Pro. These are observations over matched prompt coverage, not established intrinsic properties of the underlying weights. The complete per-model length, punctuation and lexical tables are in the kit. [D1]
+
+### B4. Controlling for prompt and length
+
+For each numerical style feature, I projected out prompt indicators and a quadratic function of log(1+word count), then measured the additional variance explained by family or exact-model indicators. These are descriptive fixed-effects decompositions, not an attribution classifier. Exact-model indicators explain 43.52% of the remaining variation in mean lexical word length, 40.68% in em-dash density, 20.99% in colon density and 14.06% in semicolon density. Adding version indicators beyond family explains 24.62% of the remaining lexical-word-length variation but only 2.85% of the remaining em-dash-density variation. [D1]
+
+This is evidence that class-associated differences are not simply the result of different prompts being assigned to different models. It does not prove generalization, causality, independence of all topic effects, or immunity to nonlinear length effects. The lexical regex splits accented words; sentence counts are heuristic. Added model parameters mechanically improve in-sample fit, with a simple null scale around 0.0067, so tiny positive effects should not be celebrated. Prompt-block permutations or held-out feature associations would be the next inferential checks. No feature R-squared here is balanced accuracy.
+
+Overall response length is a much weaker clue: after accounting for prompt, model identity explains about 1.05% of residual word-count variance. Length should be available as a weak feature and diagnostic, not a routing rule. Do not condition away all length information during normal training merely because length was controlled in this audit. [D1]
+
+### B5. Lexical signals, topics and duplicates
+
+An exploratory binary phrase-frequency audit required at least six occurrences for the target model and at least six prompt groups overall. Examples include "an intricate" in 10 Gemini 3.7 responses versus five responses from all other classes combined; "all of it" in six Opus 5 responses versus four elsewhere; and "is therefore" in seven Luna responses versus 22 elsewhere. These small, multiply searched counts are feature hypotheses, not hand-written identification rules. Avoid a blacklist of supposedly diagnostic words. [D1]
+
+Manual semantic annotation inspected a representative beginning/ending from every prompt group, a GPT-5.5 excerpt from every group, and extra excerpts for ambiguous narrative groups. All inspected excerpts were predominantly English. This is not a language-detector result over every row. The inferred domain counts below describe response content, not original prompts. [D2]
+
+[[DOMAIN_STATS]]
+
+The inferred primary genres were evocative exposition 63 groups, conceptual explanation 38, reflective argument 36 and creative scene 13. Fifty-three groups were marked ambiguous because subjects and genres overlap. The corpus is concentrated in polished, often lyrical science and humanities prose. There is no observed evidence in the representatives for a large recipe, business-email, customer-support, tabular or code-generation component. [D2]
+
+There are no exact duplicates or duplicates after lowercasing and whitespace collapse. No pair reaches 0.80 cosine similarity in the stated case-sensitive character 3-5-gram TF-IDF audit. Maximum within-prompt cosine is 0.729; maximum cross-prompt cosine is 0.350. No exact text/ID overlap exists with the three visible test examples. These checks cannot exclude semantic paraphrases, hidden-test overlap, or shared prompt templates. [D1]
+
+Several different prompt IDs address closely overlapping subjects: p010/p082, p100/p146, p128/p136 and p017/p148. Therefore prompt-disjoint validation does not automatically mean subject-disjoint validation. The topic audit records fifteen candidate overlap groups for sensitivity tests; do not collapse every broad science topic into one giant component. [D2]
+
+### B6. Preprocessing and misleading shortcuts
+
+ASCII-only filtering changes 1,561 passages; folding smart quotes/dashes changes 1,529; lowercasing changes all 2,699. Stripping or collapsing whitespace changes none in this release. Preserve the original string and explicit transform versions. The absence of current whitespace variation does not justify losing future paragraph boundaries during external collection. Scikit-learn's built-in character analyzer internally collapses repeated whitespace even with lowercase=False; use a custom raw-character/byte analyzer or explicit whitespace features when byte fidelity matters. [D1, R28]
+
+Exclude id, row order and prompt_id from prediction features. Do not infer test prompts and enforce one example per model per cluster. The training crossing does not establish the same hidden-test structure. A participant reports that Hungarian matching improved local validation but failed to improve the public score; this is unverified competition anecdote, consistent with the official warning about unequal class mixtures, not proof of the hidden construction. [R01, R31]
+
+## C. Research comparison and suitability ranking
+
+Ranks below describe expected value of experimentation under the actual small-data, short-text, unseen-prompt setting. They are not benchmark rankings. Scientific confidence concerns relevance of the mechanism; private-leaderboard performance remains unmeasured.
+
+| Rank | Candidate | Mechanism / evidence | Principal risk | Data / implementation | Confidence |
+| 1 | Direct 18-class encoder | Learn source cues with CE; encoder ensembles have competitive attribution evidence | Small data, topic/style overfit; pretrained semantics may erase surface distinctions | Original data; Transformers models/code | High as practical candidate, medium as winner |
+| 2 | Character + word linear model | Sparse lexical and typographic signatures; recent prompt-grouped evidence | Brittle rare phrases; same-family overlap | Original data; scikit-learn | High as mandatory baseline and complement |
+| 3 | Same encoder + SupCon | Cross-prompt source geometry, matched hard negatives | Collapses sibling distinctions; batch construction matters | Original data, then verified external; custom loss | Medium-high experiment priority |
+| 4 | Frozen proxy feature branch | READER hidden-state trajectories; Profiler context-loss statistics | Proxy and length/domain mismatch; AUC is not top-1 accuracy | Original data; official repositories | Medium, especially for ensembles |
+| 5 | Source-conditioned adapters | ATLAS-style generation under each source condition | Family evidence may not transfer to exact versions; 18 scoring passes | Stronger with more exact data; official ATLAS adaptation | Medium potential, low direct evidence |
+| 6 | Adapted open LLM/embedding model | LoRA classifier or constrained source likelihood | Capacity and cost versus 150 examples/class | 4B-8B weights, PEFT; Qwen embedding candidate | Medium challenger |
+| 7 | Stylometry + boosting / generative n-grams | Compact interpretable features, character distributions | Handcrafted features miss interactions; very sparse support | Original data; LightGBM/CatBoost or linear models | Medium as complement, low as winner |
+| 8 | Soft hierarchy / pair specialists | Use stable family/pair error structure | Hard routing and noisy specialization hurt other classes | OOF-confirmed confusions; custom heads | Conditional |
+| 9 | Prompted zero/few-shot LLM | Instructions and exemplars identify source | Unsupported source stereotypes, order bias, online restrictions | Offline open model only at inference | Low priority |
+| 10 | Self-training / RL / active fingerprints | Pseudo labels or sequential query policies | Confirmation bias or wrong inference setting | Extra data and stringent validation | Low initially |
+
+### C1. What the relevant studies actually show
+
+Every Model Leaves a Trace (20 October 2026 preprint) is unusually relevant because it uses prompt-grouped evaluation and tests related sources. Its eight-way raw-text experiment reports 80.07% accuracy for lexical logistic regression, 66.04% for semantic features and 81.41% for combined features. These are its own models, prompts and class resolution. Its strongest prompt-neutralized embedding diagnostic needs peer responses from every candidate to the same test prompt; that is not available here. Its original semantic branch uses an online OpenAI embedding model. Treat the lexical result as a reason to test simple methods, not an expected Kaggle score. [R04]
+
+OpenTuringBench (EMNLP 2025) provides a Longformer/triplet/centroid framework and a public benchmark. OTBDetector's weighted F1 changes from 0.997 in-domain to 0.510 on out-of-domain essays in its attribution tables. The benchmark uses much longer texts, older open generators and a human class. Contrastive learning can work very well within a distribution while still failing under a meaningful shift. Its dataset card is CC BY-NC 4.0; studying the method does not automatically make the data eligible for unrestricted reuse. [R06, R38]
+
+Profiler (EMNLP 2025) extracts context-aware loss patterns from frozen surrogate LMs and trains random forests. Its evaluation is predominantly one-versus-rest origin detection with ROC-AUC; its OOD cases include paraphrasing rather than this exact unseen-prompt test. The official implementation is available. It is a plausible complementary feature generator, but a high AUC does not establish that scores from eighteen separate binary detectors are comparable or yield high balanced top-1 accuracy. Refit/evaluate a multiclass decision rule. [R05, R35]
+
+READER (2026 preprint, verified v3) summarizes frozen proxy hidden-state trajectories with low-frequency coefficients and can accumulate evidence across interactions. On its 100-source, 500-prompt Agent500 experiment, one-response READER-Qwen accuracy is 50.4%; a fine-tuned Qwen3-Embedding-8B baseline reaches 55.4% in the appendix. Its 96.2% result combines 100 responses from the same source and is not the relevant endpoint. Use response-only K=1 features and compare against adapted embeddings. Published timing uses H200 hardware and caching, so it cannot be reused as an L40S estimate. [R07, R37]
+
+ATLAS (14 October 2026 preprint) uses a frozen Qwen2.5-7B model with shared/source-specific low-rank parameters and clipped relative token-likelihood aggregation. Its headline joint domain/version-shift accuracy is 74.27% versus 65.27% for its strongest baseline, on five-family identification with 149,760 machine-generated training texts. Its objective preserves family identity across versions; this task separates versions. An eighteen-source adaptation with far less data is therefore a novel experiment. Code exists; the reported full experiment uses four H100-80GB GPUs, which does not establish a required configuration for this smaller adaptation. [R08, R36]
+
+SemEval-2024 Task 8 supplies useful competitive evidence: AISPACE's encoder ensemble ranked first in six-way generator/human attribution at 90.85% accuracy. A different CE+contrastive system did not dominate the shared task. In that system's enriched PeerRead experiment, synonym replacement and random word swaps changed accuracy from 74.60% to 58.81%. These incompatible tasks are not compared as a league table; they motivate supervised baselines and caution against source-changing augmentation. [R09-R10]
+
+Ettin (ICLR 2026) and the October 2026 UltraBERT release are contemporary encoder candidates with public checkpoints. Their general classification evidence does not establish LLM-attribution superiority. Test one of them alongside a contrasting proven architecture instead of automatically selecting the newest or largest encoder. New sparse lexical authorship work also merits an optional later comparison, but its human-authorship task is indirect evidence. [R14-R15, R29]
+
+Fingerprinting LLMs via Prompt Injection (ACL 2026, LLMPrint) optimizes prompts for provenance/derivation verification, including many post-trained variants. LLMmap (USENIX Security 2025) actively queries a model; its greater-than-95% result over 42 versions uses eight chosen interactions. Both require access to the unknown authoring model. Kaggle provides a fixed passage, so these results cannot be imported as passive-attribution evidence. [R11-R12]
+
+### C2. RL, active collection, provenance and watermarking
+
+The four settings must remain distinct. Passive attribution maps an existing passage to a label. Active identification chooses inputs for an unknown model. Active collection chooses independent prompts for already known source models. Adaptive allocation decides which source/prompt cells to purchase next. Only the latter two are available during this project's data collection; the first is the submission task.
+
+One RL fingerprinting preprint reports 93.89% accuracy from three selected queries versus 82.22% from three random queries, over nine open models and a fixed 50-query pool. This does not show an advantage over greedy information gain or Bayesian experimental design, and it does not optimize downstream passive-classifier accuracy. Start with stratified matched sampling, pair-confusion counts, uncertainty/disagreement on newly generated candidate responses and an explicit held-out reward. [R13]
+
+Information gain about a queried source is not the same objective as expected improvement on naturally distributed test passages. Use diagnostic distinctiveness as an acquisition heuristic, then accept prompts only if their generated data improve target-like held-out performance. A useful later policy could allocate among domain/length/pair arms using simple bandit-style allocation; RL is justified only if a sequential advantage survives equal-cost comparison with these simpler policies.
+
+Watermarks require an applicable generation mechanism and a usable detector or key. Google documents text watermarking in Gemini experiences, but neither the supplied data nor retrieved competition documentation establishes a detector/key for all target passages or exact-version payloads. Watermark-inspired statistical features may be tested if concrete evidence appears, but watermark decoding is not a defensible main plan. A provider-level provenance signal would still leave version attribution unresolved. [R30]
+
+## D. Detailed architecture and training recommendation
+
+### D1. Baseline system and preprocessing
+
+Use only the passage string at inference. Keep its raw Unicode, case and punctuation. Construct three independently inspectable branches: raw-character TF-IDF; word TF-IDF; and roughly 20-60 nonconstant numeric style features. Start with character n-grams 3-5 and 2-6 as two alternatives; word unigrams/bigrams; min_df 2 or 3; sublinear TF as an ablation; and a small regularization grid C in {0.1, 1, 10}. These are proposed settings, not claimed optima. Compare multinomial logistic regression with a linear SVM. Fit vocabulary and IDF only on the training portion of each split.
+
+Numeric features should include lexical length, length-adjusted vocabulary richness, punctuation densities, capitalization, contractions, pronoun rates and sentence-boundary patterns. The initial corpus offers little value for complex layout features because most are constant. A modest boosted-tree model is useful for nonlinear interactions; a linear style model remains a strong control. Historical Delta-style function-word distances, character Markov models and compression distances are inexpensive secondary baselines, with no verified contemporary exact-version advantage here.
+
+Keep raw and lightly normalized views as separate experiments. Do not paraphrase passages with another LLM, translate them, swap synonyms or automatically correct grammar while retaining the original model label. These operations can transfer or erase the source signature. Dropout-based representation regularization is safer to test because it does not rewrite the recorded source text.
+
+### D2. Practical neural baseline
+
+First compare three carefully bounded alternatives: a 150M-400M current encoder such as Ettin/UltraBERT; a contrasting DeBERTa-v3 or RoBERTa architecture; and a frozen open embedding model with a regularized head. Then spend compute only on surviving backbones. Qwen3-Embedding-8B with LoRA is a larger challenger supported by relevant single-response evidence; it is not the mandatory starting point. [R07, R14-R16]
+
+Proposed initial recipe: exact 18-way CE, AdamW, BF16 on L40S, learning rate 1e-5 or 3e-5, weight decay 0.01, effective batch 32-64, 5-10% warmup and a short schedule of 3-10 epochs selected using inner validation. Audit candidate-tokenizer lengths, initially cap at 512 only if the audit supports it, and use dynamic padding. Compare the architecture's recommended pooled representation with mean pooling in one bounded ablation. Preserve all eighteen logits. With the official 150/149 counts, large class weights or aggressive oversampling are unwarranted.
+
+Use full fine-tuning for compact encoders; parameter-efficient tuning is not inherently more accurate. For an 8B challenger, begin with LoRA rank 8 or 16, learning rate 5e-5 to 2e-4, microbatch 2-8, accumulated batch 32-64 and gradient checkpointing. Use BF16 base weights if memory allows, or QLoRA NF4 with BF16 computation. Exact memory and speed require a pilot. A classification head avoids decoding long label explanations. For a generative head, prefer fixed-length class codes, verified against its tokenizer; otherwise compare sum-log-probability and length-normalized label scores inside inner folds. Length normalization is an ablation, not an automatic correction. [R27]
+
+### D3. Controlled contrastive and hierarchy experiments
+
+Compare CE with CE + lambda*SupCon, initially lambda in {0.05, 0.2}, on otherwise identical configurations. A true contrastive batch can contain two or three complete prompt groups, giving 36 or 54 texts. Same exact model across prompts provides positives; other models answering the same prompt provide topic-controlled negatives. The missing Fable cell is naturally omitted. Harder same-family negatives can be emphasized only after plain CE errors have identified stable confusion pairs.
+
+Ordinary gradient accumulation does not enlarge the contrastive denominator. Embeddings must coexist through an actual batch, gradient caching, or a carefully documented queue. Test linear-head prediction and prototype/centroid prediction separately. Do not force all provider siblings into one tight embedding cluster when they are distinct labels.
+
+A family auxiliary head is an ablation, not the default. Its loss must not overwhelm the exact-label objective. Soft factorization p(model|text)=p(family|text)*p(model|family,text) is worth testing against direct CE; hard routing permanently converts an early family mistake into an exact-label error. For a specialist pair, preserve or renormalize the pair's total probability mass and evaluate the full 18-class outcome. Oracle-family or pair-only accuracy is a diagnostic, not the competition objective.
+
+### D4. Complementary and generative candidates
+
+Start with one frozen local causal model. Cache response-only hidden-state summaries from a small preregistered set of layers and/or token/context likelihood features. Fit standardization, feature selection and classifier parameters inside each fold. All candidate training text can be passed through an entirely frozen feature extractor without fitting it, but no validation information may influence layer selection or learned normalization. Profiler-style context losses can require more work than one ordinary perplexity pass; measure the actual implementation. [R05, R07]
+
+For ATLAS, use an eighteen-condition source adapter with shared parameters and stronger regularization than a large-data recipe might need. Train only on the current outer-training sources. Compare ordinary normalized log likelihood against clipped relative token evidence. The eighteen exact labels must remain separate. A smaller 1B-3B implementation may be a feasibility prototype, but changing the backbone/objective is an adaptation, not reproduction of the published result. Run a 7B comparison only if the cheap prototype shows meaningful evidence. [R08]
+
+Direct source-model perplexity would require comparable scoring access to every exact historical generator. That access is not established, the sources are generally not portable to the submission notebook, and runtime API calls are forbidden. A proxy likelihood is a learned surrogate measurement, not the source model's true probability. Do not treat whichever proxy gives the lowest perplexity as the author without a trained, validated attribution rule.
+
+### D5. Ensembles, calibration and distillation
+
+Measure per-class error overlap and how often each branch corrects the current leader. An oracle union of correct predictions is only an upper bound on possible complementarity. Test the actual probability or logit blend on outer-held-out prompts, using global weights first. Class-specific weights and offsets have many parameters relative to 150 groups; use strong shrinkage and inner-fold fitting if tried.
+
+Positive scalar temperature scaling does not change a single classifier's argmax and therefore cannot by itself improve its balanced accuracy. It can help a mixture combine differently scaled confidences. Fit calibration inside training folds. Under stable class-conditional distributions, the balanced-accuracy Bayes rule is argmax_k p(text|k), equivalently argmax_k p_train(k|text)/pi_train(k). The near-uniform original prior needs almost no adjustment. Unknown test priors do not justify forcing equal output counts or ordinary accuracy-oriented prior correction.
+
+After a teacher ensemble has demonstrated a gain, distill it into a compact classifier using hard labels plus temperature-scaled soft targets. For each outer fold, the teacher must be trained without its validation passages; its architecture, mixture and calibration must also be chosen without them. A teacher may produce targets for permitted external examples offline, but source model labels remain the generation provenance, not a teacher's guess. Compare the distilled student with the same student's hard-label training and the teacher's actual deployed accuracy/runtime.
+
+Pseudo-labeling is low priority. The three preview examples offer no meaningful self-training pool. Before relying on any adaptation to hidden text during rerun, verify eligibility under the rules and organizer clarifications; no blanket prohibition on all automated transductive methods was established here. Do not export hidden text or hand-label it. A later eligible self-training experiment should use automatic labels, high-confidence agreement, low weights and an analogous untouched-prompt simulation; abandon it if it reinforces sibling confusion.
+
+## E. External-data prompt engineering package
+
+### E1. Strategy: matched natural prose first, diagnostic prompts as a separate arm
+
+Use a diverse prompt bank with a shared prompt for every accessible exact nominal source. A universal content prompt produces too few independent situations. An oversized generic chat bank mismatches the observed domain. A bespoke prompt for each model confounds author with content. A crossed panel preserves comparisons and supports topic-controlled negatives. Different prompts may be used for a confusing pair only when both members receive the same new prompts, with periodic full-panel anchors.
+
+The initial bank contains 24 independently authored training prompts, six untouched external-evaluation prompts and six diagnostic prompts. The 24 core prompts span four requested length bands evenly: 40-70, 90-130, 160-210 and 220-250 words. Their domain/genre mix is broad within the observed science/humanities setting; it is not claimed to be the optimal hidden-test mixture. Longer expansion should approximate the observed empirical length distribution or reweight/stratify length, rather than assuming these four equal bands match it exactly.
+
+Most core prompts request one paragraph but leave wording, sentence structure, punctuation and argument development free. That is a distribution-matching hypothesis based on the actual file, not a recovered organizer instruction. Diagnostic D01 and D05 deliberately allow ordinary formatting freedom. After the first panel, compare several equivalent output wrappers on new independent topics, with wrapper choice crossed across all sources. Every paraphrase, length variant and repeated generation of the same conceptual request shares one prompt_family_id and one validation group.
+
+Do not instruct models to reveal their identity, imitate another model, exaggerate a house style, use a distinctive catchphrase, or answer with a prescribed word list. Such prompts can be easy to identify for the wrong reason. Do not provide examples taken from the competition. Never paste hidden or official passages into unrelated chat services for labeling, rewriting or source guessing.
+
+### E2. Ready-to-copy prompt bank
+
+Paste only one prompt at a time. N prompts are for the initial training panel, H prompts remain external holdouts, and D prompts are the separate diagnostic arm. These new prompts were written for this package; their wording is not copied from competition passages.
+
+[[PROMPT_BANK]]
+
+### E3. Manual operator workflow
+
+1. Verify the source before collection. Record the exact displayed model, official model identifier where available, product, date, region and any selected effort/mode. A screenshot of the model selector or API response metadata can be retained privately as evidence; do not include account/payment details in shared artifacts. Model self-identification is not evidence.
+
+2. Use a fresh conversation for every sample. Disable memory, personalization and custom instructions where the interface allows it. Record unknown settings as unknown. A temporary chat does not necessarily remove provider system instructions. Do not claim that consumer chat is equivalent to a bare API request.
+
+3. Disable browsing, retrieval, connectors, file context, agent swarms and tool execution where possible. Do not use a research mode or multi-agent mode to represent one ordinary source. If an interface forces tools or hidden routing, label that condition and keep it out of the highest-trust core panel.
+
+4. Use the same initial prompt across accessible sources. Rotate collection order across providers and dates so a topic or length is not tied to a particular model or service update. Prefer completing a small cross-model panel before collecting hundreds from a single model.
+
+5. Collect the first complete answer, even if it is awkward, inaccurate, unexpectedly short, or ignores the word target. Record task compliance and actual length. Selecting the nicest or most diagnostic response introduces a collector-specific filter. Log genuine technical failures and retries instead of silently replacing samples.
+
+6. Keep the final visible answer separate from any visible reasoning panel, tool trace or interface footer. Do not ask for hidden reasoning. If final-answer extraction is ambiguous, keep the raw export and mark the record for review rather than constructing a cleaner answer by hand.
+
+7. Use the interface's copy/export facility consistently. Record whether copying preserves Markdown source, rendered text, newlines, Unicode and equations. Store the exact captured text and a SHA-256 hash. When underlying raw bytes are unavailable, call the field a captured raw response; it is not a byte-perfect server record. Preserve any alternate rendered export separately.
+
+8. Do not edit spelling, punctuation, sentence count or factual mistakes. Do not strip a preamble or wrapper in the primary record. If testing organizer-like cleanup, create a derived field with an explicit transform version and retain the original. All derivatives stay with their parent validation group.
+
+9. Keep the first response as the primary sample. Follow-up corrections, continuations and regenerations are separately labeled conditions, not independent fresh-prompt examples. Avoid dozens of repeated samples from one prompt: they increase rows much faster than independent prompt coverage.
+
+10. Use UI defaults when controls are unavailable, recording them as unknown/default rather than inventing temperature values. Where exposed, hold settings fixed within a core arm; later compare a small preregistered range across all accessible models. Reasoning settings can change visible style and billing. Do not assume every model accepts temperature zero or can disable reasoning.
+
+11. Review provenance and deduplicate exact captures before admission. Exclude provider navigation text, mixed-source stitched answers, accidental multi-turn history, confirmed fallback, and unknown-author imports from exact-label training. Preserve quarantined records and reasons so collection is auditable.
+
+12. Obtain organizer clarification for conditional paid/private sources before relying on them. A source being technically reachable is distinct from competition eligibility. The owner performs collection; this research has made no generation requests or spending commitments.
+
+### E4. Exact model access and nominal-target costs
+
+All rates below are USD per million uncached input/output tokens for short requests, as documented at the cutoff. They are not a promise of account access, immutable weights, eligibility or future pricing. APIs were researched but not authenticated or called. Current documentation supports 17 nominal target endpoints; exact 3.7 Flash is not presently verified. Public chat selectors are a separate matter. [R17-R25, R33]
+
+[[ACCESS_TABLE]]
+
+Google's October 8 release note explicitly redirects gemini-3.7-flash to 3.8. Do not relabel these generations as 3.7. Older archived 3.7 data require dates, actual served-model provenance and eligibility review. GPT-5.5's October 14 retirement applies to ChatGPT/Work/Codex, not API access. Current help says GPT-5.6 Luna and Terra are not selectable in standard ChatGPT, while Astra powers GPT-6 Pro; product names, plan and effort must all be recorded. Claude's API lifecycle lists the five targets as active legacy models, but this does not establish that all remain selectable in the owner's chat account. [R17-R21]
+
+DeepSeek is not one of the eighteen labels. Its outputs may be useful for a separately justified auxiliary representation or robustness experiment, but must not be assigned a competition source label. New Qwen, Kimi, Claude, GPT or Gemini releases likewise remain separate proxies unless the exact target identity is established.
+
+Proposed verification statuses are: snapshot_verified; nominal_target_verified; ui_label_verified; family_proxy; and rejected_exact_label. Even snapshot_verified does not imply competition_snapshot_match: that second field is unknown unless the organizer supplies comparable provenance. Confirmed redirects, contradictory returned identifiers and unverifiable generic Auto routing are unsuitable exact labels.
+
+Cost formula: sum over models of number_of_responses * [input_tokens * input_rate + (visible_answer_tokens + separately_billed_reasoning_tokens) * output_rate] / 1,000,000. Adjust to each provider's billing definition and avoid double-counting reasoning already included in output usage. Add retries, tools, subscriptions and taxes separately.
+
+Using the listed global Qwen rate, across the 17 documented endpoints the input rates sum to $57.90 and output rates to $292.551. At 100 independent responses per model, 100 input tokens and 300 billed answer tokens per response, the illustrative total is $9.36 for 1,700 responses. If each response also bills 2,000 reasoning tokens, it is about $67.87. At 500 responses per model, corresponding examples are $46.78 and $339.33 for 8,500 responses. Qwen's Singapore/international endpoint instead lists $2/$6; using that rate changes the two 1,700-response scenarios to about $9.39/$68.11 and the 8,500-response scenarios to $46.95/$340.55. These are arithmetic scenarios, not measured spending or forecasts of reasoning length. [R20-R25, R33]
+
+Manual labor may dominate monetary cost. At an assumed two minutes of operator time per response, 1,700 responses mean about 57 hours; this is a planning assumption, not a measured rate. A small, high-quality panel is more useful than thousands of uncertain labels. Gemini Flash rates and GPT Sol rates include promotional conditions; recheck prices before purchase. Subscription access does not automatically include API usage or certify reasonable access under competition rules.
+
+### E5. Collection schema
+
+The kit includes a JSON Schema and an explicitly nontraining template. Unknown parameters are null, not guessed. Each generated response is one append-only record, with a stable record_id and separate provenance fields.
+
+| Field group | Required information |
+| Identity | target_label, served_model_id, displayed_model_label, snapshot_id, provider, interface/version, endpoint/product, region |
+| Time and prompt | collected_at_utc, prompt_id, prompt_family_id, prompt_bank_version, exact prompt_text, intended split |
+| Content | captured raw_response, optional rendered export, response hash, visible reasoning separated from final answer |
+| Verification | status, evidence references, routing uncertainty, competition snapshot match status, verification date |
+| Session | fresh conversation, prior turns, memory/personalization/custom instructions, known/unknown system instructions, tools, observed fallback |
+| Settings | temperature, top_p, random seed, max output tokens, reasoning effort, source of setting information |
+| Provenance | collection and copy method, collector pseudonym, original artifact, terms/license URL, eligibility evidence, transformations, attempt number, parent record |
+| Quality and cost | word/token counts with tokenizer name, completion/refusal/tool flags, duplicates/issues, token usage, monetary cost and operator time |
+
+Do not put labels inside the text supplied to a classifier. Metadata is for filtering, grouping, audit and shift diagnostics; using provider/interface as a prediction feature would make the training task trivial and fail the passage-only test.
+
+### E6. Adaptive expansion and external-data falsification
+
+The first collection stage is 24 core prompts across the 17 currently documented nominal targets: up to 408 training responses, plus 102 H-prompt external holdout responses if all are accessible. Six H prompts are only a gross-transfer sentinel: expand to approximately 30 or more new independent holdout families before interpreting model differences, and let confidence intervals determine whether more are needed. Reserve 20-25% of subsequent new prompt families for evaluation. The six D prompts add up to 102 diagnostic responses, but six independent prompt groups are a small pilot rather than a conclusive comparison. Missing cells stay missing. Do not inflate the corpus by mapping current 3.8 responses to unavailable 3.7.
+
+Expand only after a provenance-controlled pilot. A reasonable next scale is 50-100 independent training prompts per accessible target, or roughly 850-1,700 responses. If learning curves continue improving, test 150-500 prompts/model, roughly 2,550-8,500 responses for seventeen sources. These are suggested experiment sizes with substantial uncertainty, not sample-complexity guarantees. The unit worth expanding is independent prompt coverage, not raw response count.
+
+Audit existing public synthetic corpora before spending large amounts of operator time. One Kaggle dataset description reports 7,753 passages across ten target names, a CC BY 4.0 license, mixed OpenRouter/OpenAI routes, some missing served-model metadata and filters for single-paragraph, non-Markdown text. I examined its description, not its underlying rows. Its 3.7 Flash records require particular date/route scrutiny; do not assume that a public label proves the served historical model or host approval. Public corpora may also share prompt sources with one another, requiring cross-corpus grouping. [R32]
+
+Run at least three data conditions on the same held-out official prompt groups: official-only; external-only; and combined. Because one class is inaccessible for new collection, external-only is a 17-source diagnostic and cannot replace the official 18-class score. For a matched comparison, train and evaluate all three conditions on the same seventeen-label task, excluding 3.7 consistently. Separately report the full eighteen-class official-only and combined results with the original 3.7 examples retained. Never conceal the missing source or compare a seventeen-class headline directly with an eighteen-class score.
+
+For combined training, choose a class uniformly, then select official versus external examples with an inner-tuned mixing weight, initially retaining at least half of exposure from official data. Fall back to official examples for missing external classes. Compare this mixed schedule with external pretraining followed by official-only fine-tuning. Balance domain/length within source where possible. Uniform class sampling does not remove the remaining class-by-corpus confound; specifically watch 3.7 recall and within-Gemini errors.
+
+Compare naturalistic versus diagnostic augmentation at equal response count and comparable independent prompt count. The first six D prompts only test feasibility; expand the diagnostic bank with independent topics before claiming an acquisition advantage. Evaluate both arms on naturalistic official holdouts and H prompts, not only their own diagnostic examples. If diagnostic data only help diagnostic validation, do not scale that arm.
+
+After the first models, prioritize weaknesses supported across inner folds: persistent sibling confusions; short passages; domains with low per-class recall; underrepresented lexical patterns; and collection-interface shifts. Acquire matched responses from both members of each selected pair. Keep some broad anchor prompts to detect unintended regressions. Avoid selecting every next prompt from one model's confidence score; combine disagreement, error prevalence and diversity. Bootstrap uncertainty and minimum sample counts should temper decisions from sparse slices.
+
+Adaptive acquisition must respect the outer split as well. For an unbiased outer evaluation, each fold's selected prompts/data must depend only on that fold's training groups; do not pool acquisition decisions from all folds into a shared corpus, because a held-out group in one fold appears in another fold's training data. A simpler practical alternative freezes a shared, independently designed external panel before cross-validation. Subsequent global error-driven acquisition rounds are explicitly selection-affected development; assess the completely frozen recipe once on the locked confirmation set or a newly collected independent evaluation panel.
+
+Externally generated data can reduce accuracy through mislabeled versions, new system prompts, UI-specific markup, temporal drift, selection filters or domain mismatch. If external-only transfer is poor, first examine these confounds. If combined training degrades the official score across repeated splits, reduce its weight, restrict it to an auxiliary objective, use an official-only final stage, or discard it. Extra rows are not inherently useful.
+
+## F. Validation protocol
+
+### F1. Primary research design and exact split sizes
+
+Reserve 30 of the 150 official prompt groups as a one-time post-EDA confirmation set before any model experimentation. A reproducible implementation can sort prompt IDs by SHA-256 of the string "name-that-llm-confirm-v1|" plus prompt_id, then take the first 30. Save the manifest and prohibit reading its model errors during development. All 150 groups have already informed descriptive forensics, feature hypotheses and prompt-bank design; this is not a pristine untouched test. The lock prevents subsequent model selection, calibration and error-driven collection from using those groups. All eighteen labels are represented approximately equally because each prompt is a crossed panel.
+
+Use the remaining 120 groups for primary development. Deterministically shuffle groups with a recorded seed, then allocate five outer folds of 24 groups. Each outer fit has 96 training groups, approximately 1,728 rows, and 24 validation groups, approximately 432 rows. Within its 96 training groups, use three inner folds of 32 groups for hyperparameters, early stopping, external-data weights, layer selection, calibration, specialist gates and ensemble weights. The one missing Fable row can reduce one count by one.
+
+For each outer fold, choose settings only from inner results, refit on its 96 training groups, and predict the untouched 24 groups. Concatenate outer predictions over all 120 development groups and report balanced accuracy. Store every prediction, label order, fold manifest, configuration, seed, source revision and data hash. Do not call a meta-model unbiased merely because its input is OOF: fitting and evaluating its weights on the same OOF labels still overfits.
+
+After ranking a small preregistered finalist set, repeat development evaluation with a second group partition and two model-initialization seeds where feasible. Partition seeds and initialization seeds measure different variation. Freeze the final recipe, fit on all 120 development groups and evaluate the 30 locked groups once. Do not repeatedly change the method after reading that result while continuing to call it a holdout. A failure should be recorded and may require a newly collected independent evaluation panel or an explicitly labeled new exploratory phase.
+
+Once the recipe is chosen, all 150 official groups may be used for final fitting. Five-fold models trained over all 150 groups can be used for the final ensemble, or a full-data refit can use an inner-selected epoch budget. If all-150 cross-validation is additionally reported for comparison with community results, label it selection-affected rather than a second untouched confirmation. The externally generated H panel is independent by prompt but is also a distinct interface/time distribution, so it complements rather than replaces official validation.
+
+### F2. Leakage controls
+
+All outputs from the same prompt, all variants/paraphrases, repeated generations, derived crops/normalizations and teacher-generated descendants stay in the same group. Deduplicate before splitting and union genuinely duplicated prompt families. Fit vectorizers, feature selection, scalers, PCA, pooling/layer choices, adapters, hard-negative mining, calibration and blend weights without outer validation labels. A frozen pretrained tokenizer or fixed feature extractor is reusable; learned corpus statistics are not.
+
+Only official training prompts may inform broad domain summaries. Actual original prompt text is absent, so prompt-template leakage cannot be completely excluded. Run a sensitivity split joining very close topical pairs identified by independent semantic audit. Then perform leave-domain-out or leave-topic-cluster-out tests separately. Unseen domain is a harder distribution than unseen prompt; label the difference instead of mixing the scores.
+
+External records need prompt-family, substantive-template-family, date/session and source-version grouping. The schema also records broad output-wrapper IDs for sensitivity checks; a shared generic instruction to write one paragraph does not automatically make every topic one duplicate group. Hold out whole collection batches or interfaces to expose chat-harness shortcuts. Never use a source-specific collector/template assignment as though it were intrinsic model style. Do not use public-leaderboard feedback to choose prompt content or many class-specific thresholds.
+
+### F3. Metric, uncertainty and diagnostics
+
+Official metric: BA = (1/18) * sum over classes of correct_predictions_in_class / number_of_examples_in_class. Compute this explicitly. Ordinary accuracy is very similar on the original balanced corpus but can differ on the hidden distribution. Macro-F1, log loss and calibration are secondary diagnostics, not selection substitutes. [R01]
+
+For uncertainty, resample whole prompt groups with replacement, retaining all their rows, and compute paired BA differences for candidates on the same resample. A 2,000-draw prompt-cluster bootstrap is a reasonable default. Do not treat rows from one prompt as independent or count repeated folds as independent experiments. The interval conditions on fitted models and does not fully represent training or repeated-selection uncertainty; report seed sensitivity separately.
+
+Report eighteen class recalls, a row-normalized confusion matrix, source-family errors, within-family confusion, and an explicitly labeled oracle-family diagnostic if useful. Family diagnostics must state whether they weight six families equally or preserve the official eighteen-class weighting. Report length slices (<70, 70-129, 130-199, >=200 whitespace words), inferred domain/genre slices, raw versus normalized views, and at least one interface/time holdout when external data are used. Sparse slices require counts and cautious interpretation.
+
+Use a positive paired difference, stability across the two development partitions, and acceptable worst-class behavior to justify promotion. A conservative final gate is a lower 95% paired-bootstrap bound above zero; a smaller uncertain gain can remain a candidate, but cannot be described as established. Do not reject a useful complementary model solely because its standalone score is lower: judge its actual nested blend. Predeclare a material-regression tolerance, for example 3 percentage points in a sufficiently populated critical slice, as an engineering choice rather than a scientific constant.
+
+### F4. Public leaderboard use
+
+The attachment allows five submissions per day and two final selections. Use a few planned submissions to check notebook correctness and whether a locally robust improvement survives the public distribution. Do not exhaust the limit merely to tune thresholds. Log every change before seeing its leaderboard score. The official public/private mixtures differ, so a small public gain is not decisive. There is no authority to hand-label, manually identify, or externally query hidden records. [R01, R03]
+
+## G. Prioritized experiment matrix
+
+All experiments below use balanced accuracy and the F1/F2 grouping rules. "DEV" means the nested five-fold design on 120 development prompt groups; "CONFIRM" means the final 30-group locked test. Adaptive external acquisition is outer-fold-specific, or explicitly treated as selection-affected development as described in E6. Complete all ensemble, distillation and deployment choices on DEV; use CONFIRM only once for the entirely frozen final recipe. No experiment in this matrix has been run; compute values are planning estimates in L40S GPU-hours unless marked CPU.
+
+| Order | Hypothesis / implementation | Training data and validation | Compute allocation | Success / failure / next decision |
+| 0 | File, split and offline schema audit prevents invalid experiments | Official files; no labels inferred | CPU under 1 hour; no training | Pass unchanged hashes, group integrity and schema; otherwise fix the pipeline |
+| 1 | Raw lexical/style cues form a competitive low-cost baseline | Official training partitions; DEV | CPU 0.5-3 hours for bounded search | Retain strongest reproducible char/word/style baseline; remove redundant weak branches |
+| 2 | Frozen embeddings add a distinct source representation | Official folds; DEV, one offline embedder | 0.2-2 hours feature extraction, CPU heads | Keep if standalone or nested blend improves; otherwise use only as reference |
+| 3 | A direct encoder improves exact-version recall | Official folds; DEV; 2-3 backbones, bounded settings | 5-30 hours screening; expand nested runs only for survivors | Promote stable BA/pair improvements; stop a backbone after fair bounded search without value |
+| 4 | SupCon improves prompt generalization over identical CE | Same backbone/data/budget; DEV, two seeds for finalist | 5-20 hours additional | Keep only if gain survives new prompt partition and sibling recalls; else CE |
+| 5 | Verified external prose improves target transfer | Official-only/external-only/combined; DEV plus external H | 408-output pilot; 5-25 hours fitting | Scale if combined helps official BA; diagnose/discard harmful corpora |
+| 6 | Diagnostic acquisition beats naturalistic acquisition | Equal output and independent-prompt budgets; DEV/H | Pilot D panel then matched expansion; 5-15 hours | Scale only if ordinary-prose validation improves; otherwise naturalistic panel |
+| 7 | Frozen hidden-state/likelihood statistics complement the leader | Original plus accepted external; DEV, one local proxy | 1-8 hours extraction; 1-5 hours heads/combination | Keep actual nested blend gain; stop if only oracle complementarity appears |
+| 8 | An adapted 4B-8B embedding/causal classifier beats compact encoders | Same accepted data; DEV | 2-10 hours per fold/config, resumable | Expand only on reproducible BA or robust complementary gains; otherwise stop |
+| 9 | Eighteen-condition generative modeling handles domain shift | Same accepted data; DEV and topic/domain holdouts | 1B-3B pilot 2-8 hours/fold; 7B may need 3-15+ | Proceed only with exact-label gain and feasible inference; stop family-only gains |
+| 10 | A pair specialist or soft family auxiliary fixes stable errors | OOF-confirmed pairs; full 18-class DEV | 1-8 hours for small specialists | Retain only global BA improvement; reject pair-only improvements that hurt others |
+| 11 | A small ensemble earns its runtime | Nested inner calibration/blend and outer DEV only | Refit dependent; 1-5 hours analysis plus required base fits | Accept measured BA gain/error complementarity; otherwise single best model |
+| 12 | Distillation preserves useful teacher gains offline | Fold-safe teacher/student; DEV only | 5-25 hours after teacher chosen | Accept measured student tradeoff; otherwise deploy validated teacher branches |
+| 13 | Final artifact reproduces under offline Kaggle limits | Freeze complete recipe, one CONFIRM evaluation, then all permitted data for final fitting | Measured offline dry run, target <=6 hours | Verify schema, memory/runtime and reproducibility; substantive recipe changes after confirmation require a new exploratory phase |
+
+Budget accounting matters. For H hyperparameter configurations, full five-outer/three-inner evaluation requires approximately 15H+5 model fits, not five. A fixed M-model ensemble with nested inner predictions and outer refits is roughly 20M fits before extra tuning. Cache frozen representations and use bounded screening before that expense. A compact initial campaign can reserve about 30-80 GPU-hours; a serious nested finalist campaign may require 100-300 or more. These are planning envelopes, not measured performance, and the ledger must use actual fit counts and timings.
+
+Every expensive direction receives a time-boxed feasibility run before a full fold sweep. Stop after two well-controlled settings and a second seed/partition fail to show either standalone or ensemble value; do not treat an unsuccessful unverified implementation as evidence against the whole method. For major alternatives, distinguish reproduction failure, resource failure and statistically unconvincing gains.
+
+## H. L40S training and offline Kaggle inference
+
+### H1. Hardware and expected scale
+
+NVIDIA documents 48 GB memory and BF16 support for L40S. It is suitable for full fine-tuning compact encoders and LoRA/QLoRA experiments with modest open LMs. The actual submission accelerator, RAM, VRAM and installed software were not established by the supplied files. Do not infer that Kaggle will provide an L40S, or that two small GPUs automatically act like one larger memory space. [R26]
+
+| Method | Estimated L40S training memory | Estimated time per original-data fold | Approximate weight storage | Offline implication |
+| Sparse linear / style | CPU RAM depends on vocabulary | Seconds to minutes; CPU | Often MB to hundreds of MB | Cheap baseline/fallback |
+| 150M-400M encoder | About 8-30 GB with tuned batch/length | About 0.25-2 GPU-hours | About 0.3-0.8 GB BF16 weights | Several sequential checkpoints plausible |
+| Frozen 0.6B-8B feature extractor | About 3-24+ GB by size/precision/batch | Feature pass about 0.2-3 hours; CPU heads | About 1.2-16 GB BF16 or smaller quantized | Load once per branch; cache features |
+| 7B-8B LoRA/QLoRA classifier | About 12-40 GB, configuration-dependent | About 2-10 hours, resumable | About 4-6 GB 4-bit base, or 14-16 GB BF16, plus adapters | Quantization/precision requires validation |
+| Source-conditioned 7B | About 20-44+ GB with careful batching | About 3-15+ hours, strongly implementation-dependent | One base plus source adapters | Eighteen forward score conditions per passage |
+
+These ranges are estimates, deliberately broad and not L40S benchmarks. They include likely overhead but not guaranteed fit. Actual sequence length, optimizer states, kernels and data size can dominate. At 400M parameters, BF16 weights alone are roughly 0.8 GB; training memory is much larger because of optimizer, gradients and activations. Do not read the weight-size column as peak VRAM.
+
+### H2. Five-hour job cap and reproducibility
+
+Treat five hours as a process boundary, not an experiment boundary. Save periodic checkpoints containing weights/adapters, optimizer, scheduler, random states, sampler position, epoch/global step, gradient-scaler state where applicable, label mapping, source revision and data/fold hashes. Checkpoint at optimizer-step boundaries. Write atomically and resume with the same total-step schedule instead of restarting warmup. Reserve time to checkpoint and exit around 4 hours 40 minutes; shorten the interval if checkpoint writing is slow.
+
+A future 100-200-step timing/memory pilot should measure peak allocation, tokens/second, examples/second and checkpoint overhead. It is explicitly an implementation-phase task, not something performed during this research. Gradient checkpointing trades compute for memory; use it when it enables a useful batch, not automatically for every small model. Accumulation changes the CE effective batch but not contrastive negatives unless embeddings are retained together.
+
+### H3. Submission implementation
+
+Package all weights, tokenizers, adapter/configuration files, label maps, vectorizers, custom model code and required wheels as permitted notebook inputs before the offline rerun. Pin library versions and checkpoint revisions. New model code such as UltraBERT may require a recent Transformers version or vendored model code; test the bundled environment rather than relying on an online install. Use local_files_only and disable library hub access. [R15]
+
+Read /kaggle/input/competitions/name-that-llm/test.csv dynamically; never assume three rows. Preserve each test ID and the input order. Load one neural checkpoint at a time, use length-aware batches, restore original order after sorting, compute scores without autoregressive explanations, and release GPU memory before the next branch. Select BF16, FP16 or FP32 based on the actual accelerator and validated numerics.
+
+Apply the frozen label mapping and preselected blend, then write /kaggle/working/submission.parquet with exactly id and model, no index. Require one non-null prediction for every unique input ID, no extra IDs, no duplicates, and only the exact eighteen permitted strings. Read the generated Parquet locally to verify its schema and values. This plan creates no submission now. [R01-R02]
+
+### H4. Throughput and ensemble accounting
+
+The measured mean of 145 o200k probe tokens gives a rough workload of 4,000*145*18 = 10.44 million token-condition scores for one eighteen-condition generative model. Five such fold models multiply that to about 52.2 million. This is illustrative arithmetic: the deployed tokenizer, padding and context-loss implementation can increase it. A shared frozen base reduces storage, not the number of conditioned computations.
+
+For compact encoders, a planning throughput of 20-100 passages/second would process 4,000 passages in approximately 40-200 seconds per checkpoint, before loading and preprocessing. This is a target scenario, not an observed rate. At only one passage/second, a single pass already takes about 67 minutes. Therefore deployment feasibility must be measured on the actual Kaggle hardware with the exact artifact, precision and full blend.
+
+Use wall_time = setup + preprocessing + sum(model_load + pass_time) + blending + Parquet_write. Time a representative length-stratified local validation workload and a larger replay workload of training passages, then allow substantial margin below nine hours; six hours is a conservative design target, not an official limit. The hidden size is approximate, so avoid a plan that only barely fits 4,000 rows. A validated encoder/lexical fallback should be prepared before experimenting with heavy generative ensembles.
+
+## I. Compliance, risks and unresolved questions
+
+### I1. Confirmed constraints from the provided rules
+
+The complete attached rules were read. The web overview/data were retrieved, but the live rules page was not independently readable through the research interface. Rule interpretation below is grounded in that supplied attachment and should be rechecked against later organizer amendments. [R03]
+
+- Specific section 2.2 allows five submissions per day and two final choices.
+- Specific section 2.6 allows external data if it is freely/equally accessible or meets the host's Reasonableness criteria. A small LLM subscription is an example of potentially acceptable access, not automatic approval of every private generated corpus or API budget.
+- The overview's code requirements say freely/publicly available external data. The detailed paid-resource exception and that wording justify asking the organizer about the proposed exact collection plan.
+- Data security provisions restrict access and redistribution to nonparticipants. Do not send competition passages to unrelated model chats or publish the raw dataset in the research kit, even though a CC BY-SA heading appears.
+- Foundational section 4(b) excludes hand-labeling or human prediction of hidden validation/test records. Training-error inspection and independent prompt generation do not authorize hidden-label investigation.
+- Private cross-team code/data sharing is restricted. Public releases must follow the competition's venue and third-party rights requirements.
+- Winner deliverables include training/inference code, environment, resource requirements and sufficient methodology to reproduce the submission. Preserve source versions, generation records, manifests and checkpoints.
+- The winner-license heading and detailed source-code license language are not identical. The rules include exceptions for certain input data/pretrained models and commercially available software; those exceptions do not grant rights that a third-party license withholds.
+
+OpenTuringBench's public dataset card is CC BY-NC 4.0; do not assume that being downloadable makes every use eligible. Prefer clearly licensed checkpoints such as the verified MIT Ettin or Apache-2.0 UltraBERT/Qwen embedding releases when otherwise competitive, while inspecting the actual revision and transitive code licenses. Availability of an academic repository does not itself prove that its complete training pipeline is packaged or licensed for this submission. [R14-R16, R38]
+
+### I2. Questions that require organizer clarification
+
+1. Are privately retained outputs from generally available paid APIs/chat subscriptions eligible under section 2.6, and must the resulting corpus be made public by a specified date?
+
+2. How does the Reasonableness Standard apply to the aggregate cost and geographic/plan accessibility of this proposed panel? The example of a dataset costing more than a prize does not establish a universal safe spending threshold.
+
+3. Are archived exact-version generations from a retired or redirected model acceptable when their provenance and corpus are publicly accessible? This directly affects gemini-3.7-flash.
+
+4. Can the host disclose generation dates, pinned versus nominal identifiers, major system/decoding conditions and cleanup rules without releasing prompts or hidden labels? These details materially affect whether newly collected nominal-target outputs match the source distribution.
+
+5. Which source-code and model/data licenses are required at winner delivery where the heading and detailed clauses differ? Does any specific proposal need an exception?
+
+These uncertainties do not block the official-data baselines or the prompt/validation design. They do block asserting unconditional eligibility or exact historical equivalence for the external corpus. No organizer message has been sent in this research.
+
+### I3. Evidence register
+
+Confirmed measurements: file shapes, label/group counts, descriptive lengths and punctuation, duplicate-scan results, and Parquet format. Confirmed published facts: the cited papers, their evaluation settings, currently documented API availability and the verified routing/retirement changes. Research-supported inference: a raw lexical baseline and direct encoder are high-value starting experiments, and prompted active fingerprints do not directly solve fixed-passage attribution.
+
+Hypotheses: CE+SupCon improves unseen-prompt exact-version classification; generative source adapters improve a meaningful domain shift; mixed external data help; the three-branch ensemble has complementary errors. Unknowns: winning architecture, private score ceiling, historic generator checkpoints/harness, hidden prompt/domain distribution, final Kaggle accelerator and host treatment of the proposed paid/private data.
+
+The hardest failure mode is correct nominal labels with the wrong serving distribution. A current chat model can expose different system instructions, safety wrappers, routing, reasoning settings or output cleanup from the competition. A classifier may accurately recognize the collection interface while transferring poorly to Kaggle. Label provenance and the official-only/external-only/combined ablation are therefore as important as architecture search.
+
+## J. References and reproducibility material
+
+All web sources below were checked for this research on 2 November 2026. Paper results are cited with their own task conditions; none is treated as a Kaggle score forecast. Author preprints and implementation releases are distinguished from proceedings papers. Dataset statistics originate in D1/D2, not in a third-party article.
+
+[[REFERENCES]]
+
+### Concrete ranked next actions
+
+1. Freeze the input hashes, 30-group confirmation set and nested development splits; establish the raw character/word/style baseline.
+2. Run the bounded direct-encoder comparison with CE and retain only real improvements on exact-label balanced accuracy.
+3. Audit actual available model selectors and obtain the specific external-data ruling; collect the 24-prompt matched panel with explicit provenance.
+4. Run official-only, external-only and combined data experiments, reporting the missing exact 3.7 class honestly.
+5. Compare CE with CE+SupCon and test one frozen likelihood/hidden-state branch for actual ensemble value.
+6. If gains plateau, evaluate the larger embedding classifier and eighteen-condition ATLAS adaptation under matched data and splits.
+7. Add specialists, blending or distillation only when they improve the full objective; confirm the frozen recipe once and package an offline solution with runtime margin.

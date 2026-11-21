@@ -1,0 +1,6 @@
+# Keep LF line endings on every checkout: the TC2 shell/sbatch scripts run on Linux (stage.sh refuses CRLF),
+# and this machine's core.autocrlf would otherwise convert text files to CRLF.
+* text=auto eol=lf
+*.png binary
+*.pdf binary
+*.parquet binary

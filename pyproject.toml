@@ -1,0 +1,60 @@
+[project]
+name = "name-that-llm"
+version = "0.1.0"
+description = "Kaggle Name That LLM: attribute a passage to one of 18 exact source-model labels"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=2.0",
+    "pandas>=2.2",
+    "pyarrow>=17",
+    "scipy>=1.13",
+    "scikit-learn>=1.5",
+    "tiktoken>=0.8",
+    "matplotlib>=3.9",
+]
+
+[project.optional-dependencies]
+# Encoder fine-tuning / frozen-feature branches. torch comes from the CUDA 12.8
+# index, which the RTX 50-series (sm_120) needs.
+nn = [
+    "torch>=2.7",
+    "transformers>=4.57",
+    "accelerate>=1.10",
+    "peft>=0.17",
+    "sentencepiece>=0.2",
+    "protobuf>=5",
+]
+# External-data collection (report section E): validating pasted answers against the record schema.
+collect = [
+    "jsonschema>=4.23",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "ipykernel>=6.29",
+    "ruff>=0.7",
+]
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu128", extra = "nn" }]
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/nllm"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

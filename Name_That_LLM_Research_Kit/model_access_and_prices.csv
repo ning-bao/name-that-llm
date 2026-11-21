@@ -1,0 +1,19 @@
+target_label,documented_status,manual_route,usd_per_million_input,usd_per_million_output,references
+gpt-5.5,API documented; chat retired,API; verify snapshot,5,30,"R17,R33"
+gpt-5.6-luna,API documented,Work/Codex; not ordinary chat selector,0.2,1.2,"R18,R33"
+gpt-5.6-sol,API documented,Chat/Work/Codex; record effort,4,20,"R18,R33"
+gpt-5.6-terra,API documented,Work/Codex; not ordinary chat selector,2,12,"R18,R33"
+gpt-6-astra,API documented,GPT-6 Pro; plan-dependent,10,50,"R18,R33"
+gemini-3.1-pro-preview,API preview documented,AI Studio; not generic Pro label,2,12,R20
+gemini-3.6-flash,API documented,AI Studio; explicit ID,0.75,3.75,R20
+gemini-3.7-flash,Redirected to 3.8,No verified current exact route,,,R19
+gemini-3.8-flash,API documented,AI Studio; explicit ID,0.75,3.75,R20
+claude-fable-5,API active legacy,Current consumer selector unverified,10,50,"R21,R22"
+claude-opus-4-6,API active legacy,Current consumer selector unverified,5,25,"R21,R22"
+claude-opus-4-8,API active legacy,Current consumer selector unverified,5,25,"R21,R22"
+claude-opus-5,API active legacy,Current consumer selector unverified,5,25,"R21,R22"
+claude-sonnet-5,API active legacy,Current consumer selector unverified,2,10,"R21,R22"
+qwen3.8-max,API documented,Chat route unverified; regional rates,1.65,4.951,R23
+glm-5.3,API documented,Consumer chat exact route unverified,1.4,4.4,R24
+glm-5.3-flash,API documented,Do not substitute FlashX,0.15,0.5,R24
+kimi-k3,API documented,Explicit K3; avoid Cluster mode,3,15,R25

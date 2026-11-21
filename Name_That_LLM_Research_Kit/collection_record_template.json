@@ -1,0 +1,63 @@
+{
+  "record_id": "example-template-do-not-train",
+  "schema_version": "1.0",
+  "target_label": null,
+  "served_model_id": null,
+  "displayed_model_label": null,
+  "snapshot_id": null,
+  "provider": "FILL_ME",
+  "interface": "FILL_ME",
+  "collected_at_utc": "2026-11-02T00:00:00Z",
+  "prompt_id": "N01",
+  "prompt_family_id": "N01",
+  "template_family_id": "N01",
+  "wrapper_id": "paragraph-length-v1",
+  "prompt_bank_version": "1.0",
+  "prompt_text": "Explain why a metal handrail and a wooden handrail can feel different in temperature even when they have been in the same room overnight. Write one self-contained paragraph of about 40-70 words.",
+  "raw_response": "REPLACE WITH UNEDITED RESPONSE",
+  "rendered_text_export": null,
+  "raw_response_sha256": null,
+  "source_verification": {
+    "status": "family_proxy",
+    "evidence": [],
+    "routing_uncertainty": "not verified",
+    "competition_snapshot_match": "unknown"
+  },
+  "session": {
+    "fresh_conversation": true,
+    "prior_turn_count": 0,
+    "memory": "unknown",
+    "personalization": "unknown",
+    "custom_instructions": "unknown",
+    "system_instructions_status": "provider_default_unknown",
+    "tools": []
+  },
+  "settings": {
+    "temperature": null,
+    "top_p": null,
+    "seed": null,
+    "max_output_tokens": null,
+    "reasoning_effort": null
+  },
+  "provenance": {
+    "collection_method": "manual_chat",
+    "copy_method": "FILL_ME",
+    "collector_id": "FILL_ME",
+    "license_or_terms_url": null,
+    "eligibility_status": "pending_clarification",
+    "transforms": [],
+    "attempt_index": 1,
+    "parent_record_id": null
+  },
+  "quality": {
+    "word_count": 0,
+    "complete": false,
+    "refusal": false,
+    "tool_use_observed": false,
+    "duplicate_of": null,
+    "issues": [
+      "TEMPLATE ONLY"
+    ]
+  },
+  "split": "quarantine"
+}

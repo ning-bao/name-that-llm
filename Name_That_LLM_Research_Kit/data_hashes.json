@@ -1,0 +1,14 @@
+{
+  "sample_submission.parquet": {
+    "sha256": "ccf86796b80fd7f83d8463664603fd1208e17559abcf416f198776b819646188",
+    "bytes": 899
+  },
+  "train.csv": {
+    "sha256": "40a22ce8d88c5f46feb4637a099db815bef5f713ffe53e89dbe1b7b21de77707",
+    "bytes": 2139418
+  },
+  "test.csv": {
+    "sha256": "4545aa3a3459f4c0724f97ad5bd06c4caa3506bdfea5fab905e8203184fc0c57",
+    "bytes": 2218
+  }
+}
