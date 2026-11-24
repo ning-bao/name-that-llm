@@ -17,8 +17,8 @@ The project is finished and archived. The full write-up is in [`report/report.pd
   0.01 or less.
 - The provider family is right on 85% of passages, so most remaining errors confuse sibling models. Word
   choice separates providers and model generations, but not close siblings.
-- The final public score was 0.684, from the best public notebook at the time. Adding our 8B model to that
-  ensemble did not raise it (0.680).
+- Our best leaderboard score, 0.684, came from running a public 0.684 notebook without changes. Adding our 8B
+  model to that ensemble did not raise it (0.680). The best public notebook reached 0.704.
 
 Trained weights are not in this repository.
 
