@@ -7,7 +7,8 @@ Writes, from the kit's prompt bank plus collection/prompts_v2.tsv:
 
 wave1 is the kit's 24 core + 6 holdout prompts; wave2-wave5 add 40 prompts each (32 train,
 8 external holdout chosen by hash within length band); the kit's 6 diagnostic prompts are
-a separate optional pack. Existing answer files are never overwritten.
+a separate optional pack. Existing answer files are refreshed: empty blocks get the current prompt text, while
+header values and filled answers (with the prompt they were answered under) are kept.
 
 Usage: uv run python scripts/build_prompt_packs.py
 """
@@ -32,10 +33,12 @@ def main() -> None:
         lines = [
             f"# {wave}: {len(prompts)} prompts",
             "",
-            f"Ask each of the {len(collection.TARGETS)} models every prompt below, one fresh chat per prompt, and paste "
+            (f"Ask each of the {len(collection.TARGETS)} models every prompt below, one fresh chat per prompt, and paste "
             f"the first complete answer into `data/external/answers/{wave}/<model>.txt` (same order as here). "
-            "Do not edit or regenerate answers. Not collected: "
-            + "; ".join(f"{m} ({why})" for m, why in collection.UNCOLLECTABLE.items()) + ".",
+            "Do not edit or regenerate answers. Every prompt ends with the same no-tools line; keep it, "
+            "and still turn web search off wherever the app allows."),
+            *(f"\nCollected but held out of training until verified: {m} ({why})."
+              for m, why in collection.HELD.items()),
         ]
         for p in prompts:
             lines += ["", f"## {p['prompt_id']}", "", "```text", p["prompt_text"], "```"]
@@ -45,6 +48,11 @@ def main() -> None:
         for label in collection.TARGETS:
             path = answer_dir / f"{label}.txt"
             if path.exists():
+                # Refresh prompts in empty blocks; header values and filled answers carry over unchanged.
+                old = path.read_text(encoding="utf-8-sig")
+                new = collection.refresh_answer_file(old, label, wave, prompts)
+                if new != old.replace("\r\n", "\n"):
+                    path.write_text(new, encoding="utf-8")
                 kept += 1
                 continue
             path.write_text(collection.answer_template(label, wave, prompts), encoding="utf-8")
@@ -57,7 +65,7 @@ def main() -> None:
     print(f"\nnew prompts by length band:\n{new.requested_words.value_counts().sort_index().to_string()}")
     print(f"\nnew prompts by genre:\n{new.genre.value_counts().to_string()}")
     print(f"\nnew prompts by domain:\n{new.domain.value_counts().to_string()}")
-    print(f"\nwrote {collection.BANK_PATH}, {md_dir}/*.md; answer files: {created} created, {kept} already existed")
+    print(f"\nwrote {collection.BANK_PATH}, {md_dir}/*.md; answer files: {created} created, {kept} refreshed")
 
 
 if __name__ == "__main__":

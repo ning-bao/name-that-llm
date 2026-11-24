@@ -12,8 +12,8 @@
 #SBATCH --gres=gpu:1
 #SBATCH --mem=16G
 #SBATCH --time=01:30:00
-#SBATCH --output=nllm/logs/%x_%j.out   # relative to $HOME, where nllm_install.sh submits
-#SBATCH --error=nllm/logs/%x_%j.out
+#SBATCH --output=$HOME/nllm/logs/%x_%j.out
+#SBATCH --error=$HOME/nllm/logs/%x_%j.out
 set -eo pipefail   # no -u: the cluster's conda activate.d scripts reference unset variables
 B=$HOME/nllm; R=${REPO:?REPO}
 date --iso-8601=seconds; hostname; nvidia-smi --query-gpu=name,driver_version --format=csv,noheader

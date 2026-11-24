@@ -5,12 +5,12 @@
   "domain": "physics",
   "genre": "conceptual explanation",
   "requested_words": "40-70",
-  "prompt_text": "Explain why a metal handrail and a wooden handrail can feel different in temperature even when they have been in the same room overnight. Write one self-contained paragraph of about 40-70 words.",
+  "prompt_text": "Explain why a metal handrail and a wooden handrail can feel different in temperature even when they have been in the same room overnight. Write one self-contained paragraph of about 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "1.0",
   "origin": "independently authored for this research",
   "prompt_family_id": "N01",
   "template_family_id": "N01",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave1"
  },
  {
@@ -19,12 +19,12 @@
   "domain": "space",
   "genre": "evocative exposition",
   "requested_words": "90-130",
-  "prompt_text": "Describe how the shape of a distant planet might be inferred from a tiny change in starlight. Make the explanation accessible and convey the difficulty of learning about something that cannot be seen directly. Write one paragraph of about 90-130 words.",
+  "prompt_text": "Describe how the shape of a distant planet might be inferred from a tiny change in starlight. Make the explanation accessible and convey the difficulty of learning about something that cannot be seen directly. Write one paragraph of about 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "1.0",
   "origin": "independently authored for this research",
   "prompt_family_id": "N02",
   "template_family_id": "N02",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave1"
  },
  {
@@ -33,12 +33,12 @@
   "domain": "life science",
   "genre": "conceptual explanation",
   "requested_words": "160-210",
-  "prompt_text": "Why does a healing skin wound sometimes leave a scar instead of restoring exactly what was there before? Explain the biological tradeoff to an interested general reader in one paragraph of about 160-210 words.",
+  "prompt_text": "Why does a healing skin wound sometimes leave a scar instead of restoring exactly what was there before? Explain the biological tradeoff to an interested general reader in one paragraph of about 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "1.0",
   "origin": "independently authored for this research",
   "prompt_family_id": "N03",
   "template_family_id": "N03",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave1"
  },
  {
@@ -47,12 +47,12 @@
   "domain": "mathematics",
   "genre": "reflective argument",
   "requested_words": "220-250",
-  "prompt_text": "Two maps can represent the same city while making it feel like two different places. Use this idea to explain what mathematical abstraction preserves and what it leaves out. Write one self-contained paragraph of about 220-250 words.",
+  "prompt_text": "Two maps can represent the same city while making it feel like two different places. Use this idea to explain what mathematical abstraction preserves and what it leaves out. Write one self-contained paragraph of about 220-250 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "1.0",
   "origin": "independently authored for this research",
   "prompt_family_id": "N04",
   "template_family_id": "N04",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave1"
  },
  {
@@ -61,12 +61,12 @@
   "domain": "computing",
   "genre": "conceptual explanation",
   "requested_words": "40-70",
-  "prompt_text": "A shared document can show conflicting edits when two people work offline. Explain why resolving the conflict involves a choice rather than simply discovering which computer is correct. Write one paragraph of about 40-70 words.",
+  "prompt_text": "A shared document can show conflicting edits when two people work offline. Explain why resolving the conflict involves a choice rather than simply discovering which computer is correct. Write one paragraph of about 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "1.0",
   "origin": "independently authored for this research",
   "prompt_family_id": "N05",
   "template_family_id": "N05",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave1"
  },
  {
@@ -75,12 +75,12 @@
   "domain": "philosophy",
   "genre": "reflective argument",
   "requested_words": "90-130",
-  "prompt_text": "Can an apology still matter if the person receiving it never forgives? Explore one tension in this question without turning the answer into a list. Write one paragraph of about 90-130 words.",
+  "prompt_text": "Can an apology still matter if the person receiving it never forgives? Explore one tension in this question without turning the answer into a list. Write one paragraph of about 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "1.0",
   "origin": "independently authored for this research",
   "prompt_family_id": "N06",
   "template_family_id": "N06",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave1"
  },
  {
@@ -89,12 +89,12 @@
   "domain": "history/culture",
   "genre": "evocative exposition",
   "requested_words": "160-210",
-  "prompt_text": "Describe how an old harbor can preserve the history of trade even after its warehouses have become homes and cafes. Connect physical details with the movement of people and ideas. Write one paragraph of about 160-210 words.",
+  "prompt_text": "Describe how an old harbor can preserve the history of trade even after its warehouses have become homes and cafes. Connect physical details with the movement of people and ideas. Write one paragraph of about 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "1.0",
   "origin": "independently authored for this research",
   "prompt_family_id": "N07",
   "template_family_id": "N07",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave1"
  },
  {
@@ -103,12 +103,12 @@
   "domain": "creative prose",
   "genre": "creative scene",
   "requested_words": "220-250",
-  "prompt_text": "Write a scene in which a night-shift conservator notices a fresh fingerprint inside a sealed museum display. Keep the explanation unresolved and let the setting carry the tension. Use one paragraph of about 220-250 words.",
+  "prompt_text": "Write a scene in which a night-shift conservator notices a fresh fingerprint inside a sealed museum display. Keep the explanation unresolved and let the setting carry the tension. Use one paragraph of about 220-250 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "1.0",
   "origin": "independently authored for this research",
   "prompt_family_id": "N08",
   "template_family_id": "N08",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave1"
  },
  {
@@ -117,12 +117,12 @@
   "domain": "life science",
   "genre": "evocative exposition",
   "requested_words": "40-70",
-  "prompt_text": "Describe a seed waiting through a dry season, connecting its apparent stillness with the living processes that make future growth possible. Write one paragraph of about 40-70 words.",
+  "prompt_text": "Describe a seed waiting through a dry season, connecting its apparent stillness with the living processes that make future growth possible. Write one paragraph of about 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "1.0",
   "origin": "independently authored for this research",
   "prompt_family_id": "N09",
   "template_family_id": "N09",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave1"
  },
  {
@@ -131,12 +131,12 @@
   "domain": "mathematics",
   "genre": "conceptual explanation",
   "requested_words": "90-130",
-  "prompt_text": "A fair coin has landed heads six times in a row. Explain why the next toss and our suspicion about the coin are two different questions. Write one paragraph of about 90-130 words.",
+  "prompt_text": "A fair coin has landed heads six times in a row. Explain why the next toss and our suspicion about the coin are two different questions. Write one paragraph of about 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "1.0",
   "origin": "independently authored for this research",
   "prompt_family_id": "N10",
   "template_family_id": "N10",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave1"
  },
  {
@@ -145,12 +145,12 @@
   "domain": "space",
   "genre": "conceptual explanation",
   "requested_words": "160-210",
-  "prompt_text": "How could astronomers learn that a small moon contains an ocean without drilling through its surface? Discuss the kinds of indirect evidence and what would remain uncertain. Write one paragraph of about 160-210 words.",
+  "prompt_text": "How could astronomers learn that a small moon contains an ocean without drilling through its surface? Discuss the kinds of indirect evidence and what would remain uncertain. Write one paragraph of about 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "1.0",
   "origin": "independently authored for this research",
   "prompt_family_id": "N11",
   "template_family_id": "N11",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave1"
  },
  {
@@ -159,12 +159,12 @@
   "domain": "mind/behavior",
   "genre": "reflective argument",
   "requested_words": "220-250",
-  "prompt_text": "Why can a familiar place feel different when visited after a long absence, even if very little in it has changed? Explore the relationship between expectation, attention, and memory. Write one paragraph of about 220-250 words.",
+  "prompt_text": "Why can a familiar place feel different when visited after a long absence, even if very little in it has changed? Explore the relationship between expectation, attention, and memory. Write one paragraph of about 220-250 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "1.0",
   "origin": "independently authored for this research",
   "prompt_family_id": "N12",
   "template_family_id": "N12",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave1"
  },
  {
@@ -173,12 +173,12 @@
   "domain": "history/culture",
   "genre": "conceptual explanation",
   "requested_words": "40-70",
-  "prompt_text": "Why might two careful historians disagree about the significance of the same surviving letter? Write one self-contained paragraph of about 40-70 words.",
+  "prompt_text": "Why might two careful historians disagree about the significance of the same surviving letter? Write one self-contained paragraph of about 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "1.0",
   "origin": "independently authored for this research",
   "prompt_family_id": "N13",
   "template_family_id": "N13",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave1"
  },
  {
@@ -187,12 +187,12 @@
   "domain": "earth/environment",
   "genre": "evocative exposition",
   "requested_words": "90-130",
-  "prompt_text": "Describe a river delta as a place that is always being built and erased. Explain how sediment, water, and human decisions shape this changing boundary. Write one paragraph of about 90-130 words.",
+  "prompt_text": "Describe a river delta as a place that is always being built and erased. Explain how sediment, water, and human decisions shape this changing boundary. Write one paragraph of about 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "1.0",
   "origin": "independently authored for this research",
   "prompt_family_id": "N14",
   "template_family_id": "N14",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave1"
  },
  {
@@ -201,12 +201,12 @@
   "domain": "computing",
   "genre": "reflective argument",
   "requested_words": "160-210",
-  "prompt_text": "A computer program gives the right answer on every example its developer tried. Explain why that success is different from knowing the program is correct, using an accessible analogy. Write one paragraph of about 160-210 words.",
+  "prompt_text": "A computer program gives the right answer on every example its developer tried. Explain why that success is different from knowing the program is correct, using an accessible analogy. Write one paragraph of about 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "1.0",
   "origin": "independently authored for this research",
   "prompt_family_id": "N15",
   "template_family_id": "N15",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave1"
  },
  {
@@ -215,12 +215,12 @@
   "domain": "philosophy",
   "genre": "reflective argument",
   "requested_words": "220-250",
-  "prompt_text": "A community chooses to preserve an uncomfortable monument while changing the explanation beside it. Explore what this choice suggests about remembering, honoring, and judging the past. Write one paragraph of about 220-250 words.",
+  "prompt_text": "A community chooses to preserve an uncomfortable monument while changing the explanation beside it. Explore what this choice suggests about remembering, honoring, and judging the past. Write one paragraph of about 220-250 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "1.0",
   "origin": "independently authored for this research",
   "prompt_family_id": "N16",
   "template_family_id": "N16",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave1"
  },
  {
@@ -229,12 +229,12 @@
   "domain": "creative prose",
   "genre": "creative scene",
   "requested_words": "40-70",
-  "prompt_text": "Write a quiet scene in which a person opens a repaired umbrella on a perfectly clear day. Let a small physical detail suggest why the act matters. Use one paragraph of about 40-70 words.",
+  "prompt_text": "Write a quiet scene in which a person opens a repaired umbrella on a perfectly clear day. Let a small physical detail suggest why the act matters. Use one paragraph of about 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "1.0",
   "origin": "independently authored for this research",
   "prompt_family_id": "N17",
   "template_family_id": "N17",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave1"
  },
  {
@@ -243,12 +243,12 @@
   "domain": "physics",
   "genre": "conceptual explanation",
   "requested_words": "90-130",
-  "prompt_text": "Why can a smooth-looking sheet of ice break suddenly after supporting a weight for some time? Explain how small imperfections can matter without presenting a mathematical derivation. Write one paragraph of about 90-130 words.",
+  "prompt_text": "Why can a smooth-looking sheet of ice break suddenly after supporting a weight for some time? Explain how small imperfections can matter without presenting a mathematical derivation. Write one paragraph of about 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "1.0",
   "origin": "independently authored for this research",
   "prompt_family_id": "N18",
   "template_family_id": "N18",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave1"
  },
  {
@@ -257,12 +257,12 @@
   "domain": "society/economics",
   "genre": "reflective argument",
   "requested_words": "160-210",
-  "prompt_text": "A town removes the fare from its buses, but some residents still cannot use them. Explain what this reveals about the difference between price and access. Write one paragraph of about 160-210 words.",
+  "prompt_text": "A town removes the fare from its buses, but some residents still cannot use them. Explain what this reveals about the difference between price and access. Write one paragraph of about 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "1.0",
   "origin": "independently authored for this research",
   "prompt_family_id": "N19",
   "template_family_id": "N19",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave1"
  },
  {
@@ -271,12 +271,12 @@
   "domain": "arts/language",
   "genre": "evocative exposition",
   "requested_words": "220-250",
-  "prompt_text": "Describe what a translator must decide when a short joke depends on a word with two meanings. Explore what might be preserved even when the original wording cannot survive. Write one paragraph of about 220-250 words.",
+  "prompt_text": "Describe what a translator must decide when a short joke depends on a word with two meanings. Explore what might be preserved even when the original wording cannot survive. Write one paragraph of about 220-250 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "1.0",
   "origin": "independently authored for this research",
   "prompt_family_id": "N20",
   "template_family_id": "N20",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave1"
  },
  {
@@ -285,12 +285,12 @@
   "domain": "space",
   "genre": "evocative exposition",
   "requested_words": "40-70",
-  "prompt_text": "Describe the silence inside a spacecraft while its instruments record a violent storm on a planet below. Keep the physical setting plausible. Write one paragraph of about 40-70 words.",
+  "prompt_text": "Describe the silence inside a spacecraft while its instruments record a violent storm on a planet below. Keep the physical setting plausible. Write one paragraph of about 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "1.0",
   "origin": "independently authored for this research",
   "prompt_family_id": "N21",
   "template_family_id": "N21",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave1"
  },
  {
@@ -299,12 +299,12 @@
   "domain": "life science",
   "genre": "conceptual explanation",
   "requested_words": "90-130",
-  "prompt_text": "How can a species become common in a new habitat without being unusually strong or intelligent? Explain the role of relationships and opportunities in one paragraph of about 90-130 words.",
+  "prompt_text": "How can a species become common in a new habitat without being unusually strong or intelligent? Explain the role of relationships and opportunities in one paragraph of about 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "1.0",
   "origin": "independently authored for this research",
   "prompt_family_id": "N22",
   "template_family_id": "N22",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave1"
  },
  {
@@ -313,12 +313,12 @@
   "domain": "mathematics",
   "genre": "conceptual explanation",
   "requested_words": "160-210",
-  "prompt_text": "A voting rule seems fair in several simple examples but behaves strangely when a third candidate enters. Explain why a few appealing examples cannot settle whether a rule is fair. Write one paragraph of about 160-210 words.",
+  "prompt_text": "A voting rule seems fair in several simple examples but behaves strangely when a third candidate enters. Explain why a few appealing examples cannot settle whether a rule is fair. Write one paragraph of about 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "1.0",
   "origin": "independently authored for this research",
   "prompt_family_id": "N23",
   "template_family_id": "N23",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave1"
  },
  {
@@ -327,12 +327,12 @@
   "domain": "creative prose",
   "genre": "creative scene",
   "requested_words": "220-250",
-  "prompt_text": "Write a scene in which a person responsible for winding a public clock discovers that the clock has continued working during a week-long absence. Build the scene around observation rather than a final explanation. Use one paragraph of about 220-250 words.",
+  "prompt_text": "Write a scene in which a person responsible for winding a public clock discovers that the clock has continued working during a week-long absence. Build the scene around observation rather than a final explanation. Use one paragraph of about 220-250 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "1.0",
   "origin": "independently authored for this research",
   "prompt_family_id": "N24",
   "template_family_id": "N24",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave1"
  },
  {
@@ -341,12 +341,12 @@
   "domain": "physics",
   "genre": "conceptual explanation",
   "requested_words": "40-70",
-  "prompt_text": "Why does a drop of water cling to the underside of a leaf for a while before falling? Explain the competing effects in one paragraph of about 40-70 words.",
+  "prompt_text": "Why does a drop of water cling to the underside of a leaf for a while before falling? Explain the competing effects in one paragraph of about 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "1.0",
   "origin": "independently authored for this research",
   "prompt_family_id": "H01",
   "template_family_id": "H01",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave1"
  },
  {
@@ -355,12 +355,12 @@
   "domain": "computing",
   "genre": "conceptual explanation",
   "requested_words": "90-130",
-  "prompt_text": "A search engine returns a highly relevant document that contains an incorrect claim. Explain why finding useful information and deciding whether it is true are separate problems. Write one paragraph of about 90-130 words.",
+  "prompt_text": "A search engine returns a highly relevant document that contains an incorrect claim. Explain why finding useful information and deciding whether it is true are separate problems. Write one paragraph of about 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "1.0",
   "origin": "independently authored for this research",
   "prompt_family_id": "H02",
   "template_family_id": "H02",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave1"
  },
  {
@@ -369,12 +369,12 @@
   "domain": "history/culture",
   "genre": "evocative exposition",
   "requested_words": "160-210",
-  "prompt_text": "Describe how a traditional weaving pattern can carry practical knowledge about a landscape and its seasons. Explain what an outsider might miss by seeing only decoration. Write one self-contained paragraph of about 160-210 words.",
+  "prompt_text": "Describe how a traditional weaving pattern can carry practical knowledge about a landscape and its seasons. Explain what an outsider might miss by seeing only decoration. Write one self-contained paragraph of about 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "1.0",
   "origin": "independently authored for this research",
   "prompt_family_id": "H03",
   "template_family_id": "H03",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave1"
  },
  {
@@ -383,12 +383,12 @@
   "domain": "philosophy",
   "genre": "reflective argument",
   "requested_words": "220-250",
-  "prompt_text": "Should someone receive more moral credit for resisting a strong temptation than for doing the same right thing without hesitation? Examine what effort can and cannot tell us about character. Write one paragraph of about 220-250 words.",
+  "prompt_text": "Should someone receive more moral credit for resisting a strong temptation than for doing the same right thing without hesitation? Examine what effort can and cannot tell us about character. Write one paragraph of about 220-250 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "1.0",
   "origin": "independently authored for this research",
   "prompt_family_id": "H04",
   "template_family_id": "H04",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave1"
  },
  {
@@ -397,12 +397,12 @@
   "domain": "life science",
   "genre": "conceptual explanation",
   "requested_words": "90-130",
-  "prompt_text": "How can a living organism maintain a stable internal temperature while its surroundings keep changing? Explain the idea of regulation to a general reader in one paragraph of about 90-130 words.",
+  "prompt_text": "How can a living organism maintain a stable internal temperature while its surroundings keep changing? Explain the idea of regulation to a general reader in one paragraph of about 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "1.0",
   "origin": "independently authored for this research",
   "prompt_family_id": "H05",
   "template_family_id": "H05",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave1"
  },
  {
@@ -411,12 +411,12 @@
   "domain": "creative prose",
   "genre": "creative scene",
   "requested_words": "160-210",
-  "prompt_text": "Write a warm, understated scene in which a child teaches a grandparent to identify neighborhood birds by listening. Let a small misunderstanding reveal affection between them. Use one paragraph of about 160-210 words.",
+  "prompt_text": "Write a warm, understated scene in which a child teaches a grandparent to identify neighborhood birds by listening. Let a small misunderstanding reveal affection between them. Use one paragraph of about 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "1.0",
   "origin": "independently authored for this research",
   "prompt_family_id": "H06",
   "template_family_id": "H06",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave1"
  },
  {
@@ -425,12 +425,12 @@
   "domain": "physics",
   "genre": "unconstrained explanation",
   "requested_words": "brief",
-  "prompt_text": "Why does a soap bubble show changing colors? Give a brief explanation for an interested adult.",
+  "prompt_text": "Why does a soap bubble show changing colors? Give a brief explanation for an interested adult. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "1.0",
   "origin": "independently authored for this research",
   "prompt_family_id": "D01",
   "template_family_id": "D01",
-  "wrapper_id": "brief-natural-v1",
+  "wrapper_id": "brief-natural-v1+no-tools-v1",
   "wave": "diagnostic"
  },
  {
@@ -439,12 +439,12 @@
   "domain": "mind/behavior",
   "genre": "ambiguity handling",
   "requested_words": "90-130",
-  "prompt_text": "Someone says, \"The experiment proved that listening to music makes everyone concentrate better.\" Explain what would need to be known before accepting this claim. Use one paragraph of about 90-130 words.",
+  "prompt_text": "Someone says, \"The experiment proved that listening to music makes everyone concentrate better.\" Explain what would need to be known before accepting this claim. Use one paragraph of about 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "1.0",
   "origin": "independently authored for this research",
   "prompt_family_id": "D02",
   "template_family_id": "D02",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "diagnostic"
  },
  {
@@ -453,12 +453,12 @@
   "domain": "mathematics",
   "genre": "reasoning and correction",
   "requested_words": "90-130",
-  "prompt_text": "A puzzle says that doubling the side length of a square doubles its area. Explain the mistake and give a clear correction for a younger reader. Write one paragraph of about 90-130 words.",
+  "prompt_text": "A puzzle says that doubling the side length of a square doubles its area. Explain the mistake and give a clear correction for a younger reader. Write one paragraph of about 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "1.0",
   "origin": "independently authored for this research",
   "prompt_family_id": "D03",
   "template_family_id": "D03",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "diagnostic"
  },
  {
@@ -467,12 +467,12 @@
   "domain": "arts/language",
   "genre": "analogy",
   "requested_words": "160-210",
-  "prompt_text": "Explain why revising a musical performance is different from revising a printed score. Use an analogy of your choice. Write one paragraph of about 160-210 words.",
+  "prompt_text": "Explain why revising a musical performance is different from revising a printed score. Use an analogy of your choice. Write one paragraph of about 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "1.0",
   "origin": "independently authored for this research",
   "prompt_family_id": "D04",
   "template_family_id": "D04",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "diagnostic"
  },
  {
@@ -481,12 +481,12 @@
   "domain": "computing",
   "genre": "format freedom",
   "requested_words": "brief",
-  "prompt_text": "What is lost and what is gained when a computer stores a photograph at lower resolution? Explain briefly using whatever structure seems clearest.",
+  "prompt_text": "What is lost and what is gained when a computer stores a photograph at lower resolution? Explain briefly using whatever structure seems clearest. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "1.0",
   "origin": "independently authored for this research",
   "prompt_family_id": "D05",
   "template_family_id": "D05",
-  "wrapper_id": "brief-natural-v1",
+  "wrapper_id": "brief-natural-v1+no-tools-v1",
   "wave": "diagnostic"
  },
  {
@@ -495,12 +495,12 @@
   "domain": "philosophy",
   "genre": "controlled contrast",
   "requested_words": "90-130",
-  "prompt_text": "A person keeps a promise for the wrong reason, while another breaks one to prevent serious harm. Compare how intention and consequence affect our judgment. Write one paragraph of about 90-130 words without prescribing a final verdict.",
+  "prompt_text": "A person keeps a promise for the wrong reason, while another breaks one to prevent serious harm. Compare how intention and consequence affect our judgment. Write one paragraph of about 90-130 words without prescribing a final verdict. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "1.0",
   "origin": "independently authored for this research",
   "prompt_family_id": "D06",
   "template_family_id": "D06",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "diagnostic"
  },
  {
@@ -509,12 +509,12 @@
   "domain": "space",
   "genre": "evocative exposition",
   "requested_words": "40-70",
-  "prompt_text": "Describe the night side of Earth as seen from orbit, where city lights trace coastlines, rivers and roads. Write one paragraph of about 40-70 words.",
+  "prompt_text": "Describe the night side of Earth as seen from orbit, where city lights trace coastlines, rivers and roads. Write one paragraph of about 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X001",
   "template_family_id": "X001",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -523,12 +523,12 @@
   "domain": "space",
   "genre": "evocative exposition",
   "requested_words": "90-130",
-  "prompt_text": "Describe looking at a distant galaxy as looking into the past, and convey how its light carries a history older than the Earth. Answer in a single paragraph of roughly 90-130 words.",
+  "prompt_text": "Describe looking at a distant galaxy as looking into the past, and convey how its light carries a history older than the Earth. Answer in a single paragraph of roughly 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X002",
   "template_family_id": "X002",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -537,12 +537,12 @@
   "domain": "space",
   "genre": "evocative exposition",
   "requested_words": "160-210",
-  "prompt_text": "Describe a neutron star, where a spoonful of matter would outweigh a mountain, and convey how such density changes the rules of ordinary matter. Keep it to one paragraph of around 160-210 words.",
+  "prompt_text": "Describe a neutron star, where a spoonful of matter would outweigh a mountain, and convey how such density changes the rules of ordinary matter. Keep it to one paragraph of around 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X003",
   "template_family_id": "X003",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -551,12 +551,12 @@
   "domain": "space",
   "genre": "reflective argument",
   "requested_words": "40-70",
-  "prompt_text": "Would finding simple microbial life on another planet change how people think about life on Earth? Write one paragraph of about 40-70 words.",
+  "prompt_text": "Would finding simple microbial life on another planet change how people think about life on Earth? Write one paragraph of about 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X004",
   "template_family_id": "X004",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -565,12 +565,12 @@
   "domain": "space",
   "genre": "evocative exposition",
   "requested_words": "90-130",
-  "prompt_text": "Describe a comet's long journey from the frozen outer solar system to the glowing tail it grows near the Sun. Answer in a single paragraph of roughly 90-130 words.",
+  "prompt_text": "Describe a comet's long journey from the frozen outer solar system to the glowing tail it grows near the Sun. Answer in a single paragraph of roughly 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X005",
   "template_family_id": "X005",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -579,12 +579,12 @@
   "domain": "space",
   "genre": "conceptual explanation",
   "requested_words": "40-70",
-  "prompt_text": "Why do astronauts aboard an orbiting space station float, even though gravity at that height is still strong? Keep it to one paragraph of around 40-70 words.",
+  "prompt_text": "Why do astronauts aboard an orbiting space station float, even though gravity at that height is still strong? Keep it to one paragraph of around 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X006",
   "template_family_id": "X006",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -593,12 +593,12 @@
   "domain": "space",
   "genre": "creative scene",
   "requested_words": "160-210",
-  "prompt_text": "Write a scene in which an amateur astronomer realizes that a faint smudge in the eyepiece was not there the night before. Use one paragraph of about 160-210 words.",
+  "prompt_text": "Write a scene in which an amateur astronomer realizes that a faint smudge in the eyepiece was not there the night before. Use one paragraph of about 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X007",
   "template_family_id": "X007",
-  "wrapper_id": "scene-length-v1",
+  "wrapper_id": "scene-length-v1+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -607,12 +607,12 @@
   "domain": "mathematics",
   "genre": "conceptual explanation",
   "requested_words": "90-130",
-  "prompt_text": "Explain why there must be infinitely many prime numbers, using an argument a curious teenager could follow. Answer in a single paragraph of roughly 90-130 words.",
+  "prompt_text": "Explain why there must be infinitely many prime numbers, using an argument a curious teenager could follow. Answer in a single paragraph of roughly 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X008",
   "template_family_id": "X008",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -621,12 +621,12 @@
   "domain": "mathematics",
   "genre": "evocative exposition",
   "requested_words": "40-70",
-  "prompt_text": "Describe the number zero as an invention that changed how people count, trade and calculate. Keep it to one paragraph of around 40-70 words.",
+  "prompt_text": "Describe the number zero as an invention that changed how people count, trade and calculate. Keep it to one paragraph of around 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X009",
   "template_family_id": "X009",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -635,12 +635,12 @@
   "domain": "mathematics",
   "genre": "reflective argument",
   "requested_words": "220-250",
-  "prompt_text": "Is mathematics discovered or invented? Explore one consideration on each side without settling the question. Write one paragraph of about 220-250 words.",
+  "prompt_text": "Is mathematics discovered or invented? Explore one consideration on each side without settling the question. Write one paragraph of about 220-250 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X010",
   "template_family_id": "X010",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -649,12 +649,12 @@
   "domain": "mathematics",
   "genre": "conceptual explanation",
   "requested_words": "40-70",
-  "prompt_text": "Explain why a random sample of a thousand people can say something useful about a country of millions. Answer in a single paragraph of roughly 40-70 words.",
+  "prompt_text": "Explain why a random sample of a thousand people can say something useful about a country of millions. Answer in a single paragraph of roughly 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X011",
   "template_family_id": "X011",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -663,12 +663,12 @@
   "domain": "computing",
   "genre": "conceptual explanation",
   "requested_words": "90-130",
-  "prompt_text": "Explain why a long password made of ordinary words can be harder to guess than a short one full of symbols. Keep it to one paragraph of around 90-130 words.",
+  "prompt_text": "Explain why a long password made of ordinary words can be harder to guess than a short one full of symbols. Keep it to one paragraph of around 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X012",
   "template_family_id": "X012",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -677,12 +677,12 @@
   "domain": "computing",
   "genre": "evocative exposition",
   "requested_words": "160-210",
-  "prompt_text": "Describe the journey of a single email from the moment it is sent to the moment it appears on a screen on another continent. Write one paragraph of about 160-210 words.",
+  "prompt_text": "Describe the journey of a single email from the moment it is sent to the moment it appears on a screen on another continent. Write one paragraph of about 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X013",
   "template_family_id": "X013",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -691,12 +691,12 @@
   "domain": "computing",
   "genre": "reflective argument",
   "requested_words": "90-130",
-  "prompt_text": "Should software that makes decisions about people always be able to explain its reasons? Explore one tension in this question. Answer in a single paragraph of roughly 90-130 words.",
+  "prompt_text": "Should software that makes decisions about people always be able to explain its reasons? Explore one tension in this question. Answer in a single paragraph of roughly 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X014",
   "template_family_id": "X014",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -705,12 +705,12 @@
   "domain": "history/culture",
   "genre": "evocative exposition",
   "requested_words": "90-130",
-  "prompt_text": "Describe how the street names of an old market town can still reveal what was once made and sold there. Keep it to one paragraph of around 90-130 words.",
+  "prompt_text": "Describe how the street names of an old market town can still reveal what was once made and sold there. Keep it to one paragraph of around 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X015",
   "template_family_id": "X015",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -719,12 +719,12 @@
   "domain": "history/culture",
   "genre": "conceptual explanation",
   "requested_words": "40-70",
-  "prompt_text": "Why did the printing press change who could take part in arguments about ideas? Write one paragraph of about 40-70 words.",
+  "prompt_text": "Why did the printing press change who could take part in arguments about ideas? Write one paragraph of about 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X016",
   "template_family_id": "X016",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -733,12 +733,12 @@
   "domain": "history/culture",
   "genre": "evocative exposition",
   "requested_words": "160-210",
-  "prompt_text": "Describe the building of a great cathedral across several generations, when no single worker would live to see it finished. Answer in a single paragraph of roughly 160-210 words.",
+  "prompt_text": "Describe the building of a great cathedral across several generations, when no single worker would live to see it finished. Answer in a single paragraph of roughly 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X017",
   "template_family_id": "X017",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -747,12 +747,12 @@
   "domain": "arts/language",
   "genre": "reflective argument",
   "requested_words": "40-70",
-  "prompt_text": "Why can a single line of poetry stay with someone for years while a whole novel fades from memory? Keep it to one paragraph of around 40-70 words.",
+  "prompt_text": "Why can a single line of poetry stay with someone for years while a whole novel fades from memory? Keep it to one paragraph of around 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X018",
   "template_family_id": "X018",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -761,12 +761,12 @@
   "domain": "arts/language",
   "genre": "evocative exposition",
   "requested_words": "90-130",
-  "prompt_text": "Describe how a familiar song changes in feeling when it is played slowly in a minor key. Write one paragraph of about 90-130 words.",
+  "prompt_text": "Describe how a familiar song changes in feeling when it is played slowly in a minor key. Write one paragraph of about 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X019",
   "template_family_id": "X019",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -775,12 +775,12 @@
   "domain": "arts/language",
   "genre": "evocative exposition",
   "requested_words": "160-210",
-  "prompt_text": "Describe how a borrowed word travels from one language into another and gradually changes once it settles in. Answer in a single paragraph of roughly 160-210 words.",
+  "prompt_text": "Describe how a borrowed word travels from one language into another and gradually changes once it settles in. Answer in a single paragraph of roughly 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X020",
   "template_family_id": "X020",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -789,12 +789,12 @@
   "domain": "life science",
   "genre": "evocative exposition",
   "requested_words": "40-70",
-  "prompt_text": "Describe the inside of a beehive in winter, when the colony survives by clustering together and shivering to make heat. Keep it to one paragraph of around 40-70 words.",
+  "prompt_text": "Describe the inside of a beehive in winter, when the colony survives by clustering together and shivering to make heat. Keep it to one paragraph of around 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X021",
   "template_family_id": "X021",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -803,12 +803,12 @@
   "domain": "life science",
   "genre": "conceptual explanation",
   "requested_words": "90-130",
-  "prompt_text": "Explain how a vaccine trains the immune system without causing the disease it protects against. Write one paragraph of about 90-130 words.",
+  "prompt_text": "Explain how a vaccine trains the immune system without causing the disease it protects against. Write one paragraph of about 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X022",
   "template_family_id": "X022",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -817,12 +817,12 @@
   "domain": "life science",
   "genre": "evocative exposition",
   "requested_words": "160-210",
-  "prompt_text": "Describe the migration of monarch butterflies, a round trip so long that it takes several generations to complete. Answer in a single paragraph of roughly 160-210 words.",
+  "prompt_text": "Describe the migration of monarch butterflies, a round trip so long that it takes several generations to complete. Answer in a single paragraph of roughly 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X023",
   "template_family_id": "X023",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -831,12 +831,12 @@
   "domain": "life science",
   "genre": "conceptual explanation",
   "requested_words": "40-70",
-  "prompt_text": "Why do the leaves of many trees change color in autumn? Keep it to one paragraph of around 40-70 words.",
+  "prompt_text": "Why do the leaves of many trees change color in autumn? Keep it to one paragraph of around 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X024",
   "template_family_id": "X024",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -845,12 +845,12 @@
   "domain": "life science",
   "genre": "reflective argument",
   "requested_words": "220-250",
-  "prompt_text": "Should extinct species be brought back if science makes it possible? Explore what such an effort might gain and what it might overlook. Write one paragraph of about 220-250 words.",
+  "prompt_text": "Should extinct species be brought back if science makes it possible? Explore what such an effort might gain and what it might overlook. Write one paragraph of about 220-250 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X025",
   "template_family_id": "X025",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -859,12 +859,12 @@
   "domain": "philosophy",
   "genre": "reflective argument",
   "requested_words": "90-130",
-  "prompt_text": "Is it possible to owe gratitude to someone who helped you without meaning to? Answer in a single paragraph of roughly 90-130 words.",
+  "prompt_text": "Is it possible to owe gratitude to someone who helped you without meaning to? Answer in a single paragraph of roughly 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X026",
   "template_family_id": "X026",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -873,12 +873,12 @@
   "domain": "philosophy",
   "genre": "reflective argument",
   "requested_words": "40-70",
-  "prompt_text": "Can a perfect copy of a famous painting ever be as valuable as the original? Keep it to one paragraph of around 40-70 words.",
+  "prompt_text": "Can a perfect copy of a famous painting ever be as valuable as the original? Keep it to one paragraph of around 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X027",
   "template_family_id": "X027",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -887,12 +887,12 @@
   "domain": "philosophy",
   "genre": "evocative exposition",
   "requested_words": "160-210",
-  "prompt_text": "Describe the puzzle of a wooden ship that is repaired plank by plank for a century until none of its original timber remains, and convey why the puzzle is hard to settle. Write one paragraph of about 160-210 words.",
+  "prompt_text": "Describe the puzzle of a wooden ship that is repaired plank by plank for a century until none of its original timber remains, and convey why the puzzle is hard to settle. Write one paragraph of about 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X028",
   "template_family_id": "X028",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -901,12 +901,12 @@
   "domain": "philosophy",
   "genre": "conceptual explanation",
   "requested_words": "90-130",
-  "prompt_text": "Explain the difference between something being legal and something being right, using an everyday example. Answer in a single paragraph of roughly 90-130 words.",
+  "prompt_text": "Explain the difference between something being legal and something being right, using an everyday example. Answer in a single paragraph of roughly 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X029",
   "template_family_id": "X029",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -915,12 +915,12 @@
   "domain": "mind/behavior",
   "genre": "conceptual explanation",
   "requested_words": "40-70",
-  "prompt_text": "Why do people tend to remember the beginning and end of a list better than the middle? Keep it to one paragraph of around 40-70 words.",
+  "prompt_text": "Why do people tend to remember the beginning and end of a list better than the middle? Keep it to one paragraph of around 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X030",
   "template_family_id": "X030",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -929,12 +929,12 @@
   "domain": "mind/behavior",
   "genre": "evocative exposition",
   "requested_words": "90-130",
-  "prompt_text": "Describe the moment of falling asleep, when thoughts loosen and drift into dream-like images. Write one paragraph of about 90-130 words.",
+  "prompt_text": "Describe the moment of falling asleep, when thoughts loosen and drift into dream-like images. Write one paragraph of about 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X031",
   "template_family_id": "X031",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -943,12 +943,12 @@
   "domain": "mind/behavior",
   "genre": "reflective argument",
   "requested_words": "220-250",
-  "prompt_text": "Why do people sometimes prefer a familiar disappointment to an uncertain improvement? Explore the roles of fear, habit and identity. Answer in a single paragraph of roughly 220-250 words.",
+  "prompt_text": "Why do people sometimes prefer a familiar disappointment to an uncertain improvement? Explore the roles of fear, habit and identity. Answer in a single paragraph of roughly 220-250 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X032",
   "template_family_id": "X032",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -957,12 +957,12 @@
   "domain": "mind/behavior",
   "genre": "creative scene",
   "requested_words": "40-70",
-  "prompt_text": "Write a scene in which a song playing in a shop suddenly returns someone to a forgotten summer. Use one paragraph of about 40-70 words.",
+  "prompt_text": "Write a scene in which a song playing in a shop suddenly returns someone to a forgotten summer. Use one paragraph of about 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X033",
   "template_family_id": "X033",
-  "wrapper_id": "scene-length-v1",
+  "wrapper_id": "scene-length-v1+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -971,12 +971,12 @@
   "domain": "earth/environment",
   "genre": "evocative exposition",
   "requested_words": "40-70",
-  "prompt_text": "Describe a glacier as a slow river of ice that carries the record of past winters. Write one paragraph of about 40-70 words.",
+  "prompt_text": "Describe a glacier as a slow river of ice that carries the record of past winters. Write one paragraph of about 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X034",
   "template_family_id": "X034",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -985,12 +985,12 @@
   "domain": "earth/environment",
   "genre": "conceptual explanation",
   "requested_words": "90-130",
-  "prompt_text": "Explain why some stretches of coastline erode quickly while others nearby barely change. Answer in a single paragraph of roughly 90-130 words.",
+  "prompt_text": "Explain why some stretches of coastline erode quickly while others nearby barely change. Answer in a single paragraph of roughly 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X035",
   "template_family_id": "X035",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -999,12 +999,12 @@
   "domain": "earth/environment",
   "genre": "evocative exposition",
   "requested_words": "220-250",
-  "prompt_text": "Describe a volcanic island from its first eruption to the arrival of plants, birds and eventually people. Keep it to one paragraph of around 220-250 words.",
+  "prompt_text": "Describe a volcanic island from its first eruption to the arrival of plants, birds and eventually people. Keep it to one paragraph of around 220-250 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X036",
   "template_family_id": "X036",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -1013,12 +1013,12 @@
   "domain": "physics",
   "genre": "conceptual explanation",
   "requested_words": "40-70",
-  "prompt_text": "Why does a spinning top stay upright while it spins quickly but topple as it slows down? Write one paragraph of about 40-70 words.",
+  "prompt_text": "Why does a spinning top stay upright while it spins quickly but topple as it slows down? Write one paragraph of about 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X037",
   "template_family_id": "X037",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -1027,12 +1027,12 @@
   "domain": "physics",
   "genre": "evocative exposition",
   "requested_words": "90-130",
-  "prompt_text": "Describe a rainbow as sunlight that has been bent and sorted inside countless falling drops. Answer in a single paragraph of roughly 90-130 words.",
+  "prompt_text": "Describe a rainbow as sunlight that has been bent and sorted inside countless falling drops. Answer in a single paragraph of roughly 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X038",
   "template_family_id": "X038",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -1041,12 +1041,12 @@
   "domain": "society/economics",
   "genre": "reflective argument",
   "requested_words": "40-70",
-  "prompt_text": "Why might a city with many empty homes still have people who cannot find anywhere to live? Keep it to one paragraph of around 40-70 words.",
+  "prompt_text": "Why might a city with many empty homes still have people who cannot find anywhere to live? Keep it to one paragraph of around 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X039",
   "template_family_id": "X039",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -1055,12 +1055,12 @@
   "domain": "society/economics",
   "genre": "creative scene",
   "requested_words": "160-210",
-  "prompt_text": "Write a scene in which a market trader packs up a stall for the last time after forty years. Use one paragraph of about 160-210 words.",
+  "prompt_text": "Write a scene in which a market trader packs up a stall for the last time after forty years. Use one paragraph of about 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X040",
   "template_family_id": "X040",
-  "wrapper_id": "scene-length-v1",
+  "wrapper_id": "scene-length-v1+no-tools-v1",
   "wave": "wave2"
  },
  {
@@ -1069,12 +1069,12 @@
   "domain": "space",
   "genre": "evocative exposition",
   "requested_words": "40-70",
-  "prompt_text": "Describe the rings of Saturn as a thin, restless disk of ice that looks solid only from far away. Answer in a single paragraph of roughly 40-70 words.",
+  "prompt_text": "Describe the rings of Saturn as a thin, restless disk of ice that looks solid only from far away. Answer in a single paragraph of roughly 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X041",
   "template_family_id": "X041",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1083,12 +1083,12 @@
   "domain": "space",
   "genre": "conceptual explanation",
   "requested_words": "90-130",
-  "prompt_text": "Explain how a spacecraft can use a planet's gravity to gain speed without burning extra fuel. Keep it to one paragraph of around 90-130 words.",
+  "prompt_text": "Explain how a spacecraft can use a planet's gravity to gain speed without burning extra fuel. Keep it to one paragraph of around 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X042",
   "template_family_id": "X042",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1097,12 +1097,12 @@
   "domain": "space",
   "genre": "evocative exposition",
   "requested_words": "160-210",
-  "prompt_text": "Describe the surface of Mars at dawn, from the thin pink sky to the frost that vanishes as the ground warms. Write one paragraph of about 160-210 words.",
+  "prompt_text": "Describe the surface of Mars at dawn, from the thin pink sky to the frost that vanishes as the ground warms. Write one paragraph of about 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X043",
   "template_family_id": "X043",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1111,12 +1111,12 @@
   "domain": "space",
   "genre": "reflective argument",
   "requested_words": "220-250",
-  "prompt_text": "If people built a permanent settlement on the Moon, who should decide how its land and resources are used? Explore one tension without proposing a final plan. Answer in a single paragraph of roughly 220-250 words.",
+  "prompt_text": "If people built a permanent settlement on the Moon, who should decide how its land and resources are used? Explore one tension without proposing a final plan. Answer in a single paragraph of roughly 220-250 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X044",
   "template_family_id": "X044",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1125,12 +1125,12 @@
   "domain": "space",
   "genre": "evocative exposition",
   "requested_words": "90-130",
-  "prompt_text": "Describe a total solar eclipse as experienced by a crowd in an open field, from the first bite out of the Sun to the sudden dusk. Keep it to one paragraph of around 90-130 words.",
+  "prompt_text": "Describe a total solar eclipse as experienced by a crowd in an open field, from the first bite out of the Sun to the sudden dusk. Keep it to one paragraph of around 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X045",
   "template_family_id": "X045",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1139,12 +1139,12 @@
   "domain": "space",
   "genre": "conceptual explanation",
   "requested_words": "40-70",
-  "prompt_text": "Why does the Moon always show the same face to Earth? Write one paragraph of about 40-70 words.",
+  "prompt_text": "Why does the Moon always show the same face to Earth? Write one paragraph of about 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X046",
   "template_family_id": "X046",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1153,12 +1153,12 @@
   "domain": "space",
   "genre": "creative scene",
   "requested_words": "160-210",
-  "prompt_text": "Write a scene in which two researchers at a remote observatory argue quietly about whether a strange reading is worth waking the director for. Use one paragraph of about 160-210 words.",
+  "prompt_text": "Write a scene in which two researchers at a remote observatory argue quietly about whether a strange reading is worth waking the director for. Use one paragraph of about 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X047",
   "template_family_id": "X047",
-  "wrapper_id": "scene-length-v1",
+  "wrapper_id": "scene-length-v1+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1167,12 +1167,12 @@
   "domain": "mathematics",
   "genre": "evocative exposition",
   "requested_words": "90-130",
-  "prompt_text": "Describe the idea of infinity through the image of a hotel with endless rooms that is completely full yet can always take one more guest. Keep it to one paragraph of around 90-130 words.",
+  "prompt_text": "Describe the idea of infinity through the image of a hotel with endless rooms that is completely full yet can always take one more guest. Keep it to one paragraph of around 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X048",
   "template_family_id": "X048",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1181,12 +1181,12 @@
   "domain": "mathematics",
   "genre": "conceptual explanation",
   "requested_words": "40-70",
-  "prompt_text": "Explain why dividing a number by zero has no sensible answer. Write one paragraph of about 40-70 words.",
+  "prompt_text": "Explain why dividing a number by zero has no sensible answer. Write one paragraph of about 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X049",
   "template_family_id": "X049",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1195,12 +1195,12 @@
   "domain": "mathematics",
   "genre": "reflective argument",
   "requested_words": "160-210",
-  "prompt_text": "Why do mathematicians value an elegant proof even when a longer proof already shows the same result is true? Answer in a single paragraph of roughly 160-210 words.",
+  "prompt_text": "Why do mathematicians value an elegant proof even when a longer proof already shows the same result is true? Answer in a single paragraph of roughly 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X050",
   "template_family_id": "X050",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1209,12 +1209,12 @@
   "domain": "mathematics",
   "genre": "conceptual explanation",
   "requested_words": "90-130",
-  "prompt_text": "Explain what it means for two quantities to be correlated without one causing the other, using an everyday example. Keep it to one paragraph of around 90-130 words.",
+  "prompt_text": "Explain what it means for two quantities to be correlated without one causing the other, using an everyday example. Keep it to one paragraph of around 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X051",
   "template_family_id": "X051",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1223,12 +1223,12 @@
   "domain": "computing",
   "genre": "conceptual explanation",
   "requested_words": "40-70",
-  "prompt_text": "Explain why a computer can sort a million names faster than a person could sort a hundred. Write one paragraph of about 40-70 words.",
+  "prompt_text": "Explain why a computer can sort a million names faster than a person could sort a hundred. Write one paragraph of about 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X052",
   "template_family_id": "X052",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1237,12 +1237,12 @@
   "domain": "computing",
   "genre": "evocative exposition",
   "requested_words": "90-130",
-  "prompt_text": "Describe the inside of a data center at night, where rows of machines hum and blink while most of the world sleeps. Answer in a single paragraph of roughly 90-130 words.",
+  "prompt_text": "Describe the inside of a data center at night, where rows of machines hum and blink while most of the world sleeps. Answer in a single paragraph of roughly 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X053",
   "template_family_id": "X053",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1251,12 +1251,12 @@
   "domain": "computing",
   "genre": "reflective argument",
   "requested_words": "160-210",
-  "prompt_text": "Can a machine that composes music be called creative? Explore what we mean by creativity when we ask the question. Keep it to one paragraph of around 160-210 words.",
+  "prompt_text": "Can a machine that composes music be called creative? Explore what we mean by creativity when we ask the question. Keep it to one paragraph of around 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X054",
   "template_family_id": "X054",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1265,12 +1265,12 @@
   "domain": "history/culture",
   "genre": "evocative exposition",
   "requested_words": "40-70",
-  "prompt_text": "Describe an ancient road whose stones have been worn into grooves by centuries of cart wheels. Write one paragraph of about 40-70 words.",
+  "prompt_text": "Describe an ancient road whose stones have been worn into grooves by centuries of cart wheels. Write one paragraph of about 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X055",
   "template_family_id": "X055",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1279,12 +1279,12 @@
   "domain": "history/culture",
   "genre": "conceptual explanation",
   "requested_words": "90-130",
-  "prompt_text": "Explain how historians can estimate the population of an ancient city that left no census. Answer in a single paragraph of roughly 90-130 words.",
+  "prompt_text": "Explain how historians can estimate the population of an ancient city that left no census. Answer in a single paragraph of roughly 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X056",
   "template_family_id": "X056",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1293,12 +1293,12 @@
   "domain": "history/culture",
   "genre": "reflective argument",
   "requested_words": "160-210",
-  "prompt_text": "Why do people keep and pass down objects that have no practical use, such as a grandparent's broken watch? Explore what such objects carry. Keep it to one paragraph of around 160-210 words.",
+  "prompt_text": "Why do people keep and pass down objects that have no practical use, such as a grandparent's broken watch? Explore what such objects carry. Keep it to one paragraph of around 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X057",
   "template_family_id": "X057",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1307,12 +1307,12 @@
   "domain": "arts/language",
   "genre": "evocative exposition",
   "requested_words": "90-130",
-  "prompt_text": "Describe how a dancer can tell a whole story without a single spoken word. Write one paragraph of about 90-130 words.",
+  "prompt_text": "Describe how a dancer can tell a whole story without a single spoken word. Write one paragraph of about 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X058",
   "template_family_id": "X058",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1321,12 +1321,12 @@
   "domain": "arts/language",
   "genre": "conceptual explanation",
   "requested_words": "40-70",
-  "prompt_text": "Why do some words seem to sound like what they mean, such as buzz or whisper? Answer in a single paragraph of roughly 40-70 words.",
+  "prompt_text": "Why do some words seem to sound like what they mean, such as buzz or whisper? Answer in a single paragraph of roughly 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X059",
   "template_family_id": "X059",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1335,12 +1335,12 @@
   "domain": "arts/language",
   "genre": "evocative exposition",
   "requested_words": "160-210",
-  "prompt_text": "Describe the restoration of a faded mural, as conservators uncover colors that no living person has seen. Keep it to one paragraph of around 160-210 words.",
+  "prompt_text": "Describe the restoration of a faded mural, as conservators uncover colors that no living person has seen. Keep it to one paragraph of around 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X060",
   "template_family_id": "X060",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1349,12 +1349,12 @@
   "domain": "life science",
   "genre": "evocative exposition",
   "requested_words": "40-70",
-  "prompt_text": "Describe a coral reef at night, when the daytime colors fade and hidden creatures emerge. Write one paragraph of about 40-70 words.",
+  "prompt_text": "Describe a coral reef at night, when the daytime colors fade and hidden creatures emerge. Write one paragraph of about 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X061",
   "template_family_id": "X061",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1363,12 +1363,12 @@
   "domain": "life science",
   "genre": "conceptual explanation",
   "requested_words": "90-130",
-  "prompt_text": "Explain how a tiny change in a single gene can make a large difference to how an organism looks or behaves. Answer in a single paragraph of roughly 90-130 words.",
+  "prompt_text": "Explain how a tiny change in a single gene can make a large difference to how an organism looks or behaves. Answer in a single paragraph of roughly 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X062",
   "template_family_id": "X062",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1377,12 +1377,12 @@
   "domain": "life science",
   "genre": "evocative exposition",
   "requested_words": "160-210",
-  "prompt_text": "Describe the life of a tree across five hundred years, measured in rings, storms and the creatures it has sheltered. Keep it to one paragraph of around 160-210 words.",
+  "prompt_text": "Describe the life of a tree across five hundred years, measured in rings, storms and the creatures it has sheltered. Keep it to one paragraph of around 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X063",
   "template_family_id": "X063",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1391,12 +1391,12 @@
   "domain": "life science",
   "genre": "conceptual explanation",
   "requested_words": "40-70",
-  "prompt_text": "Why do some animals sleep through the winter while others stay active? Write one paragraph of about 40-70 words.",
+  "prompt_text": "Why do some animals sleep through the winter while others stay active? Write one paragraph of about 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X064",
   "template_family_id": "X064",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1405,12 +1405,12 @@
   "domain": "life science",
   "genre": "reflective argument",
   "requested_words": "220-250",
-  "prompt_text": "Should people try to protect every species from extinction, or accept that some loss is part of how nature changes? Explore one difficulty with each view. Answer in a single paragraph of roughly 220-250 words.",
+  "prompt_text": "Should people try to protect every species from extinction, or accept that some loss is part of how nature changes? Explore one difficulty with each view. Answer in a single paragraph of roughly 220-250 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X065",
   "template_family_id": "X065",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1419,12 +1419,12 @@
   "domain": "philosophy",
   "genre": "reflective argument",
   "requested_words": "90-130",
-  "prompt_text": "Is a promise made under pressure still a promise? Keep it to one paragraph of around 90-130 words.",
+  "prompt_text": "Is a promise made under pressure still a promise? Keep it to one paragraph of around 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X066",
   "template_family_id": "X066",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1433,12 +1433,12 @@
   "domain": "philosophy",
   "genre": "reflective argument",
   "requested_words": "40-70",
-  "prompt_text": "Does a person whose good outcome came from luck deserve less praise than one who planned it? Write one paragraph of about 40-70 words.",
+  "prompt_text": "Does a person whose good outcome came from luck deserve less praise than one who planned it? Write one paragraph of about 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X067",
   "template_family_id": "X067",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1447,12 +1447,12 @@
   "domain": "philosophy",
   "genre": "evocative exposition",
   "requested_words": "160-210",
-  "prompt_text": "Describe the experience of making a difficult choice as standing at a fork in a road where both paths disappear into fog. Answer in a single paragraph of roughly 160-210 words.",
+  "prompt_text": "Describe the experience of making a difficult choice as standing at a fork in a road where both paths disappear into fog. Answer in a single paragraph of roughly 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X068",
   "template_family_id": "X068",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1461,12 +1461,12 @@
   "domain": "philosophy",
   "genre": "conceptual explanation",
   "requested_words": "90-130",
-  "prompt_text": "Explain the difference between knowing that something is true and believing it for good reasons. Keep it to one paragraph of around 90-130 words.",
+  "prompt_text": "Explain the difference between knowing that something is true and believing it for good reasons. Keep it to one paragraph of around 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X069",
   "template_family_id": "X069",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1475,12 +1475,12 @@
   "domain": "mind/behavior",
   "genre": "conceptual explanation",
   "requested_words": "40-70",
-  "prompt_text": "Why does time seem to pass more quickly as people grow older? Write one paragraph of about 40-70 words.",
+  "prompt_text": "Why does time seem to pass more quickly as people grow older? Write one paragraph of about 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X070",
   "template_family_id": "X070",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1489,12 +1489,12 @@
   "domain": "mind/behavior",
   "genre": "evocative exposition",
   "requested_words": "90-130",
-  "prompt_text": "Describe what happens in the mind when a word is on the tip of the tongue but will not come. Answer in a single paragraph of roughly 90-130 words.",
+  "prompt_text": "Describe what happens in the mind when a word is on the tip of the tongue but will not come. Answer in a single paragraph of roughly 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X071",
   "template_family_id": "X071",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1503,12 +1503,12 @@
   "domain": "mind/behavior",
   "genre": "reflective argument",
   "requested_words": "220-250",
-  "prompt_text": "Can people ever truly know what another person is feeling? Explore what empathy can and cannot reach. Keep it to one paragraph of around 220-250 words.",
+  "prompt_text": "Can people ever truly know what another person is feeling? Explore what empathy can and cannot reach. Keep it to one paragraph of around 220-250 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X072",
   "template_family_id": "X072",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1517,12 +1517,12 @@
   "domain": "mind/behavior",
   "genre": "creative scene",
   "requested_words": "40-70",
-  "prompt_text": "Write a scene in which someone recognizes a stranger's laugh across a crowded train platform. Use one paragraph of about 40-70 words.",
+  "prompt_text": "Write a scene in which someone recognizes a stranger's laugh across a crowded train platform. Use one paragraph of about 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X073",
   "template_family_id": "X073",
-  "wrapper_id": "scene-length-v1",
+  "wrapper_id": "scene-length-v1+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1531,12 +1531,12 @@
   "domain": "earth/environment",
   "genre": "evocative exposition",
   "requested_words": "40-70",
-  "prompt_text": "Describe a desert after a rare heavy rain, when dormant seeds and creatures burst into life. Answer in a single paragraph of roughly 40-70 words.",
+  "prompt_text": "Describe a desert after a rare heavy rain, when dormant seeds and creatures burst into life. Answer in a single paragraph of roughly 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X074",
   "template_family_id": "X074",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1545,12 +1545,12 @@
   "domain": "earth/environment",
   "genre": "conceptual explanation",
   "requested_words": "90-130",
-  "prompt_text": "Explain how ocean currents carry heat around the planet and why that matters for climate. Keep it to one paragraph of around 90-130 words.",
+  "prompt_text": "Explain how ocean currents carry heat around the planet and why that matters for climate. Keep it to one paragraph of around 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X075",
   "template_family_id": "X075",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1559,12 +1559,12 @@
   "domain": "earth/environment",
   "genre": "evocative exposition",
   "requested_words": "220-250",
-  "prompt_text": "Describe the slow formation of a cave over thousands of years, from the first trickle of water to stalactites and echoing chambers. Write one paragraph of about 220-250 words.",
+  "prompt_text": "Describe the slow formation of a cave over thousands of years, from the first trickle of water to stalactites and echoing chambers. Write one paragraph of about 220-250 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X076",
   "template_family_id": "X076",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1573,12 +1573,12 @@
   "domain": "physics",
   "genre": "conceptual explanation",
   "requested_words": "40-70",
-  "prompt_text": "Why does a straw look bent when it stands in a glass of water? Answer in a single paragraph of roughly 40-70 words.",
+  "prompt_text": "Why does a straw look bent when it stands in a glass of water? Answer in a single paragraph of roughly 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X077",
   "template_family_id": "X077",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1587,12 +1587,12 @@
   "domain": "physics",
   "genre": "evocative exposition",
   "requested_words": "90-130",
-  "prompt_text": "Describe sound as a traveling ripple of pressure by following a single clap across a quiet valley. Keep it to one paragraph of around 90-130 words.",
+  "prompt_text": "Describe sound as a traveling ripple of pressure by following a single clap across a quiet valley. Keep it to one paragraph of around 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X078",
   "template_family_id": "X078",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1601,12 +1601,12 @@
   "domain": "society/economics",
   "genre": "reflective argument",
   "requested_words": "40-70",
-  "prompt_text": "Why can a rule that treats everyone exactly the same still feel unfair to some people? Write one paragraph of about 40-70 words.",
+  "prompt_text": "Why can a rule that treats everyone exactly the same still feel unfair to some people? Write one paragraph of about 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X079",
   "template_family_id": "X079",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1615,12 +1615,12 @@
   "domain": "society/economics",
   "genre": "creative scene",
   "requested_words": "160-210",
-  "prompt_text": "Write a scene in which neighbors gather in the street during a power cut and talk to each other properly for the first time. Use one paragraph of about 160-210 words.",
+  "prompt_text": "Write a scene in which neighbors gather in the street during a power cut and talk to each other properly for the first time. Use one paragraph of about 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X080",
   "template_family_id": "X080",
-  "wrapper_id": "scene-length-v1",
+  "wrapper_id": "scene-length-v1+no-tools-v1",
   "wave": "wave3"
  },
  {
@@ -1629,12 +1629,12 @@
   "domain": "space",
   "genre": "evocative exposition",
   "requested_words": "40-70",
-  "prompt_text": "Describe the light of a star that may no longer exist by the time it reaches someone looking up tonight. Keep it to one paragraph of around 40-70 words.",
+  "prompt_text": "Describe the light of a star that may no longer exist by the time it reaches someone looking up tonight. Keep it to one paragraph of around 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X081",
   "template_family_id": "X081",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -1643,12 +1643,12 @@
   "domain": "space",
   "genre": "conceptual explanation",
   "requested_words": "90-130",
-  "prompt_text": "Explain how scientists can tell what a distant star is made of without ever going there. Write one paragraph of about 90-130 words.",
+  "prompt_text": "Explain how scientists can tell what a distant star is made of without ever going there. Write one paragraph of about 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X082",
   "template_family_id": "X082",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -1657,12 +1657,12 @@
   "domain": "space",
   "genre": "evocative exposition",
   "requested_words": "160-210",
-  "prompt_text": "Describe the birth of a star inside a cold cloud of gas and dust, from slow collapse to the first ignition. Answer in a single paragraph of roughly 160-210 words.",
+  "prompt_text": "Describe the birth of a star inside a cold cloud of gas and dust, from slow collapse to the first ignition. Answer in a single paragraph of roughly 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X083",
   "template_family_id": "X083",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -1671,12 +1671,12 @@
   "domain": "space",
   "genre": "reflective argument",
   "requested_words": "90-130",
-  "prompt_text": "Should humanity send messages into space announcing its presence, or listen quietly first? Explore one argument on each side. Keep it to one paragraph of around 90-130 words.",
+  "prompt_text": "Should humanity send messages into space announcing its presence, or listen quietly first? Explore one argument on each side. Keep it to one paragraph of around 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X084",
   "template_family_id": "X084",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -1685,12 +1685,12 @@
   "domain": "space",
   "genre": "evocative exposition",
   "requested_words": "220-250",
-  "prompt_text": "Describe a probe drifting through the outer solar system, photographing small icy worlds that have barely changed since the planets formed. Write one paragraph of about 220-250 words.",
+  "prompt_text": "Describe a probe drifting through the outer solar system, photographing small icy worlds that have barely changed since the planets formed. Write one paragraph of about 220-250 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X085",
   "template_family_id": "X085",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -1699,12 +1699,12 @@
   "domain": "space",
   "genre": "conceptual explanation",
   "requested_words": "40-70",
-  "prompt_text": "Why is the night sky dark even though there are countless stars? Answer in a single paragraph of roughly 40-70 words.",
+  "prompt_text": "Why is the night sky dark even though there are countless stars? Answer in a single paragraph of roughly 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X086",
   "template_family_id": "X086",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -1713,12 +1713,12 @@
   "domain": "space",
   "genre": "creative scene",
   "requested_words": "160-210",
-  "prompt_text": "Write a scene in which a family watches a rocket launch from a distant beach, each of them thinking about something different. Use one paragraph of about 160-210 words.",
+  "prompt_text": "Write a scene in which a family watches a rocket launch from a distant beach, each of them thinking about something different. Use one paragraph of about 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X087",
   "template_family_id": "X087",
-  "wrapper_id": "scene-length-v1",
+  "wrapper_id": "scene-length-v1+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -1727,12 +1727,12 @@
   "domain": "mathematics",
   "genre": "conceptual explanation",
   "requested_words": "90-130",
-  "prompt_text": "Explain why, in a room of just twenty-three people, the chance that two share a birthday is better than even. Write one paragraph of about 90-130 words.",
+  "prompt_text": "Explain why, in a room of just twenty-three people, the chance that two share a birthday is better than even. Write one paragraph of about 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X088",
   "template_family_id": "X088",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -1741,12 +1741,12 @@
   "domain": "mathematics",
   "genre": "evocative exposition",
   "requested_words": "40-70",
-  "prompt_text": "Describe a spiral seashell as a shape that keeps growing without changing its form. Answer in a single paragraph of roughly 40-70 words.",
+  "prompt_text": "Describe a spiral seashell as a shape that keeps growing without changing its form. Answer in a single paragraph of roughly 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X089",
   "template_family_id": "X089",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -1755,12 +1755,12 @@
   "domain": "mathematics",
   "genre": "reflective argument",
   "requested_words": "160-210",
-  "prompt_text": "Can a mathematical model of a city's traffic ever be true, or only useful? Explore what models leave out and why that can be a strength. Keep it to one paragraph of around 160-210 words.",
+  "prompt_text": "Can a mathematical model of a city's traffic ever be true, or only useful? Explore what models leave out and why that can be a strength. Keep it to one paragraph of around 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X090",
   "template_family_id": "X090",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -1769,12 +1769,12 @@
   "domain": "mathematics",
   "genre": "conceptual explanation",
   "requested_words": "40-70",
-  "prompt_text": "Explain how rounding small amounts many times can add up to a large error. Write one paragraph of about 40-70 words.",
+  "prompt_text": "Explain how rounding small amounts many times can add up to a large error. Write one paragraph of about 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X091",
   "template_family_id": "X091",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -1783,12 +1783,12 @@
   "domain": "computing",
   "genre": "conceptual explanation",
   "requested_words": "90-130",
-  "prompt_text": "Explain why a digital file can be copied perfectly while copies of a cassette tape slowly lose quality. Answer in a single paragraph of roughly 90-130 words.",
+  "prompt_text": "Explain why a digital file can be copied perfectly while copies of a cassette tape slowly lose quality. Answer in a single paragraph of roughly 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X092",
   "template_family_id": "X092",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -1797,12 +1797,12 @@
   "domain": "computing",
   "genre": "evocative exposition",
   "requested_words": "40-70",
-  "prompt_text": "Describe the internet as a web of undersea cables, switching stations and blinking lights that most people never see. Keep it to one paragraph of around 40-70 words.",
+  "prompt_text": "Describe the internet as a web of undersea cables, switching stations and blinking lights that most people never see. Keep it to one paragraph of around 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X093",
   "template_family_id": "X093",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -1811,12 +1811,12 @@
   "domain": "computing",
   "genre": "reflective argument",
   "requested_words": "160-210",
-  "prompt_text": "Should old websites and digital records be preserved forever, even when the people who made them would prefer them forgotten? Write one paragraph of about 160-210 words.",
+  "prompt_text": "Should old websites and digital records be preserved forever, even when the people who made them would prefer them forgotten? Write one paragraph of about 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X094",
   "template_family_id": "X094",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -1825,12 +1825,12 @@
   "domain": "history/culture",
   "genre": "conceptual explanation",
   "requested_words": "40-70",
-  "prompt_text": "Why did so many ancient cities grow up beside rivers? Answer in a single paragraph of roughly 40-70 words.",
+  "prompt_text": "Why did so many ancient cities grow up beside rivers? Answer in a single paragraph of roughly 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X095",
   "template_family_id": "X095",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -1839,12 +1839,12 @@
   "domain": "history/culture",
   "genre": "evocative exposition",
   "requested_words": "90-130",
-  "prompt_text": "Describe a nineteenth-century lighthouse keeper's daily routine, when the light depended entirely on human hands. Keep it to one paragraph of around 90-130 words.",
+  "prompt_text": "Describe a nineteenth-century lighthouse keeper's daily routine, when the light depended entirely on human hands. Keep it to one paragraph of around 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X096",
   "template_family_id": "X096",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -1853,12 +1853,12 @@
   "domain": "history/culture",
   "genre": "reflective argument",
   "requested_words": "160-210",
-  "prompt_text": "How should a museum decide whether to return an object to the community it was taken from? Explore the values that pull in different directions. Write one paragraph of about 160-210 words.",
+  "prompt_text": "How should a museum decide whether to return an object to the community it was taken from? Explore the values that pull in different directions. Write one paragraph of about 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X097",
   "template_family_id": "X097",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -1867,12 +1867,12 @@
   "domain": "arts/language",
   "genre": "evocative exposition",
   "requested_words": "90-130",
-  "prompt_text": "Describe how a photograph can freeze a moment that no one present noticed at the time. Answer in a single paragraph of roughly 90-130 words.",
+  "prompt_text": "Describe how a photograph can freeze a moment that no one present noticed at the time. Answer in a single paragraph of roughly 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X098",
   "template_family_id": "X098",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -1881,12 +1881,12 @@
   "domain": "arts/language",
   "genre": "evocative exposition",
   "requested_words": "160-210",
-  "prompt_text": "Describe how a child picks up a new language by playing every day with children who speak it. Keep it to one paragraph of around 160-210 words.",
+  "prompt_text": "Describe how a child picks up a new language by playing every day with children who speak it. Keep it to one paragraph of around 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X099",
   "template_family_id": "X099",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -1895,12 +1895,12 @@
   "domain": "arts/language",
   "genre": "reflective argument",
   "requested_words": "40-70",
-  "prompt_text": "Can a translation of a poem become a new poem in its own right? Write one paragraph of about 40-70 words.",
+  "prompt_text": "Can a translation of a poem become a new poem in its own right? Write one paragraph of about 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X100",
   "template_family_id": "X100",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -1909,12 +1909,12 @@
   "domain": "life science",
   "genre": "evocative exposition",
   "requested_words": "40-70",
-  "prompt_text": "Describe an octopus changing color and texture as it moves across the sea floor. Answer in a single paragraph of roughly 40-70 words.",
+  "prompt_text": "Describe an octopus changing color and texture as it moves across the sea floor. Answer in a single paragraph of roughly 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X101",
   "template_family_id": "X101",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -1923,12 +1923,12 @@
   "domain": "life science",
   "genre": "conceptual explanation",
   "requested_words": "90-130",
-  "prompt_text": "Explain why antibiotics stop working well when bacteria are exposed to them too often. Keep it to one paragraph of around 90-130 words.",
+  "prompt_text": "Explain why antibiotics stop working well when bacteria are exposed to them too often. Keep it to one paragraph of around 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X102",
   "template_family_id": "X102",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -1937,12 +1937,12 @@
   "domain": "life science",
   "genre": "evocative exposition",
   "requested_words": "160-210",
-  "prompt_text": "Describe the hidden life in a handful of garden soil, from earthworms to microbes, and how it keeps plants alive. Write one paragraph of about 160-210 words.",
+  "prompt_text": "Describe the hidden life in a handful of garden soil, from earthworms to microbes, and how it keeps plants alive. Write one paragraph of about 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X103",
   "template_family_id": "X103",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -1951,12 +1951,12 @@
   "domain": "life science",
   "genre": "conceptual explanation",
   "requested_words": "40-70",
-  "prompt_text": "Why do people get goosebumps when they are cold or deeply moved by music? Answer in a single paragraph of roughly 40-70 words.",
+  "prompt_text": "Why do people get goosebumps when they are cold or deeply moved by music? Answer in a single paragraph of roughly 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X104",
   "template_family_id": "X104",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -1965,12 +1965,12 @@
   "domain": "life science",
   "genre": "reflective argument",
   "requested_words": "220-250",
-  "prompt_text": "If science could greatly extend the human lifespan, should it? Explore what a much longer life might change for individuals and for societies. Keep it to one paragraph of around 220-250 words.",
+  "prompt_text": "If science could greatly extend the human lifespan, should it? Explore what a much longer life might change for individuals and for societies. Keep it to one paragraph of around 220-250 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X105",
   "template_family_id": "X105",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -1979,12 +1979,12 @@
   "domain": "philosophy",
   "genre": "reflective argument",
   "requested_words": "90-130",
-  "prompt_text": "Is it wrong to tell a comforting lie to someone who is dying? Write one paragraph of about 90-130 words.",
+  "prompt_text": "Is it wrong to tell a comforting lie to someone who is dying? Write one paragraph of about 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X106",
   "template_family_id": "X106",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -1993,12 +1993,12 @@
   "domain": "philosophy",
   "genre": "evocative exposition",
   "requested_words": "40-70",
-  "prompt_text": "Describe the idea that the present moment is all we ever directly experience, using the image of a single footprint on a beach. Answer in a single paragraph of roughly 40-70 words.",
+  "prompt_text": "Describe the idea that the present moment is all we ever directly experience, using the image of a single footprint on a beach. Answer in a single paragraph of roughly 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X107",
   "template_family_id": "X107",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -2007,12 +2007,12 @@
   "domain": "philosophy",
   "genre": "conceptual explanation",
   "requested_words": "90-130",
-  "prompt_text": "Explain the difference between being free to act as you want and being free to choose what you want, using a simple example. Keep it to one paragraph of around 90-130 words.",
+  "prompt_text": "Explain the difference between being free to act as you want and being free to choose what you want, using a simple example. Keep it to one paragraph of around 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X108",
   "template_family_id": "X108",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -2021,12 +2021,12 @@
   "domain": "philosophy",
   "genre": "reflective argument",
   "requested_words": "90-130",
-  "prompt_text": "Can someone be responsible for a harm they could not have foreseen? Write one paragraph of about 90-130 words.",
+  "prompt_text": "Can someone be responsible for a harm they could not have foreseen? Write one paragraph of about 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X109",
   "template_family_id": "X109",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -2035,12 +2035,12 @@
   "domain": "mind/behavior",
   "genre": "conceptual explanation",
   "requested_words": "40-70",
-  "prompt_text": "Why do people sometimes see faces in clouds, rocks or electrical outlets? Answer in a single paragraph of roughly 40-70 words.",
+  "prompt_text": "Why do people sometimes see faces in clouds, rocks or electrical outlets? Answer in a single paragraph of roughly 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X110",
   "template_family_id": "X110",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -2049,12 +2049,12 @@
   "domain": "mind/behavior",
   "genre": "evocative exposition",
   "requested_words": "90-130",
-  "prompt_text": "Describe reading a gripping book late at night, when the room disappears and the story takes over. Keep it to one paragraph of around 90-130 words.",
+  "prompt_text": "Describe reading a gripping book late at night, when the room disappears and the story takes over. Keep it to one paragraph of around 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X111",
   "template_family_id": "X111",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -2063,12 +2063,12 @@
   "domain": "mind/behavior",
   "genre": "reflective argument",
   "requested_words": "160-210",
-  "prompt_text": "Does boredom serve a purpose? Explore what might be lost if people were never bored. Write one paragraph of about 160-210 words.",
+  "prompt_text": "Does boredom serve a purpose? Explore what might be lost if people were never bored. Write one paragraph of about 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X112",
   "template_family_id": "X112",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -2077,12 +2077,12 @@
   "domain": "mind/behavior",
   "genre": "creative scene",
   "requested_words": "220-250",
-  "prompt_text": "Write a scene in which an elderly musician whose memory is fading sits at a piano and finds that their hands still remember. Use one paragraph of about 220-250 words.",
+  "prompt_text": "Write a scene in which an elderly musician whose memory is fading sits at a piano and finds that their hands still remember. Use one paragraph of about 220-250 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X113",
   "template_family_id": "X113",
-  "wrapper_id": "scene-length-v1",
+  "wrapper_id": "scene-length-v1+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -2091,12 +2091,12 @@
   "domain": "earth/environment",
   "genre": "evocative exposition",
   "requested_words": "40-70",
-  "prompt_text": "Describe the moment a thunderstorm breaks over dry fields after weeks of heat. Keep it to one paragraph of around 40-70 words.",
+  "prompt_text": "Describe the moment a thunderstorm breaks over dry fields after weeks of heat. Keep it to one paragraph of around 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X114",
   "template_family_id": "X114",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -2105,12 +2105,12 @@
   "domain": "earth/environment",
   "genre": "conceptual explanation",
   "requested_words": "90-130",
-  "prompt_text": "Explain how scientists learn about past climates from air bubbles trapped in ancient ice. Write one paragraph of about 90-130 words.",
+  "prompt_text": "Explain how scientists learn about past climates from air bubbles trapped in ancient ice. Write one paragraph of about 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X115",
   "template_family_id": "X115",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -2119,12 +2119,12 @@
   "domain": "earth/environment",
   "genre": "evocative exposition",
   "requested_words": "160-210",
-  "prompt_text": "Describe a mangrove forest as a place where land and sea renegotiate their boundary twice a day. Answer in a single paragraph of roughly 160-210 words.",
+  "prompt_text": "Describe a mangrove forest as a place where land and sea renegotiate their boundary twice a day. Answer in a single paragraph of roughly 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X116",
   "template_family_id": "X116",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -2133,12 +2133,12 @@
   "domain": "physics",
   "genre": "conceptual explanation",
   "requested_words": "40-70",
-  "prompt_text": "Why does a heavy steel ship float while a small pebble sinks? Keep it to one paragraph of around 40-70 words.",
+  "prompt_text": "Why does a heavy steel ship float while a small pebble sinks? Keep it to one paragraph of around 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X117",
   "template_family_id": "X117",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -2147,12 +2147,12 @@
   "domain": "physics",
   "genre": "evocative exposition",
   "requested_words": "90-130",
-  "prompt_text": "Describe magnetism as an invisible force by following iron filings as they arrange themselves around a magnet. Write one paragraph of about 90-130 words.",
+  "prompt_text": "Describe magnetism as an invisible force by following iron filings as they arrange themselves around a magnet. Write one paragraph of about 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X118",
   "template_family_id": "X118",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -2161,12 +2161,12 @@
   "domain": "society/economics",
   "genre": "conceptual explanation",
   "requested_words": "90-130",
-  "prompt_text": "Explain why prices in a shop can rise even when nothing about the products has changed. Answer in a single paragraph of roughly 90-130 words.",
+  "prompt_text": "Explain why prices in a shop can rise even when nothing about the products has changed. Answer in a single paragraph of roughly 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X119",
   "template_family_id": "X119",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -2175,12 +2175,12 @@
   "domain": "society/economics",
   "genre": "creative scene",
   "requested_words": "40-70",
-  "prompt_text": "Write a scene in which a librarian helps a stranger find a book they only half remember. Use one paragraph of about 40-70 words.",
+  "prompt_text": "Write a scene in which a librarian helps a stranger find a book they only half remember. Use one paragraph of about 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X120",
   "template_family_id": "X120",
-  "wrapper_id": "scene-length-v1",
+  "wrapper_id": "scene-length-v1+no-tools-v1",
   "wave": "wave4"
  },
  {
@@ -2189,12 +2189,12 @@
   "domain": "space",
   "genre": "evocative exposition",
   "requested_words": "40-70",
-  "prompt_text": "Describe the aurora as seen from a frozen lake, where particles from the Sun meet the upper atmosphere. Write one paragraph of about 40-70 words.",
+  "prompt_text": "Describe the aurora as seen from a frozen lake, where particles from the Sun meet the upper atmosphere. Write one paragraph of about 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X121",
   "template_family_id": "X121",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2203,12 +2203,12 @@
   "domain": "space",
   "genre": "conceptual explanation",
   "requested_words": "90-130",
-  "prompt_text": "Explain how astronomers know that the universe is expanding. Answer in a single paragraph of roughly 90-130 words.",
+  "prompt_text": "Explain how astronomers know that the universe is expanding. Answer in a single paragraph of roughly 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X122",
   "template_family_id": "X122",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2217,12 +2217,12 @@
   "domain": "space",
   "genre": "evocative exposition",
   "requested_words": "160-210",
-  "prompt_text": "Describe Jupiter's Great Red Spot as a storm larger than Earth that has raged for centuries. Keep it to one paragraph of around 160-210 words.",
+  "prompt_text": "Describe Jupiter's Great Red Spot as a storm larger than Earth that has raged for centuries. Keep it to one paragraph of around 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X123",
   "template_family_id": "X123",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2231,12 +2231,12 @@
   "domain": "space",
   "genre": "conceptual explanation",
   "requested_words": "40-70",
-  "prompt_text": "Why do planets keep orbiting the Sun instead of falling straight into it? Write one paragraph of about 40-70 words.",
+  "prompt_text": "Why do planets keep orbiting the Sun instead of falling straight into it? Write one paragraph of about 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X124",
   "template_family_id": "X124",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2245,12 +2245,12 @@
   "domain": "space",
   "genre": "evocative exposition",
   "requested_words": "90-130",
-  "prompt_text": "Describe what a sunset might look like on a planet that orbits two suns. Answer in a single paragraph of roughly 90-130 words.",
+  "prompt_text": "Describe what a sunset might look like on a planet that orbits two suns. Answer in a single paragraph of roughly 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X125",
   "template_family_id": "X125",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2259,12 +2259,12 @@
   "domain": "space",
   "genre": "reflective argument",
   "requested_words": "160-210",
-  "prompt_text": "Is exploring space worth its cost when there are urgent problems on Earth? Explore one tension honestly. Keep it to one paragraph of around 160-210 words.",
+  "prompt_text": "Is exploring space worth its cost when there are urgent problems on Earth? Explore one tension honestly. Keep it to one paragraph of around 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X126",
   "template_family_id": "X126",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2273,12 +2273,12 @@
   "domain": "space",
   "genre": "creative scene",
   "requested_words": "40-70",
-  "prompt_text": "Write a scene in which a child at a planetarium show asks a question that silences the presenter for a moment. Use one paragraph of about 40-70 words.",
+  "prompt_text": "Write a scene in which a child at a planetarium show asks a question that silences the presenter for a moment. Use one paragraph of about 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X127",
   "template_family_id": "X127",
-  "wrapper_id": "scene-length-v1",
+  "wrapper_id": "scene-length-v1+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2287,12 +2287,12 @@
   "domain": "mathematics",
   "genre": "evocative exposition",
   "requested_words": "90-130",
-  "prompt_text": "Describe the idea of mathematical symmetry through the image of a snowflake, where every arm repeats the others. Answer in a single paragraph of roughly 90-130 words.",
+  "prompt_text": "Describe the idea of mathematical symmetry through the image of a snowflake, where every arm repeats the others. Answer in a single paragraph of roughly 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X128",
   "template_family_id": "X128",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2301,12 +2301,12 @@
   "domain": "mathematics",
   "genre": "conceptual explanation",
   "requested_words": "40-70",
-  "prompt_text": "Explain why multiplying a negative number by a negative number gives a positive number. Keep it to one paragraph of around 40-70 words.",
+  "prompt_text": "Explain why multiplying a negative number by a negative number gives a positive number. Keep it to one paragraph of around 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X129",
   "template_family_id": "X129",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2315,12 +2315,12 @@
   "domain": "mathematics",
   "genre": "reflective argument",
   "requested_words": "220-250",
-  "prompt_text": "Why do some people find mathematics beautiful while others find it cold? Explore what beauty in mathematics might mean. Write one paragraph of about 220-250 words.",
+  "prompt_text": "Why do some people find mathematics beautiful while others find it cold? Explore what beauty in mathematics might mean. Write one paragraph of about 220-250 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X130",
   "template_family_id": "X130",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2329,12 +2329,12 @@
   "domain": "mathematics",
   "genre": "conceptual explanation",
   "requested_words": "90-130",
-  "prompt_text": "Explain what a weather forecast means when it gives a seventy percent chance of rain, and what that number does not tell you. Answer in a single paragraph of roughly 90-130 words.",
+  "prompt_text": "Explain what a weather forecast means when it gives a seventy percent chance of rain, and what that number does not tell you. Answer in a single paragraph of roughly 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X131",
   "template_family_id": "X131",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2343,12 +2343,12 @@
   "domain": "computing",
   "genre": "evocative exposition",
   "requested_words": "40-70",
-  "prompt_text": "Describe a single pixel on a screen as a tiny window that changes color many times every second. Keep it to one paragraph of around 40-70 words.",
+  "prompt_text": "Describe a single pixel on a screen as a tiny window that changes color many times every second. Keep it to one paragraph of around 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X132",
   "template_family_id": "X132",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2357,12 +2357,12 @@
   "domain": "computing",
   "genre": "conceptual explanation",
   "requested_words": "160-210",
-  "prompt_text": "Explain why recognizing a cat in a photograph is hard for a computer even though a toddler does it easily. Write one paragraph of about 160-210 words.",
+  "prompt_text": "Explain why recognizing a cat in a photograph is hard for a computer even though a toddler does it easily. Write one paragraph of about 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X133",
   "template_family_id": "X133",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2371,12 +2371,12 @@
   "domain": "computing",
   "genre": "reflective argument",
   "requested_words": "90-130",
-  "prompt_text": "Should people be able to delete everything a company has stored about them? Explore one tension in this question. Answer in a single paragraph of roughly 90-130 words.",
+  "prompt_text": "Should people be able to delete everything a company has stored about them? Explore one tension in this question. Answer in a single paragraph of roughly 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X134",
   "template_family_id": "X134",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2385,12 +2385,12 @@
   "domain": "history/culture",
   "genre": "evocative exposition",
   "requested_words": "90-130",
-  "prompt_text": "Describe a caravan on an ancient trade route crossing a desert, carrying goods, languages and ideas between distant cultures. Keep it to one paragraph of around 90-130 words.",
+  "prompt_text": "Describe a caravan on an ancient trade route crossing a desert, carrying goods, languages and ideas between distant cultures. Keep it to one paragraph of around 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X135",
   "template_family_id": "X135",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2399,12 +2399,12 @@
   "domain": "history/culture",
   "genre": "conceptual explanation",
   "requested_words": "40-70",
-  "prompt_text": "Why did early mapmakers sometimes draw islands that later sailors could never find? Write one paragraph of about 40-70 words.",
+  "prompt_text": "Why did early mapmakers sometimes draw islands that later sailors could never find? Write one paragraph of about 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X136",
   "template_family_id": "X136",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2413,12 +2413,12 @@
   "domain": "history/culture",
   "genre": "reflective argument",
   "requested_words": "160-210",
-  "prompt_text": "How do festivals keep old traditions alive while changing them with each generation? Explore whether a tradition that keeps changing is still the same tradition. Answer in a single paragraph of roughly 160-210 words.",
+  "prompt_text": "How do festivals keep old traditions alive while changing them with each generation? Explore whether a tradition that keeps changing is still the same tradition. Answer in a single paragraph of roughly 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X137",
   "template_family_id": "X137",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2427,12 +2427,12 @@
   "domain": "arts/language",
   "genre": "conceptual explanation",
   "requested_words": "90-130",
-  "prompt_text": "Explain how rhyme and rhythm can make a sentence easier to remember. Keep it to one paragraph of around 90-130 words.",
+  "prompt_text": "Explain how rhyme and rhythm can make a sentence easier to remember. Keep it to one paragraph of around 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X138",
   "template_family_id": "X138",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2441,12 +2441,12 @@
   "domain": "arts/language",
   "genre": "evocative exposition",
   "requested_words": "160-210",
-  "prompt_text": "Describe the silence just before an orchestra begins to play, and how it shapes what the audience hears next. Write one paragraph of about 160-210 words.",
+  "prompt_text": "Describe the silence just before an orchestra begins to play, and how it shapes what the audience hears next. Write one paragraph of about 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X139",
   "template_family_id": "X139",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2455,12 +2455,12 @@
   "domain": "arts/language",
   "genre": "reflective argument",
   "requested_words": "40-70",
-  "prompt_text": "Is a story still the same story when it is retold with a different ending? Answer in a single paragraph of roughly 40-70 words.",
+  "prompt_text": "Is a story still the same story when it is retold with a different ending? Answer in a single paragraph of roughly 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X140",
   "template_family_id": "X140",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2469,12 +2469,12 @@
   "domain": "life science",
   "genre": "evocative exposition",
   "requested_words": "40-70",
-  "prompt_text": "Describe a spider spinning its web at dawn, thread by thread, in a few patient minutes. Keep it to one paragraph of around 40-70 words.",
+  "prompt_text": "Describe a spider spinning its web at dawn, thread by thread, in a few patient minutes. Keep it to one paragraph of around 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X141",
   "template_family_id": "X141",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2483,12 +2483,12 @@
   "domain": "life science",
   "genre": "conceptual explanation",
   "requested_words": "90-130",
-  "prompt_text": "Explain how the human eye adjusts when someone walks from bright sunlight into a dark room. Write one paragraph of about 90-130 words.",
+  "prompt_text": "Explain how the human eye adjusts when someone walks from bright sunlight into a dark room. Write one paragraph of about 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X142",
   "template_family_id": "X142",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2497,12 +2497,12 @@
   "domain": "life science",
   "genre": "evocative exposition",
   "requested_words": "160-210",
-  "prompt_text": "Describe a salmon's return upstream to the river where it hatched, guided by the memory of a smell. Answer in a single paragraph of roughly 160-210 words.",
+  "prompt_text": "Describe a salmon's return upstream to the river where it hatched, guided by the memory of a smell. Answer in a single paragraph of roughly 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X143",
   "template_family_id": "X143",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2511,12 +2511,12 @@
   "domain": "life science",
   "genre": "conceptual explanation",
   "requested_words": "40-70",
-  "prompt_text": "Why do some plants fold their leaves at night? Keep it to one paragraph of around 40-70 words.",
+  "prompt_text": "Why do some plants fold their leaves at night? Keep it to one paragraph of around 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X144",
   "template_family_id": "X144",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2525,12 +2525,12 @@
   "domain": "life science",
   "genre": "reflective argument",
   "requested_words": "220-250",
-  "prompt_text": "Do animals experience joy? Explore what kind of evidence could count and why the question is so hard to answer. Write one paragraph of about 220-250 words.",
+  "prompt_text": "Do animals experience joy? Explore what kind of evidence could count and why the question is so hard to answer. Write one paragraph of about 220-250 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X145",
   "template_family_id": "X145",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2539,12 +2539,12 @@
   "domain": "philosophy",
   "genre": "reflective argument",
   "requested_words": "90-130",
-  "prompt_text": "Is it better to admit a mistake that no one would ever discover? Answer in a single paragraph of roughly 90-130 words.",
+  "prompt_text": "Is it better to admit a mistake that no one would ever discover? Answer in a single paragraph of roughly 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X146",
   "template_family_id": "X146",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2553,12 +2553,12 @@
   "domain": "philosophy",
   "genre": "evocative exposition",
   "requested_words": "40-70",
-  "prompt_text": "Describe the idea of fairness through the image of two children dividing a cake. Keep it to one paragraph of around 40-70 words.",
+  "prompt_text": "Describe the idea of fairness through the image of two children dividing a cake. Keep it to one paragraph of around 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X147",
   "template_family_id": "X147",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2567,12 +2567,12 @@
   "domain": "philosophy",
   "genre": "conceptual explanation",
   "requested_words": "160-210",
-  "prompt_text": "Explain how a thought experiment can teach us something even though it describes a situation that could never happen. Write one paragraph of about 160-210 words.",
+  "prompt_text": "Explain how a thought experiment can teach us something even though it describes a situation that could never happen. Write one paragraph of about 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X148",
   "template_family_id": "X148",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2581,12 +2581,12 @@
   "domain": "philosophy",
   "genre": "reflective argument",
   "requested_words": "90-130",
-  "prompt_text": "Is a life well lived one that is happy, one that is meaningful, or something else? Explore one tension. Answer in a single paragraph of roughly 90-130 words.",
+  "prompt_text": "Is a life well lived one that is happy, one that is meaningful, or something else? Explore one tension. Answer in a single paragraph of roughly 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X149",
   "template_family_id": "X149",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2595,12 +2595,12 @@
   "domain": "mind/behavior",
   "genre": "conceptual explanation",
   "requested_words": "40-70",
-  "prompt_text": "Why do people often yawn after seeing someone else yawn? Keep it to one paragraph of around 40-70 words.",
+  "prompt_text": "Why do people often yawn after seeing someone else yawn? Keep it to one paragraph of around 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X150",
   "template_family_id": "X150",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2609,12 +2609,12 @@
   "domain": "mind/behavior",
   "genre": "evocative exposition",
   "requested_words": "90-130",
-  "prompt_text": "Describe the experience of déjà vu, when a new moment feels strangely like a memory. Write one paragraph of about 90-130 words.",
+  "prompt_text": "Describe the experience of déjà vu, when a new moment feels strangely like a memory. Write one paragraph of about 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X151",
   "template_family_id": "X151",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2623,12 +2623,12 @@
   "domain": "mind/behavior",
   "genre": "reflective argument",
   "requested_words": "160-210",
-  "prompt_text": "Are habits a kind of freedom, because they free our attention, or a kind of cage? Explore both sides. Answer in a single paragraph of roughly 160-210 words.",
+  "prompt_text": "Are habits a kind of freedom, because they free our attention, or a kind of cage? Explore both sides. Answer in a single paragraph of roughly 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X152",
   "template_family_id": "X152",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2637,12 +2637,12 @@
   "domain": "mind/behavior",
   "genre": "creative scene",
   "requested_words": "40-70",
-  "prompt_text": "Write a scene in which someone finds an old note in their own handwriting that they do not remember writing. Use one paragraph of about 40-70 words.",
+  "prompt_text": "Write a scene in which someone finds an old note in their own handwriting that they do not remember writing. Use one paragraph of about 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X153",
   "template_family_id": "X153",
-  "wrapper_id": "scene-length-v1",
+  "wrapper_id": "scene-length-v1+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2651,12 +2651,12 @@
   "domain": "earth/environment",
   "genre": "evocative exposition",
   "requested_words": "40-70",
-  "prompt_text": "Describe the first snowfall of winter settling on a busy city and briefly quieting it. Write one paragraph of about 40-70 words.",
+  "prompt_text": "Describe the first snowfall of winter settling on a busy city and briefly quieting it. Write one paragraph of about 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X154",
   "template_family_id": "X154",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2665,12 +2665,12 @@
   "domain": "earth/environment",
   "genre": "conceptual explanation",
   "requested_words": "90-130",
-  "prompt_text": "Explain why earthquakes happen much more often in some parts of the world than in others. Answer in a single paragraph of roughly 90-130 words.",
+  "prompt_text": "Explain why earthquakes happen much more often in some parts of the world than in others. Answer in a single paragraph of roughly 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X155",
   "template_family_id": "X155",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2679,12 +2679,12 @@
   "domain": "earth/environment",
   "genre": "evocative exposition",
   "requested_words": "220-250",
-  "prompt_text": "Describe a rainforest canopy as a world above the world, from the tops of the tallest trees down to the shaded forest floor. Keep it to one paragraph of around 220-250 words.",
+  "prompt_text": "Describe a rainforest canopy as a world above the world, from the tops of the tallest trees down to the shaded forest floor. Keep it to one paragraph of around 220-250 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X156",
   "template_family_id": "X156",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2693,12 +2693,12 @@
   "domain": "physics",
   "genre": "conceptual explanation",
   "requested_words": "40-70",
-  "prompt_text": "Why does a microwave oven heat soup quickly while the bowl often stays cooler? Write one paragraph of about 40-70 words.",
+  "prompt_text": "Why does a microwave oven heat soup quickly while the bowl often stays cooler? Write one paragraph of about 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X157",
   "template_family_id": "X157",
-  "wrapper_id": "paragraph-length-v1",
+  "wrapper_id": "paragraph-length-v1+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2707,12 +2707,12 @@
   "domain": "physics",
   "genre": "evocative exposition",
   "requested_words": "90-130",
-  "prompt_text": "Describe the moment a kettle begins to sing, as bubbles of steam form and collapse at the bottom of the water. Answer in a single paragraph of roughly 90-130 words.",
+  "prompt_text": "Describe the moment a kettle begins to sing, as bubbles of steam form and collapse at the bottom of the water. Answer in a single paragraph of roughly 90-130 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X158",
   "template_family_id": "X158",
-  "wrapper_id": "paragraph-length-v2",
+  "wrapper_id": "paragraph-length-v2+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2721,12 +2721,12 @@
   "domain": "society/economics",
   "genre": "reflective argument",
   "requested_words": "40-70",
-  "prompt_text": "Why do people trust a recommendation from a friend more than an advertisement? Keep it to one paragraph of around 40-70 words.",
+  "prompt_text": "Why do people trust a recommendation from a friend more than an advertisement? Keep it to one paragraph of around 40-70 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X159",
   "template_family_id": "X159",
-  "wrapper_id": "paragraph-length-v3",
+  "wrapper_id": "paragraph-length-v3+no-tools-v1",
   "wave": "wave5"
  },
  {
@@ -2735,12 +2735,12 @@
   "domain": "society/economics",
   "genre": "creative scene",
   "requested_words": "160-210",
-  "prompt_text": "Write a scene in which a newly arrived family tries to buy groceries in a country whose language they do not yet speak. Use one paragraph of about 160-210 words.",
+  "prompt_text": "Write a scene in which a newly arrived family tries to buy groceries in a country whose language they do not yet speak. Use one paragraph of about 160-210 words. Answer from your own knowledge, without searching the web or using any tools.",
   "bank_version": "2.0",
   "origin": "independently authored for this project; contains no competition text",
   "prompt_family_id": "X160",
   "template_family_id": "X160",
-  "wrapper_id": "scene-length-v1",
+  "wrapper_id": "scene-length-v1+no-tools-v1",
   "wave": "wave5"
  }
 ]

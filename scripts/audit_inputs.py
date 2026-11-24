@@ -30,7 +30,7 @@ def main() -> int:
     args = ap.parse_args()
     src = args.data_dir or data_dir()
 
-    recorded = json.loads((KIT_DIR / "data_hashes.json").read_text(encoding="utf-8"))
+    recorded = json.loads((KIT_DIR / "forensic_summary.json").read_text(encoding="utf-8"))["files"]
     checks: dict[str, bool] = {}
     hashes = {name: sha256(src / name) for name in DATA_FILES}
     for name in DATA_FILES:

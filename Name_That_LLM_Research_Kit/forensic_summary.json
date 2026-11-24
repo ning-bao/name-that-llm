@@ -1,0 +1,1776 @@
+{
+  "files": {
+    "sample_submission.parquet": {
+      "bytes": 899,
+      "sha256": "ccf86796b80fd7f83d8463664603fd1208e17559abcf416f198776b819646188"
+    },
+    "Pasted markdown(20261102-060939).md": {
+      "bytes": 35906,
+      "sha256": "e62195c4fa7a08b6daf34078ee6d57b15fd44140df24dd2b01b40cb073d70908"
+    },
+    "train.csv": {
+      "bytes": 2139418,
+      "sha256": "40a22ce8d88c5f46feb4637a099db815bef5f713ffe53e89dbe1b7b21de77707"
+    },
+    "test.csv": {
+      "bytes": 2218,
+      "sha256": "4545aa3a3459f4c0724f97ad5bd06c4caa3506bdfea5fab905e8203184fc0c57"
+    }
+  },
+  "train_shape": [
+    2699,
+    4
+  ],
+  "train_columns": [
+    "id",
+    "prompt_id",
+    "text",
+    "model"
+  ],
+  "test_shape": [
+    3,
+    2
+  ],
+  "test_columns": [
+    "id",
+    "text"
+  ],
+  "submission_shape": [
+    3,
+    2
+  ],
+  "submission_columns": [
+    "id",
+    "model"
+  ],
+  "submission_dtypes": {
+    "id": "object",
+    "model": "object"
+  },
+  "submission_ids_match": true,
+  "empty_fields": {
+    "id": 0,
+    "prompt_id": 0,
+    "text": 0,
+    "model": 0
+  },
+  "model_counts": {
+    "claude-fable-5": 149,
+    "claude-opus-4-6": 150,
+    "claude-opus-4-8": 150,
+    "claude-opus-5": 150,
+    "claude-sonnet-5": 150,
+    "gemini-3.1-pro-preview": 150,
+    "gemini-3.6-flash": 150,
+    "gemini-3.7-flash": 150,
+    "gemini-3.8-flash": 150,
+    "glm-5.3": 150,
+    "glm-5.3-flash": 150,
+    "gpt-5.5": 150,
+    "gpt-5.6-luna": 150,
+    "gpt-5.6-sol": 150,
+    "gpt-5.6-terra": 150,
+    "gpt-6-astra": 150,
+    "kimi-k3": 150,
+    "qwen3.8-max": 150
+  },
+  "prompt_counts": {
+    "18": 149,
+    "17": 1
+  },
+  "incomplete_prompts": {
+    "p002": [
+      "claude-fable-5"
+    ]
+  },
+  "id_duplicates": 0,
+  "prompt_model_duplicates": 0,
+  "exact_text_duplicates": 0,
+  "train_test_id_overlap": 0,
+  "train_test_exact_text_overlap": 0,
+  "whitespace_lowercase_text_duplicates": 0,
+  "length_overall": {
+    "words": {
+      "count": 2699.0,
+      "mean": 114.65950351982215,
+      "std": 58.281372160365294,
+      "min": 36.0,
+      "1%": 40.0,
+      "5%": 44.0,
+      "25%": 64.0,
+      "50%": 101.0,
+      "75%": 157.0,
+      "95%": 224.0,
+      "99%": 248.0,
+      "max": 274.0
+    },
+    "tokens": {
+      "count": 2699.0,
+      "mean": 145.3438310485365,
+      "std": 71.84991493419811,
+      "min": 44.0,
+      "1%": 52.0,
+      "5%": 58.0,
+      "25%": 84.0,
+      "50%": 128.0,
+      "75%": 195.0,
+      "95%": 280.0999999999999,
+      "99%": 311.0,
+      "max": 376.0
+    },
+    "chars": {
+      "count": 2699.0,
+      "mean": 755.2893664320119,
+      "std": 377.3710752923643,
+      "min": 230.0,
+      "1%": 267.0,
+      "5%": 297.0,
+      "25%": 429.0,
+      "50%": 670.0,
+      "75%": 1027.0,
+      "95%": 1469.1999999999998,
+      "99%": 1669.0,
+      "max": 1900.0
+    },
+    "sentences_heuristic": {
+      "count": 2699.0,
+      "mean": 4.858095590959615,
+      "std": 2.169832469828692,
+      "min": 0.0,
+      "1%": 1.0,
+      "5%": 2.0,
+      "25%": 3.0,
+      "50%": 5.0,
+      "75%": 6.0,
+      "95%": 9.0,
+      "99%": 11.0,
+      "max": 14.0
+    },
+    "paragraphs": {
+      "count": 2699.0,
+      "mean": 1.0,
+      "std": 0.0,
+      "min": 1.0,
+      "1%": 1.0,
+      "5%": 1.0,
+      "25%": 1.0,
+      "50%": 1.0,
+      "75%": 1.0,
+      "95%": 1.0,
+      "99%": 1.0,
+      "max": 1.0
+    }
+  },
+  "words_outside_40_250": 41,
+  "token_gt_512": 0,
+  "token_gt_768": 0,
+  "artifact_totals": {
+    "leading_space": 0,
+    "trailing_space": 0,
+    "repeated_spaces": 0,
+    "blankline": 0,
+    "has_bold": 0,
+    "has_heading": 0,
+    "has_bullet": 0,
+    "has_numbered": 0,
+    "has_latex": 5,
+    "has_code_fence": 0,
+    "has_url": 0,
+    "nfc_changed": 0,
+    "nfkc_changed": 12,
+    "has_em_dash": 1052,
+    "has_en_dash": 11,
+    "has_curly_apostrophe": 567,
+    "has_left_curly_quote": 93,
+    "has_right_curly_quote": 93,
+    "has_straight_apostrophe": 835,
+    "has_straight_double_quote": 109,
+    "has_semicolon": 1044,
+    "has_colon": 1407,
+    "has_exclamation": 8,
+    "has_question": 84,
+    "has_asterisk": 15,
+    "has_backtick": 0,
+    "has_slash": 7,
+    "has_newline": 0,
+    "has_tab": 0,
+    "has_nbsp": 0
+  },
+  "non_ascii_char_counts": {
+    "—": 1835,
+    "’": 840,
+    "“": 125,
+    "”": 125,
+    "ö": 67,
+    "é": 30,
+    "à": 28,
+    "ç": 21,
+    "–": 18,
+    "−": 12,
+    "ő": 10,
+    "²": 7,
+    "⁻": 7,
+    "³": 7,
+    "è": 5,
+    "⁶": 4,
+    "₂": 3,
+    "⁺": 2,
+    "ε": 2,
+    "₀": 2,
+    "Σ": 2,
+    "∞": 1,
+    "°": 1,
+    "θ": 1,
+    "⁵": 1,
+    "ä": 1,
+    "⁷": 1,
+    "→": 1,
+    "ã": 1,
+    "ω": 1
+  },
+  "note": "All lengths measured; sentence counts heuristic. No models trained. Token probe o200k_base, not source-specific.",
+  "length_model_partial_r2_after_prompt": {
+    "words": 0.010481248521028497,
+    "tokens": 0.010277327577325579
+  },
+  "length_prompt_r2": {
+    "words": 0.050432738619848205,
+    "tokens": 0.05134849786610818
+  },
+  "cosine_similarity": {
+    "definition": "case-sensitive sklearn char3-5 TFIDF; min_df2 max_features180000; repeated whitespace normalized by sklearn internally; descriptive only",
+    "same_prompt_percentiles": [
+      0.2518700957298279,
+      0.3688856720924377,
+      0.4085872769355771,
+      0.48960679650306704,
+      0.7292627692222595
+    ],
+    "cross_prompt_percentiles": [
+      0.07241041958332062,
+      0.12011515349149707,
+      0.1354680210351944,
+      0.1648057021200657,
+      0.349824458360672
+    ]
+  },
+  "near_duplicate_candidates_ge080": 0,
+  "cross_prompt_candidates_ge080": 0,
+  "repeated_phrases": {
+    "claude-fable-5": [
+      {
+        "phrase": "the moment",
+        "own_rows": 6,
+        "other_rows": 30,
+        "distinct_prompts": 19,
+        "log_rate_ratio": 1.2876809173337809
+      },
+      {
+        "phrase": "at all",
+        "own_rows": 8,
+        "other_rows": 40,
+        "distinct_prompts": 33,
+        "log_rate_ratio": 1.272369613429333
+      },
+      {
+        "phrase": "a self",
+        "own_rows": 6,
+        "other_rows": 32,
+        "distinct_prompts": 17,
+        "log_rate_ratio": 1.2241675116114554
+      },
+      {
+        "phrase": "so the",
+        "own_rows": 6,
+        "other_rows": 33,
+        "distinct_prompts": 31,
+        "log_rate_ratio": 1.1938621621161265
+      },
+      {
+        "phrase": "water and",
+        "own_rows": 6,
+        "other_rows": 33,
+        "distinct_prompts": 18,
+        "log_rate_ratio": 1.1938621621161265
+      },
+      {
+        "phrase": "years ago",
+        "own_rows": 6,
+        "other_rows": 36,
+        "distinct_prompts": 12,
+        "log_rate_ratio": 1.1080953403587013
+      },
+      {
+        "phrase": "this is the",
+        "own_rows": 6,
+        "other_rows": 37,
+        "distinct_prompts": 22,
+        "log_rate_ratio": 1.081066667970782
+      },
+      {
+        "phrase": "in the dark",
+        "own_rows": 6,
+        "other_rows": 39,
+        "distinct_prompts": 28,
+        "log_rate_ratio": 1.0291069290400707
+      },
+      {
+        "phrase": "without a",
+        "own_rows": 7,
+        "other_rows": 46,
+        "distinct_prompts": 26,
+        "log_rate_ratio": 1.0090561319945102
+      },
+      {
+        "phrase": "and its",
+        "own_rows": 6,
+        "other_rows": 50,
+        "distinct_prompts": 36,
+        "log_rate_ratio": 0.783434264665833
+      }
+    ],
+    "claude-opus-4-6": [
+      {
+        "phrase": "into something",
+        "own_rows": 6,
+        "other_rows": 12,
+        "distinct_prompts": 15,
+        "log_rate_ratio": 2.172642333930883
+      },
+      {
+        "phrase": "the architecture",
+        "own_rows": 9,
+        "other_rows": 18,
+        "distinct_prompts": 18,
+        "log_rate_ratio": 2.1600898678597633
+      },
+      {
+        "phrase": "the architecture of",
+        "own_rows": 6,
+        "other_rows": 15,
+        "distinct_prompts": 17,
+        "log_rate_ratio": 1.9575309543139379
+      },
+      {
+        "phrase": "millions of years",
+        "own_rows": 6,
+        "other_rows": 19,
+        "distinct_prompts": 13,
+        "log_rate_ratio": 1.7279565126694378
+      },
+      {
+        "phrase": "about the",
+        "own_rows": 6,
+        "other_rows": 26,
+        "distinct_prompts": 22,
+        "log_rate_ratio": 1.4212262452469626
+      },
+      {
+        "phrase": "millions of",
+        "own_rows": 9,
+        "other_rows": 55,
+        "distinct_prompts": 31,
+        "log_rate_ratio": 1.0614775791916542
+      },
+      {
+        "phrase": "as though",
+        "own_rows": 6,
+        "other_rows": 38,
+        "distinct_prompts": 29,
+        "log_rate_ratio": 1.0477127369454
+      },
+      {
+        "phrase": "between the",
+        "own_rows": 6,
+        "other_rows": 39,
+        "distinct_prompts": 28,
+        "log_rate_ratio": 1.0220703063320626
+      },
+      {
+        "phrase": "of years",
+        "own_rows": 8,
+        "other_rows": 54,
+        "distinct_prompts": 25,
+        "log_rate_ratio": 0.9684342631646197
+      },
+      {
+        "phrase": "that a",
+        "own_rows": 9,
+        "other_rows": 64,
+        "distinct_prompts": 45,
+        "log_rate_ratio": 0.9111953761423162
+      }
+    ],
+    "claude-opus-4-8": [
+      {
+        "phrase": "and in that",
+        "own_rows": 6,
+        "other_rows": 16,
+        "distinct_prompts": 19,
+        "log_rate_ratio": 1.8950105973326044
+      },
+      {
+        "phrase": "we cannot",
+        "own_rows": 6,
+        "other_rows": 19,
+        "distinct_prompts": 17,
+        "log_rate_ratio": 1.7279565126694378
+      },
+      {
+        "phrase": "the planet's",
+        "own_rows": 6,
+        "other_rows": 20,
+        "distinct_prompts": 9,
+        "log_rate_ratio": 1.6779460920947762
+      },
+      {
+        "phrase": "and in",
+        "own_rows": 10,
+        "other_rows": 37,
+        "distinct_prompts": 38,
+        "log_rate_ratio": 1.5536031255246603
+      },
+      {
+        "phrase": "than any",
+        "own_rows": 7,
+        "other_rows": 30,
+        "distinct_prompts": 25,
+        "log_rate_ratio": 1.423745138266446
+      },
+      {
+        "phrase": "so that",
+        "own_rows": 7,
+        "other_rows": 30,
+        "distinct_prompts": 27,
+        "log_rate_ratio": 1.423745138266446
+      },
+      {
+        "phrase": "in their",
+        "own_rows": 6,
+        "other_rows": 27,
+        "distinct_prompts": 29,
+        "log_rate_ratio": 1.384184973566613
+      },
+      {
+        "phrase": "the very",
+        "own_rows": 15,
+        "other_rows": 69,
+        "distinct_prompts": 59,
+        "log_rate_ratio": 1.3260820726920017
+      },
+      {
+        "phrase": "and you",
+        "own_rows": 8,
+        "other_rows": 40,
+        "distinct_prompts": 27,
+        "log_rate_ratio": 1.2653329907213253
+      },
+      {
+        "phrase": "as you",
+        "own_rows": 6,
+        "other_rows": 33,
+        "distinct_prompts": 11,
+        "log_rate_ratio": 1.1868255394081184
+      }
+    ],
+    "claude-opus-5": [
+      {
+        "phrase": "all of it",
+        "own_rows": 6,
+        "other_rows": 4,
+        "distinct_prompts": 7,
+        "log_rate_ratio": 3.194293581462865
+      },
+      {
+        "phrase": "four hundred",
+        "own_rows": 7,
+        "other_rows": 6,
+        "distinct_prompts": 8,
+        "log_rate_ratio": 2.969669644978221
+      },
+      {
+        "phrase": "which is",
+        "own_rows": 7,
+        "other_rows": 8,
+        "distinct_prompts": 11,
+        "log_rate_ratio": 2.7014056583835413
+      },
+      {
+        "phrase": "that is the",
+        "own_rows": 6,
+        "other_rows": 7,
+        "distinct_prompts": 9,
+        "log_rate_ratio": 2.6834679576968745
+      },
+      {
+        "phrase": "of it",
+        "own_rows": 14,
+        "other_rows": 23,
+        "distinct_prompts": 26,
+        "log_rate_ratio": 2.343717029613963
+      },
+      {
+        "phrase": "all of",
+        "own_rows": 8,
+        "other_rows": 18,
+        "distinct_prompts": 20,
+        "log_rate_ratio": 2.0488642327495388
+      },
+      {
+        "phrase": "the small",
+        "own_rows": 6,
+        "other_rows": 14,
+        "distinct_prompts": 14,
+        "log_rate_ratio": 2.0242223288126104
+      },
+      {
+        "phrase": "and it",
+        "own_rows": 10,
+        "other_rows": 23,
+        "distinct_prompts": 27,
+        "log_rate_ratio": 2.020943637350912
+      },
+      {
+        "phrase": "so that",
+        "own_rows": 10,
+        "other_rows": 27,
+        "distinct_prompts": 27,
+        "log_rate_ratio": 1.8637580538284992
+      },
+      {
+        "phrase": "a second",
+        "own_rows": 9,
+        "other_rows": 25,
+        "distinct_prompts": 17,
+        "log_rate_ratio": 1.839182147779662
+      }
+    ],
+    "claude-sonnet-5": [
+      {
+        "phrase": "of water",
+        "own_rows": 7,
+        "other_rows": 28,
+        "distinct_prompts": 16,
+        "log_rate_ratio": 1.4915677346052072
+      },
+      {
+        "phrase": "and more",
+        "own_rows": 6,
+        "other_rows": 27,
+        "distinct_prompts": 19,
+        "log_rate_ratio": 1.384184973566613
+      },
+      {
+        "phrase": "into a single",
+        "own_rows": 6,
+        "other_rows": 31,
+        "distinct_prompts": 18,
+        "log_rate_ratio": 1.2483834324075516
+      },
+      {
+        "phrase": "as though",
+        "own_rows": 7,
+        "other_rows": 37,
+        "distinct_prompts": 29,
+        "log_rate_ratio": 1.2171308889034473
+      },
+      {
+        "phrase": "this is the",
+        "own_rows": 6,
+        "other_rows": 37,
+        "distinct_prompts": 22,
+        "log_rate_ratio": 1.074030045262774
+      },
+      {
+        "phrase": "this is",
+        "own_rows": 17,
+        "other_rows": 117,
+        "distinct_prompts": 61,
+        "log_rate_ratio": 0.922331348682802
+      },
+      {
+        "phrase": "only the",
+        "own_rows": 8,
+        "other_rows": 59,
+        "distinct_prompts": 40,
+        "log_rate_ratio": 0.8806586522822344
+      },
+      {
+        "phrase": "because it",
+        "own_rows": 6,
+        "other_rows": 52,
+        "distinct_prompts": 30,
+        "log_rate_ratio": 0.7375578086415606
+      },
+      {
+        "phrase": "of life",
+        "own_rows": 7,
+        "other_rows": 61,
+        "distinct_prompts": 23,
+        "log_rate_ratio": 0.72243464706734
+      },
+      {
+        "phrase": "the very",
+        "own_rows": 8,
+        "other_rows": 76,
+        "distinct_prompts": 59,
+        "log_rate_ratio": 0.6293442240013283
+      }
+    ],
+    "gemini-3.1-pro-preview": [
+      {
+        "phrase": "strips away",
+        "own_rows": 6,
+        "other_rows": 4,
+        "distinct_prompts": 7,
+        "log_rate_ratio": 3.194293581462865
+      },
+      {
+        "phrase": "acts as",
+        "own_rows": 8,
+        "other_rows": 9,
+        "distinct_prompts": 12,
+        "log_rate_ratio": 2.7153431662273233
+      },
+      {
+        "phrase": "the ultimate",
+        "own_rows": 12,
+        "other_rows": 14,
+        "distinct_prompts": 20,
+        "log_rate_ratio": 2.6781487962192747
+      },
+      {
+        "phrase": "a sudden",
+        "own_rows": 9,
+        "other_rows": 11,
+        "distinct_prompts": 17,
+        "log_rate_ratio": 2.6355135645748384
+      },
+      {
+        "phrase": "in absolute",
+        "own_rows": 6,
+        "other_rows": 9,
+        "distinct_prompts": 10,
+        "log_rate_ratio": 2.447079179632644
+      },
+      {
+        "phrase": "it was a",
+        "own_rows": 6,
+        "other_rows": 10,
+        "distinct_prompts": 12,
+        "log_rate_ratio": 2.3469957210756616
+      },
+      {
+        "phrase": "the night sky",
+        "own_rows": 6,
+        "other_rows": 10,
+        "distinct_prompts": 8,
+        "log_rate_ratio": 2.3469957210756616
+      },
+      {
+        "phrase": "the absolute",
+        "own_rows": 6,
+        "other_rows": 10,
+        "distinct_prompts": 13,
+        "log_rate_ratio": 2.3469957210756616
+      },
+      {
+        "phrase": "a profound",
+        "own_rows": 17,
+        "other_rows": 29,
+        "distinct_prompts": 32,
+        "log_rate_ratio": 2.304379418921241
+      },
+      {
+        "phrase": "a fleeting",
+        "own_rows": 9,
+        "other_rows": 16,
+        "distinct_prompts": 11,
+        "log_rate_ratio": 2.2745002190375083
+      }
+    ],
+    "gemini-3.6-flash": [
+      {
+        "phrase": "realm of",
+        "own_rows": 6,
+        "other_rows": 6,
+        "distinct_prompts": 11,
+        "log_rate_ratio": 2.826568801337548
+      },
+      {
+        "phrase": "expanse of",
+        "own_rows": 8,
+        "other_rows": 12,
+        "distinct_prompts": 16,
+        "log_rate_ratio": 2.4409063205255626
+      },
+      {
+        "phrase": "stands as",
+        "own_rows": 7,
+        "other_rows": 12,
+        "distinct_prompts": 11,
+        "log_rate_ratio": 2.3157431775715565
+      },
+      {
+        "phrase": "geometry of",
+        "own_rows": 6,
+        "other_rows": 15,
+        "distinct_prompts": 15,
+        "log_rate_ratio": 1.9575309543139379
+      },
+      {
+        "phrase": "lies a",
+        "own_rows": 9,
+        "other_rows": 24,
+        "distinct_prompts": 24,
+        "log_rate_ratio": 1.8791874823933612
+      },
+      {
+        "phrase": "the ultimate",
+        "own_rows": 7,
+        "other_rows": 19,
+        "distinct_prompts": 20,
+        "log_rate_ratio": 1.8710573563101112
+      },
+      {
+        "phrase": "web of",
+        "own_rows": 7,
+        "other_rows": 22,
+        "distinct_prompts": 15,
+        "log_rate_ratio": 1.7279565126694378
+      },
+      {
+        "phrase": "far from",
+        "own_rows": 6,
+        "other_rows": 19,
+        "distinct_prompts": 13,
+        "log_rate_ratio": 1.7279565126694378
+      },
+      {
+        "phrase": "a solitary",
+        "own_rows": 6,
+        "other_rows": 19,
+        "distinct_prompts": 17,
+        "log_rate_ratio": 1.7279565126694378
+      },
+      {
+        "phrase": "known as",
+        "own_rows": 6,
+        "other_rows": 21,
+        "distinct_prompts": 21,
+        "log_rate_ratio": 1.6303180431055222
+      }
+    ],
+    "gemini-3.7-flash": [
+      {
+        "phrase": "an intricate",
+        "own_rows": 10,
+        "other_rows": 5,
+        "distinct_prompts": 14,
+        "log_rate_ratio": 3.4731959662625997
+      },
+      {
+        "phrase": "known as",
+        "own_rows": 10,
+        "other_rows": 17,
+        "distinct_prompts": 21,
+        "log_rate_ratio": 2.3157431775715565
+      },
+      {
+        "phrase": "the grand",
+        "own_rows": 7,
+        "other_rows": 13,
+        "distinct_prompts": 12,
+        "log_rate_ratio": 2.2387821364354283
+      },
+      {
+        "phrase": "ceases to",
+        "own_rows": 6,
+        "other_rows": 13,
+        "distinct_prompts": 11,
+        "log_rate_ratio": 2.095681292794755
+      },
+      {
+        "phrase": "the relentless",
+        "own_rows": 6,
+        "other_rows": 16,
+        "distinct_prompts": 22,
+        "log_rate_ratio": 1.8950105973326044
+      },
+      {
+        "phrase": "a profound",
+        "own_rows": 12,
+        "other_rows": 34,
+        "distinct_prompts": 32,
+        "log_rate_ratio": 1.8113381216084887
+      },
+      {
+        "phrase": "through an",
+        "own_rows": 8,
+        "other_rows": 23,
+        "distinct_prompts": 23,
+        "log_rate_ratio": 1.8096345436837051
+      },
+      {
+        "phrase": "of pure",
+        "own_rows": 8,
+        "other_rows": 25,
+        "distinct_prompts": 15,
+        "log_rate_ratio": 1.7279565126694374
+      },
+      {
+        "phrase": "the frozen",
+        "own_rows": 6,
+        "other_rows": 20,
+        "distinct_prompts": 11,
+        "log_rate_ratio": 1.6779460920947762
+      },
+      {
+        "phrase": "the silent",
+        "own_rows": 11,
+        "other_rows": 36,
+        "distinct_prompts": 34,
+        "log_rate_ratio": 1.6716035761183061
+      }
+    ],
+    "gemini-3.8-flash": [
+      {
+        "phrase": "across an",
+        "own_rows": 6,
+        "other_rows": 11,
+        "distinct_prompts": 14,
+        "log_rate_ratio": 2.2560239428699345
+      },
+      {
+        "phrase": "within this",
+        "own_rows": 7,
+        "other_rows": 19,
+        "distinct_prompts": 19,
+        "log_rate_ratio": 1.8710573563101112
+      },
+      {
+        "phrase": "upon a",
+        "own_rows": 6,
+        "other_rows": 19,
+        "distinct_prompts": 17,
+        "log_rate_ratio": 1.7279565126694378
+      },
+      {
+        "phrase": "pulse of",
+        "own_rows": 6,
+        "other_rows": 20,
+        "distinct_prompts": 14,
+        "log_rate_ratio": 1.6779460920947762
+      },
+      {
+        "phrase": "into an",
+        "own_rows": 18,
+        "other_rows": 68,
+        "distinct_prompts": 49,
+        "log_rate_ratio": 1.5175057881536467
+      },
+      {
+        "phrase": "as an",
+        "own_rows": 12,
+        "other_rows": 46,
+        "distinct_prompts": 35,
+        "log_rate_ratio": 1.512845133052493
+      },
+      {
+        "phrase": "proving that",
+        "own_rows": 12,
+        "other_rows": 52,
+        "distinct_prompts": 39,
+        "log_rate_ratio": 1.3914842760482249
+      },
+      {
+        "phrase": "dissolves into",
+        "own_rows": 7,
+        "other_rows": 38,
+        "distinct_prompts": 26,
+        "log_rate_ratio": 1.1908135805860733
+      },
+      {
+        "phrase": "an ancient",
+        "own_rows": 7,
+        "other_rows": 39,
+        "distinct_prompts": 22,
+        "log_rate_ratio": 1.165171149972736
+      },
+      {
+        "phrase": "centuries of",
+        "own_rows": 6,
+        "other_rows": 35,
+        "distinct_prompts": 17,
+        "log_rate_ratio": 1.1288382817577687
+      }
+    ],
+    "glm-5.3": [
+      {
+        "phrase": "by its",
+        "own_rows": 6,
+        "other_rows": 18,
+        "distinct_prompts": 23,
+        "log_rate_ratio": 1.7806002461548593
+      },
+      {
+        "phrase": "at all",
+        "own_rows": 8,
+        "other_rows": 40,
+        "distinct_prompts": 33,
+        "log_rate_ratio": 1.2653329907213253
+      },
+      {
+        "phrase": "the way",
+        "own_rows": 9,
+        "other_rows": 45,
+        "distinct_prompts": 37,
+        "log_rate_ratio": 1.2601482739871384
+      },
+      {
+        "phrase": "that would",
+        "own_rows": 6,
+        "other_rows": 35,
+        "distinct_prompts": 26,
+        "log_rate_ratio": 1.1288382817577687
+      },
+      {
+        "phrase": "billion years",
+        "own_rows": 8,
+        "other_rows": 52,
+        "distinct_prompts": 13,
+        "log_rate_ratio": 1.00582179523624
+      },
+      {
+        "phrase": "we can",
+        "own_rows": 6,
+        "other_rows": 41,
+        "distinct_prompts": 23,
+        "log_rate_ratio": 0.9726775510024868
+      },
+      {
+        "phrase": "no one",
+        "own_rows": 8,
+        "other_rows": 55,
+        "distinct_prompts": 37,
+        "log_rate_ratio": 0.9502519440814297
+      },
+      {
+        "phrase": "what we",
+        "own_rows": 6,
+        "other_rows": 47,
+        "distinct_prompts": 27,
+        "log_rate_ratio": 0.8376412671985434
+      },
+      {
+        "phrase": "the void",
+        "own_rows": 8,
+        "other_rows": 66,
+        "distinct_prompts": 31,
+        "log_rate_ratio": 0.7694330171720098
+      },
+      {
+        "phrase": "only a",
+        "own_rows": 7,
+        "other_rows": 62,
+        "distinct_prompts": 48,
+        "log_rate_ratio": 0.7063052651374564
+      }
+    ],
+    "glm-5.3-flash": [
+      {
+        "phrase": "years ago",
+        "own_rows": 7,
+        "other_rows": 35,
+        "distinct_prompts": 12,
+        "log_rate_ratio": 1.271939125398442
+      },
+      {
+        "phrase": "at all",
+        "own_rows": 8,
+        "other_rows": 40,
+        "distinct_prompts": 33,
+        "log_rate_ratio": 1.2653329907213253
+      },
+      {
+        "phrase": "no one",
+        "own_rows": 10,
+        "other_rows": 53,
+        "distinct_prompts": 37,
+        "log_rate_ratio": 1.1982624045990642
+      },
+      {
+        "phrase": "whisper of",
+        "own_rows": 7,
+        "other_rows": 41,
+        "distinct_prompts": 23,
+        "log_rate_ratio": 1.11577839464316
+      },
+      {
+        "phrase": "feels like",
+        "own_rows": 6,
+        "other_rows": 36,
+        "distinct_prompts": 22,
+        "log_rate_ratio": 1.1010587176506932
+      },
+      {
+        "phrase": "thousand years",
+        "own_rows": 6,
+        "other_rows": 39,
+        "distinct_prompts": 14,
+        "log_rate_ratio": 1.0220703063320626
+      },
+      {
+        "phrase": "our own",
+        "own_rows": 9,
+        "other_rows": 59,
+        "distinct_prompts": 27,
+        "log_rate_ratio": 0.9918842873924589
+      },
+      {
+        "phrase": "and that",
+        "own_rows": 7,
+        "other_rows": 47,
+        "distinct_prompts": 39,
+        "log_rate_ratio": 0.9807421108392167
+      },
+      {
+        "phrase": "the way",
+        "own_rows": 7,
+        "other_rows": 47,
+        "distinct_prompts": 37,
+        "log_rate_ratio": 0.9807421108392167
+      },
+      {
+        "phrase": "it the",
+        "own_rows": 6,
+        "other_rows": 43,
+        "distinct_prompts": 35,
+        "log_rate_ratio": 0.9256100401445004
+      }
+    ],
+    "gpt-5.5": [
+      {
+        "phrase": "whether the",
+        "own_rows": 6,
+        "other_rows": 12,
+        "distinct_prompts": 13,
+        "log_rate_ratio": 2.172642333930883
+      },
+      {
+        "phrase": "would not",
+        "own_rows": 6,
+        "other_rows": 24,
+        "distinct_prompts": 16,
+        "log_rate_ratio": 1.4996978606884572
+      },
+      {
+        "phrase": "less like",
+        "own_rows": 6,
+        "other_rows": 25,
+        "distinct_prompts": 22,
+        "log_rate_ratio": 1.459692526074758
+      },
+      {
+        "phrase": "become a",
+        "own_rows": 6,
+        "other_rows": 27,
+        "distinct_prompts": 26,
+        "log_rate_ratio": 1.384184973566613
+      },
+      {
+        "phrase": "could be",
+        "own_rows": 7,
+        "other_rows": 34,
+        "distinct_prompts": 24,
+        "log_rate_ratio": 1.3005124978424978
+      },
+      {
+        "phrase": "as if",
+        "own_rows": 14,
+        "other_rows": 74,
+        "distinct_prompts": 46,
+        "log_rate_ratio": 1.1899183253785623
+      },
+      {
+        "phrase": "seems to",
+        "own_rows": 10,
+        "other_rows": 55,
+        "distinct_prompts": 36,
+        "log_rate_ratio": 1.1615610377486365
+      },
+      {
+        "phrase": "beyond the",
+        "own_rows": 11,
+        "other_rows": 76,
+        "distinct_prompts": 41,
+        "log_rate_ratio": 0.9316250958742618
+      },
+      {
+        "phrase": "but a",
+        "own_rows": 23,
+        "other_rows": 157,
+        "distinct_prompts": 89,
+        "log_rate_ratio": 0.924143764221973
+      },
+      {
+        "phrase": "the room",
+        "own_rows": 7,
+        "other_rows": 50,
+        "distinct_prompts": 22,
+        "log_rate_ratio": 0.9194984855984982
+      }
+    ],
+    "gpt-5.6-luna": [
+      {
+        "phrase": "is therefore",
+        "own_rows": 7,
+        "other_rows": 22,
+        "distinct_prompts": 23,
+        "log_rate_ratio": 1.7279565126694378
+      },
+      {
+        "phrase": "a dark",
+        "own_rows": 6,
+        "other_rows": 21,
+        "distinct_prompts": 18,
+        "log_rate_ratio": 1.6303180431055222
+      },
+      {
+        "phrase": "less a",
+        "own_rows": 8,
+        "other_rows": 32,
+        "distinct_prompts": 30,
+        "log_rate_ratio": 1.4853948754981268
+      },
+      {
+        "phrase": "less like",
+        "own_rows": 6,
+        "other_rows": 25,
+        "distinct_prompts": 22,
+        "log_rate_ratio": 1.459692526074758
+      },
+      {
+        "phrase": "while a",
+        "own_rows": 7,
+        "other_rows": 29,
+        "distinct_prompts": 22,
+        "log_rate_ratio": 1.4570815585340378
+      },
+      {
+        "phrase": "with no",
+        "own_rows": 6,
+        "other_rows": 27,
+        "distinct_prompts": 25,
+        "log_rate_ratio": 1.384184973566613
+      },
+      {
+        "phrase": "seems to",
+        "own_rows": 12,
+        "other_rows": 53,
+        "distinct_prompts": 36,
+        "log_rate_ratio": 1.3726157917438422
+      },
+      {
+        "phrase": "can be",
+        "own_rows": 13,
+        "other_rows": 73,
+        "distinct_prompts": 43,
+        "log_rate_ratio": 1.13197308056314
+      },
+      {
+        "phrase": "a restless",
+        "own_rows": 6,
+        "other_rows": 36,
+        "distinct_prompts": 13,
+        "log_rate_ratio": 1.1010587176506932
+      },
+      {
+        "phrase": "in which",
+        "own_rows": 6,
+        "other_rows": 37,
+        "distinct_prompts": 32,
+        "log_rate_ratio": 1.074030045262774
+      }
+    ],
+    "gpt-5.6-sol": [
+      {
+        "phrase": "the darkness",
+        "own_rows": 6,
+        "other_rows": 22,
+        "distinct_prompts": 17,
+        "log_rate_ratio": 1.5848556690287645
+      },
+      {
+        "phrase": "it can",
+        "own_rows": 7,
+        "other_rows": 27,
+        "distinct_prompts": 24,
+        "log_rate_ratio": 1.5272858172072863
+      },
+      {
+        "phrase": "light and",
+        "own_rows": 6,
+        "other_rows": 25,
+        "distinct_prompts": 21,
+        "log_rate_ratio": 1.459692526074758
+      },
+      {
+        "phrase": "a hidden",
+        "own_rows": 6,
+        "other_rows": 34,
+        "distinct_prompts": 27,
+        "log_rate_ratio": 1.1574116542018245
+      },
+      {
+        "phrase": "a vast",
+        "own_rows": 7,
+        "other_rows": 40,
+        "distinct_prompts": 28,
+        "log_rate_ratio": 1.1401698477673192
+      },
+      {
+        "phrase": "did not",
+        "own_rows": 9,
+        "other_rows": 51,
+        "distinct_prompts": 30,
+        "log_rate_ratio": 1.1362787922743522
+      },
+      {
+        "phrase": "but by",
+        "own_rows": 7,
+        "other_rows": 47,
+        "distinct_prompts": 36,
+        "log_rate_ratio": 0.9807421108392167
+      },
+      {
+        "phrase": "behind the",
+        "own_rows": 7,
+        "other_rows": 50,
+        "distinct_prompts": 30,
+        "log_rate_ratio": 0.9194984855984982
+      },
+      {
+        "phrase": "enough to",
+        "own_rows": 11,
+        "other_rows": 80,
+        "distinct_prompts": 51,
+        "log_rate_ratio": 0.880658652282234
+      },
+      {
+        "phrase": "only a",
+        "own_rows": 8,
+        "other_rows": 61,
+        "distinct_prompts": 48,
+        "log_rate_ratio": 0.847597790021346
+      }
+    ],
+    "gpt-5.6-terra": [
+      {
+        "phrase": "measure of",
+        "own_rows": 6,
+        "other_rows": 15,
+        "distinct_prompts": 10,
+        "log_rate_ratio": 1.9575309543139379
+      },
+      {
+        "phrase": "the familiar",
+        "own_rows": 6,
+        "other_rows": 20,
+        "distinct_prompts": 17,
+        "log_rate_ratio": 1.6779460920947762
+      },
+      {
+        "phrase": "beneath a",
+        "own_rows": 10,
+        "other_rows": 37,
+        "distinct_prompts": 31,
+        "log_rate_ratio": 1.5536031255246603
+      },
+      {
+        "phrase": "not an",
+        "own_rows": 6,
+        "other_rows": 24,
+        "distinct_prompts": 23,
+        "log_rate_ratio": 1.4996978606884572
+      },
+      {
+        "phrase": "is not merely",
+        "own_rows": 9,
+        "other_rows": 39,
+        "distinct_prompts": 32,
+        "log_rate_ratio": 1.4015599280369666
+      },
+      {
+        "phrase": "in which",
+        "own_rows": 7,
+        "other_rows": 36,
+        "distinct_prompts": 32,
+        "log_rate_ratio": 1.2441595612913665
+      },
+      {
+        "phrase": "at first",
+        "own_rows": 6,
+        "other_rows": 32,
+        "distinct_prompts": 18,
+        "log_rate_ratio": 1.2171308889034473
+      },
+      {
+        "phrase": "the black",
+        "own_rows": 6,
+        "other_rows": 33,
+        "distinct_prompts": 13,
+        "log_rate_ratio": 1.1868255394081184
+      },
+      {
+        "phrase": "a new",
+        "own_rows": 8,
+        "other_rows": 44,
+        "distinct_prompts": 27,
+        "log_rate_ratio": 1.171145775661624
+      },
+      {
+        "phrase": "can be",
+        "own_rows": 13,
+        "other_rows": 73,
+        "distinct_prompts": 43,
+        "log_rate_ratio": 1.13197308056314
+      }
+    ],
+    "gpt-6-astra": [
+      {
+        "phrase": "a familiar",
+        "own_rows": 6,
+        "other_rows": 7,
+        "distinct_prompts": 10,
+        "log_rate_ratio": 2.6834679576968745
+      },
+      {
+        "phrase": "not simply",
+        "own_rows": 7,
+        "other_rows": 12,
+        "distinct_prompts": 16,
+        "log_rate_ratio": 2.3157431775715565
+      },
+      {
+        "phrase": "even a",
+        "own_rows": 7,
+        "other_rows": 12,
+        "distinct_prompts": 16,
+        "log_rate_ratio": 2.3157431775715565
+      },
+      {
+        "phrase": "a moment",
+        "own_rows": 6,
+        "other_rows": 11,
+        "distinct_prompts": 12,
+        "log_rate_ratio": 2.2560239428699345
+      },
+      {
+        "phrase": "is not that",
+        "own_rows": 8,
+        "other_rows": 17,
+        "distinct_prompts": 13,
+        "log_rate_ratio": 2.1044340839043496
+      },
+      {
+        "phrase": "is therefore",
+        "own_rows": 9,
+        "other_rows": 20,
+        "distinct_prompts": 23,
+        "log_rate_ratio": 2.05743571379968
+      },
+      {
+        "phrase": "not that",
+        "own_rows": 9,
+        "other_rows": 25,
+        "distinct_prompts": 18,
+        "log_rate_ratio": 1.839182147779662
+      },
+      {
+        "phrase": "need not",
+        "own_rows": 6,
+        "other_rows": 18,
+        "distinct_prompts": 16,
+        "log_rate_ratio": 1.7806002461548593
+      },
+      {
+        "phrase": "the deepest",
+        "own_rows": 6,
+        "other_rows": 20,
+        "distinct_prompts": 20,
+        "log_rate_ratio": 1.6779460920947762
+      },
+      {
+        "phrase": "the familiar",
+        "own_rows": 6,
+        "other_rows": 20,
+        "distinct_prompts": 17,
+        "log_rate_ratio": 1.6779460920947762
+      }
+    ],
+    "kimi-k3": [
+      {
+        "phrase": "not the",
+        "own_rows": 11,
+        "other_rows": 55,
+        "distinct_prompts": 42,
+        "log_rate_ratio": 1.2525328159543632
+      },
+      {
+        "phrase": "but that",
+        "own_rows": 7,
+        "other_rows": 37,
+        "distinct_prompts": 23,
+        "log_rate_ratio": 1.2171308889034473
+      },
+      {
+        "phrase": "the room",
+        "own_rows": 8,
+        "other_rows": 49,
+        "distinct_prompts": 22,
+        "log_rate_ratio": 1.0646622952591738
+      },
+      {
+        "phrase": "may be",
+        "own_rows": 9,
+        "other_rows": 56,
+        "distinct_prompts": 30,
+        "log_rate_ratio": 1.0436199617916477
+      },
+      {
+        "phrase": "in the dark",
+        "own_rows": 6,
+        "other_rows": 39,
+        "distinct_prompts": 28,
+        "log_rate_ratio": 1.0220703063320626
+      },
+      {
+        "phrase": "a small",
+        "own_rows": 6,
+        "other_rows": 43,
+        "distinct_prompts": 26,
+        "log_rate_ratio": 0.9256100401445004
+      },
+      {
+        "phrase": "as if",
+        "own_rows": 11,
+        "other_rows": 77,
+        "distinct_prompts": 46,
+        "log_rate_ratio": 0.9186379003474507
+      },
+      {
+        "phrase": "before the",
+        "own_rows": 10,
+        "other_rows": 71,
+        "distinct_prompts": 40,
+        "log_rate_ratio": 0.9082466088010634
+      },
+      {
+        "phrase": "no longer",
+        "own_rows": 10,
+        "other_rows": 75,
+        "distinct_prompts": 36,
+        "log_rate_ratio": 0.8538114022460461
+      },
+      {
+        "phrase": "the sky",
+        "own_rows": 9,
+        "other_rows": 71,
+        "distinct_prompts": 24,
+        "log_rate_ratio": 0.8081631502440811
+      }
+    ],
+    "qwen3.8-max": [
+      {
+        "phrase": "a luminous",
+        "own_rows": 6,
+        "other_rows": 16,
+        "distinct_prompts": 18,
+        "log_rate_ratio": 1.8950105973326044
+      },
+      {
+        "phrase": "as if the",
+        "own_rows": 8,
+        "other_rows": 27,
+        "distinct_prompts": 26,
+        "log_rate_ratio": 1.6524489601612924
+      },
+      {
+        "phrase": "not only",
+        "own_rows": 7,
+        "other_rows": 28,
+        "distinct_prompts": 23,
+        "log_rate_ratio": 1.4915677346052072
+      },
+      {
+        "phrase": "a whisper",
+        "own_rows": 8,
+        "other_rows": 34,
+        "distinct_prompts": 18,
+        "log_rate_ratio": 1.4256756407965039
+      },
+      {
+        "phrase": "but it",
+        "own_rows": 6,
+        "other_rows": 31,
+        "distinct_prompts": 27,
+        "log_rate_ratio": 1.2483834324075516
+      },
+      {
+        "phrase": "as if",
+        "own_rows": 14,
+        "other_rows": 74,
+        "distinct_prompts": 46,
+        "log_rate_ratio": 1.1899183253785623
+      },
+      {
+        "phrase": "learned to",
+        "own_rows": 6,
+        "other_rows": 33,
+        "distinct_prompts": 26,
+        "log_rate_ratio": 1.1868255394081184
+      },
+      {
+        "phrase": "becomes a",
+        "own_rows": 22,
+        "other_rows": 127,
+        "distinct_prompts": 65,
+        "log_rate_ratio": 1.091967745949441
+      },
+      {
+        "phrase": "but the",
+        "own_rows": 19,
+        "other_rows": 131,
+        "distinct_prompts": 76,
+        "log_rate_ratio": 0.9179764152894294
+      },
+      {
+        "phrase": "in that",
+        "own_rows": 12,
+        "other_rows": 84,
+        "distinct_prompts": 41,
+        "log_rate_ratio": 0.9155459112826749
+      }
+    ]
+  },
+  "preprocessing_changed_rows": {
+    "strip": 0,
+    "collapse_whitespace": 0,
+    "lowercase": 2699,
+    "ascii_ignore": 1561,
+    "smart_punctuation_fold": 1529
+  },
+  "selected_nearest_cross_prompt_pairs": [
+    {
+      "id_a": "3e2364945221",
+      "id_b": "c33f1541833f",
+      "prompt_a": "p010",
+      "prompt_b": "p082",
+      "cosine": 0.349824458360672
+    },
+    {
+      "id_a": "2df1c8cca6c0",
+      "id_b": "b194a401b3c6",
+      "prompt_a": "p010",
+      "prompt_b": "p082",
+      "cosine": 0.34841808676719666
+    },
+    {
+      "id_a": "2f738f830b32",
+      "id_b": "a758113dbdf7",
+      "prompt_a": "p008",
+      "prompt_b": "p131",
+      "cosine": 0.34227386116981506
+    },
+    {
+      "id_a": "815ca3ebaca4",
+      "id_b": "c33f1541833f",
+      "prompt_a": "p010",
+      "prompt_b": "p082",
+      "cosine": 0.33922719955444336
+    },
+    {
+      "id_a": "05fd45356e2b",
+      "id_b": "2df1c8cca6c0",
+      "prompt_a": "p082",
+      "prompt_b": "p010",
+      "cosine": 0.3254536986351013
+    },
+    {
+      "id_a": "042f7900384b",
+      "id_b": "b172d4db3dbe",
+      "prompt_a": "p015",
+      "prompt_b": "p121",
+      "cosine": 0.32313427329063416
+    },
+    {
+      "id_a": "604283101755",
+      "id_b": "e4cf550738bc",
+      "prompt_a": "p146",
+      "prompt_b": "p100",
+      "cosine": 0.3030111491680145
+    },
+    {
+      "id_a": "19d687a0b0fd",
+      "id_b": "b2c8b43d2734",
+      "prompt_a": "p080",
+      "prompt_b": "p016",
+      "cosine": 0.29763785004615784
+    },
+    {
+      "id_a": "03293c742476",
+      "id_b": "2f738f830b32",
+      "prompt_a": "p131",
+      "prompt_b": "p008",
+      "cosine": 0.2959652543067932
+    },
+    {
+      "id_a": "2bef1bed9374",
+      "id_b": "b3ea0328fe78",
+      "prompt_a": "p004",
+      "prompt_b": "p111",
+      "cosine": 0.29320865869522095
+    },
+    {
+      "id_a": "35c3137e866f",
+      "id_b": "c6bc20f1d6ba",
+      "prompt_a": "p087",
+      "prompt_b": "p073",
+      "cosine": 0.2913225293159485
+    },
+    {
+      "id_a": "7faf6c0ff285",
+      "id_b": "ca136fce936f",
+      "prompt_a": "p004",
+      "prompt_b": "p111",
+      "cosine": 0.2912152111530304
+    },
+    {
+      "id_a": "61714942b7a5",
+      "id_b": "6e361f1f9b4d",
+      "prompt_a": "p148",
+      "prompt_b": "p017",
+      "cosine": 0.29013606905937195
+    },
+    {
+      "id_a": "3bf3de4e8f9c",
+      "id_b": "ab5a9272cfe0",
+      "prompt_a": "p100",
+      "prompt_b": "p146",
+      "cosine": 0.28929218649864197
+    },
+    {
+      "id_a": "021df3a2e5c6",
+      "id_b": "2f738f830b32",
+      "prompt_a": "p134",
+      "prompt_b": "p008",
+      "cosine": 0.28711071610450745
+    },
+    {
+      "id_a": "43895520ce86",
+      "id_b": "c6bc20f1d6ba",
+      "prompt_a": "p087",
+      "prompt_b": "p073",
+      "cosine": 0.2869722247123718
+    },
+    {
+      "id_a": "1e4b027a5ff8",
+      "id_b": "fab7150f9834",
+      "prompt_a": "p015",
+      "prompt_b": "p121",
+      "cosine": 0.28691399097442627
+    },
+    {
+      "id_a": "9c239461481c",
+      "id_b": "c58943e3f81a",
+      "prompt_a": "p040",
+      "prompt_b": "p005",
+      "cosine": 0.2863002121448517
+    },
+    {
+      "id_a": "86dce177b51a",
+      "id_b": "9422b76ee450",
+      "prompt_a": "p100",
+      "prompt_b": "p146",
+      "cosine": 0.2861557900905609
+    },
+    {
+      "id_a": "428e494d28e0",
+      "id_b": "d84c838e875e",
+      "prompt_a": "p068",
+      "prompt_b": "p064",
+      "cosine": 0.28564557433128357
+    },
+    {
+      "id_a": "7b495fd33fe2",
+      "id_b": "b194a401b3c6",
+      "prompt_a": "p010",
+      "prompt_b": "p082",
+      "cosine": 0.28443288803100586
+    },
+    {
+      "id_a": "53c88b1f9eef",
+      "id_b": "f726309fc6b4",
+      "prompt_a": "p020",
+      "prompt_b": "p107",
+      "cosine": 0.28304049372673035
+    },
+    {
+      "id_a": "009319596f10",
+      "id_b": "43895520ce86",
+      "prompt_a": "p073",
+      "prompt_b": "p087",
+      "cosine": 0.28299224376678467
+    },
+    {
+      "id_a": "587008d1a0b8",
+      "id_b": "d84c838e875e",
+      "prompt_a": "p012",
+      "prompt_b": "p064",
+      "cosine": 0.2814360558986664
+    },
+    {
+      "id_a": "4a974f4a365c",
+      "id_b": "57f0ecf4943f",
+      "prompt_a": "p009",
+      "prompt_b": "p043",
+      "cosine": 0.2803078591823578
+    },
+    {
+      "id_a": "5128922745fa",
+      "id_b": "fcf958ea694f",
+      "prompt_a": "p110",
+      "prompt_b": "p068",
+      "cosine": 0.2781214416027069
+    },
+    {
+      "id_a": "34767983637c",
+      "id_b": "ae014ec20eaf",
+      "prompt_a": "p080",
+      "prompt_b": "p120",
+      "cosine": 0.27735745906829834
+    },
+    {
+      "id_a": "0c93c86d3028",
+      "id_b": "51f630d5e11a",
+      "prompt_a": "p002",
+      "prompt_b": "p070",
+      "cosine": 0.27706044912338257
+    },
+    {
+      "id_a": "9003cd62bfe4",
+      "id_b": "f4b956d2fb7d",
+      "prompt_a": "p008",
+      "prompt_b": "p131",
+      "cosine": 0.2763456702232361
+    },
+    {
+      "id_a": "765e81808341",
+      "id_b": "ce6e360eb08d",
+      "prompt_a": "p148",
+      "prompt_b": "p017",
+      "cosine": 0.2746570110321045
+    }
+  ]
+}

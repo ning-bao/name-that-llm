@@ -52,10 +52,16 @@ def choose_weights(inner: list[np.ndarray], y: np.ndarray) -> tuple[tuple[float,
 
 
 def nested_blend(components: list[tuple[pd.DataFrame, pd.DataFrame]], name: str) -> tuple[pd.DataFrame, pd.DataFrame]:
-    """Blend outer scores fold by fold with inner-chosen weights; returns (oof rows, weights table)."""
+    """Blend outer scores fold by fold with inner-chosen weights; returns (oof rows, weights table).
+
+    Only outer folds every component has are blended (a baseline may cover both partitions, an encoder one).
+    """
     first_inner, first_outer = components[0]
+    shared = set.intersection(*(set(c[1].index.droplevel("id").unique()) for c in components))
     parts, weights = [], []
     for (p, o), outer_rows in first_outer.groupby(level=["partition", "outer_fold"]):
+        if (p, o) not in shared:
+            continue
         inner_rows = fold(first_inner, p, o)
         ids = outer_rows.index.get_level_values("id")
         inner = [fold(c[0], p, o).loc[inner_rows.index, SCORE_COLUMNS].to_numpy() for c in components]

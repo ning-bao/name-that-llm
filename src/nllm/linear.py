@@ -99,6 +99,8 @@ def _classifier(cfg: Config, seed: int):
 
 def _label_scores(model, X) -> np.ndarray:
     raw = model.decision_function(X)
+    if raw.ndim == 1:  # two classes: sklearn returns the score of classes_[1] only
+        raw = np.column_stack([-raw / 2, raw / 2])
     out = np.full((X.shape[0], len(LABELS)), -np.inf)
     out[:, [LABELS.index(c) for c in model.classes_]] = raw
     return out
@@ -164,9 +166,14 @@ def predict(scores: np.ndarray) -> np.ndarray:
 
 
 def scale(scores: np.ndarray) -> float:
-    """One scalar per branch: std of row-centred scores, so branches blend on comparable scales."""
-    centred = scores - scores.mean(axis=1, keepdims=True)
-    return float(centred.std()) or 1.0
+    """One scalar per branch: std of row-centred scores, so branches blend on comparable scales.
+
+    Labels absent from the training rows score -inf; they are left out here (they would turn every
+    row into NaN) and stay -inf in the blend, so they are never predicted.
+    """
+    finite = np.where(np.isfinite(scores), scores, np.nan)
+    centred = finite - np.nanmean(finite, axis=1, keepdims=True)
+    return float(np.nanstd(centred)) or 1.0
 
 
 def blend(text: np.ndarray, style: np.ndarray, weight: float, text_scale: float, style_scale: float) -> np.ndarray:

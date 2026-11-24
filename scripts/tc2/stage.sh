@@ -3,7 +3,9 @@
 # uv lock and the kit's validation_plan.json) with a per-file sha256 payload list whose hash is the CODE_ID,
 # train.csv plus the baseline's oof.parquet (paired differences), their sha256s, and the login-node installer.
 # Upload with `scripts/tc2/tc2.sh upload`. Runs in Git Bash or WSL from anywhere in the repo.
-#   bash scripts/tc2/stage.sh [--code-only]
+# With --pool it also packs the pool data for pool stage 1 (nllm.pool, NLLM_POOL_DATA on TC2): the Open Pool main
+# file, extra_sources.parquet and admitted.parquet, as nllm_pool.tar with nllm_pool.sha256.
+#   bash scripts/tc2/stage.sh [--code-only | --pool]
 set -euo pipefail
 cd "$(dirname "$0")/../.."
 S=outputs/tc2_stage
@@ -23,6 +25,10 @@ if [ "${1:-}" != --code-only ]; then
   cp "$BASELINE/oof.parquet" "$S/baseline_oof.parquet"
   echo "$BASELINE" > "$S/BASELINE_RUN"
   (cd "$S" && sha256sum train.csv baseline_oof.parquet > nllm_data.sha256)
+fi
+if [ "${1:-}" = --pool ]; then
+  tar -cf "$S/nllm_pool.tar" -C data/external third_party/crtproduction__name-that-llm-open-pool/ntl_open_pool.parquet     extra_sources.parquet admitted.parquet
+  (cd "$S" && sha256sum nllm_pool.tar > nllm_pool.sha256)
 fi
 echo "staged code $CODE_ID (${#FILES[@]} files) in $S:"
 ls -la "$S"

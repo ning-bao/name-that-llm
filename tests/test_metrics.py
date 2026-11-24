@@ -32,3 +32,11 @@ def test_bootstrap_centres_on_point_estimate():
     draws = prompt_bootstrap(y_true, y_pred, groups, n_draws=2000)
     lo, hi = interval(draws)
     assert lo < balanced_accuracy(y_true, y_pred, labels=["a", "b"]) < hi
+
+
+def test_sign_flip_pvalue():
+    from nllm.metrics import sign_flip_pvalue
+
+    assert sign_flip_pvalue([1.0] * 5) == pytest.approx(1 / 32)  # exact: only the all-positive assignment
+    assert sign_flip_pvalue([1.0, -1.0] * 5) > 0.3
+    assert sign_flip_pvalue(np.full(30, 0.5) + np.random.default_rng(0).normal(0, 0.2, 30)) < 0.001

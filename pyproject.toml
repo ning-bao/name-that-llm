@@ -25,9 +25,15 @@ nn = [
     "sentencepiece>=0.2",
     "protobuf>=5",
 ]
-# External-data collection (report section E): validating pasted answers against the record schema.
+# External-data collection (report section E): validating answers against the record schema, and the
+# official Anthropic SDK for the Claude Message Batches collector.
 collect = [
     "jsonschema>=4.23",
+    "anthropic>=1.0",
+]
+# Reading the open-weight candidates' GGUF layer segments (nllm.gguf_segments, scripts/candidate_likelihood.py).
+candidates = [
+    "gguf>=0.19",
 ]
 
 [dependency-groups]

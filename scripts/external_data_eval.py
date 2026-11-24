@@ -3,8 +3,11 @@
 Every condition is scored on the same official outer-validation prompts of the dev folds,
 with the fixed reference text+style model (linear.REFERENCE_*), so only the data changes:
   18 classes: official (outer-train rows only) vs combined (plus admitted external train rows)
-  17 classes, without gemini-3.7-flash, which cannot be collected any more: official17,
-             external17 (external train rows only) and combined17
+  17 classes, without gemini-3.7-flash, the held label (collection.HELD: Google routes 3.7 to 3.8,
+             so only answers whose served model is verified are admitted; Agent Platform answers
+             verified by modelVersion are, and the 18-class conditions use them):
+             official17, external17 (external train rows only) and combined17. With --exclude,
+             labels left without external rows cannot be predicted in external17.
 In the combined conditions every class gets equal total weight and its external rows a
 share s of it, chosen per outer fold on the inner folds from --shares (at most 0.5, so
 official data keeps at least half the exposure); a class with no external rows falls back
@@ -18,6 +21,7 @@ Writes outputs/external_eval/<UTC timestamp>/.
 """
 
 import argparse
+import fnmatch
 import json
 from datetime import UTC, datetime
 from pathlib import Path
@@ -33,7 +37,10 @@ from nllm.metrics import balanced_accuracy, interval, per_class_recall, prompt_b
 from nllm.paths import OUTPUTS
 from nllm.splits import development_rows, outer_folds, select
 
-LABELS17 = [m for m in LABELS if m not in collection.UNCOLLECTABLE]
+# The matched task drops every label that cannot have admitted external rows: never collected, or held.
+LABELS17 = [m for m in LABELS if m not in collection.UNCOLLECTABLE and m not in collection.HELD]
+if len(LABELS17) != 17:
+    raise SystemExit(f"matched task expects 17 labels, got {len(LABELS17)}: update CONDITIONS for the new policy")
 # condition -> (task, official rows, external rows, paired reference)
 CONDITIONS = {
     "official": ("18", True, False, None),
@@ -91,6 +98,11 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--external", type=Path, default=collection.EXTERNAL_DIR / "admitted.parquet")
     ap.add_argument("--waves", nargs="+", help="only use external answers from these waves")
+    ap.add_argument("--methods", nargs="+", choices=["manual_chat", "api"],
+                    help="only use external answers collected this way")
+    ap.add_argument("--exclude", nargs="+", default=[], metavar="MODEL@INTERFACE",
+                    help="drop external answers whose model@interface matches a wildcard pattern, "
+                         "e.g. 'gemini-*@*' or 'kimi-k3@*workbuddy*'")
     ap.add_argument("--partitions", type=int, nargs="+", default=[0, 1])
     ap.add_argument("--shares", type=float, nargs="+", default=[0.1, 0.25, 0.5])
     ap.add_argument("--eligible-only", action="store_true", help="only answers marked organizer_confirmed")
@@ -103,6 +115,11 @@ def main() -> None:
     ext = pd.read_parquet(args.external)
     if args.waves:
         ext = ext[ext.wave.isin(args.waves)]
+    if args.methods:
+        ext = ext[ext.collection_method.isin(args.methods)]
+    if args.exclude:
+        tag = ext.model + "@" + ext.interface
+        ext = ext[~tag.map(lambda t: any(fnmatch.fnmatchcase(t, p) for p in args.exclude))]
     if args.eligible_only:
         ext = ext[ext.eligibility_status == "organizer_confirmed"]
     ext = ext.set_index("id", drop=False)
@@ -178,7 +195,8 @@ def main() -> None:
     recall_table.to_csv(out / "per_class_recall.csv")
     (out / "config.json").write_text(json.dumps({
         "experiment": "5: official-only vs external-only vs combined (report E6)",
-        "external": str(args.external), "waves": args.waves, "eligible_only": args.eligible_only,
+        "external": str(args.external), "waves": args.waves, "methods": args.methods, "exclude": args.exclude,
+        "eligible_only": args.eligible_only,
         "external_train_rows": len(external), "external_train_prompts": int(external.prompt_id.nunique()),
         "external_holdout_rows": len(holdout), "shares": args.shares, "partitions": args.partitions,
         "model": [linear.REFERENCE_TEXT.key, linear.REFERENCE_STYLE.key, linear.REFERENCE_STYLE_WEIGHT],
@@ -189,7 +207,7 @@ def main() -> None:
     print("\nBalanced accuracy on official held-out dev prompts (95% prompt-bootstrap CI), paired vs reference:")
     print(results.round(4).to_string(index=False))
     gemini = [m for m in recall_table.index if m.startswith("gemini")]
-    print("\nGemini recalls (watch 3.7, which gets no external data):")
+    print("\nGemini recalls (3.7 has external rows only in the 18-class conditions):")
     print(recall_table.loc[gemini].round(3).to_string())
     print(f"\nwrote {out}")
 

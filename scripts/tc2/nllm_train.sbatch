@@ -1,5 +1,5 @@
 #!/bin/bash
-# One experiment-4 job on an L40S node: scripts/encoder_finetune.py for BACKBONE into ~/nllm/runs/RUN_ID.
+# One experiment-4 job on TC2N03 (L40S): scripts/encoder_finetune.py for BACKBONE into ~/nllm/runs/RUN_ID.
 # REPO, RUN_ID, BACKBONE and ARGS come from nllm_install.sh (--export). A nested run resumes its run dir (every
 # fit's logits are cached), and --time-budget-minutes makes the script stop before a fit that might not finish
 # (exit 75). That is reported as success with runs/RUN_ID.incomplete, so the next chunk job continues it.
@@ -12,8 +12,8 @@
 #SBATCH --gres=gpu:1
 #SBATCH --mem=30G
 #SBATCH --time=05:50:00
-#SBATCH --output=nllm/logs/%x_%j.out   # relative to $HOME, where nllm_install.sh submits
-#SBATCH --error=nllm/logs/%x_%j.out
+#SBATCH --output=$HOME/nllm/logs/%x_%j.out
+#SBATCH --error=$HOME/nllm/logs/%x_%j.out
 set -o pipefail   # no -u: activate scripts may reference unset variables
 B=$HOME/nllm; R=${REPO:?REPO}; RUN_ID=${RUN_ID:?RUN_ID}; BACKBONE=${BACKBONE:?BACKBONE}; ARGS=${ARGS:-}
 date --iso-8601=seconds; hostname; nvidia-smi --query-gpu=name,memory.total,driver_version --format=csv,noheader
@@ -21,7 +21,7 @@ date --iso-8601=seconds; hostname; nvidia-smi --query-gpu=name,memory.total,driv
 [ -f "$B/data/.ready" ] || { echo "data not ready"; exit 10; }
 source "$B/venv/bin/activate"
 export PYTHONPATH=$R/src PYTHONUNBUFFERED=1 PYTHONIOENCODING=utf-8 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
-export NLLM_DATA_DIR=$B/data HF_HOME=$B/hf HF_HUB_DISABLE_PROGRESS_BARS=1 TOKENIZERS_PARALLELISM=false
+export NLLM_DATA_DIR=$B/data NLLM_POOL_DATA=$B/data/pool HF_HOME=$B/hf HF_HUB_DISABLE_PROGRESS_BARS=1 TOKENIZERS_PARALLELISM=false
 cd "$R"
 echo "=== $RUN_ID: $BACKBONE (code $(cat CODE_ID)) args: $ARGS"
 # shellcheck disable=SC2086

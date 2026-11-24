@@ -82,6 +82,20 @@ def prompt_bootstrap(
     return draws
 
 
+def sign_flip_pvalue(differences, n_draws: int = 100_000, seed: int = 0) -> float:
+    """One-sided paired permutation p-value for mean(differences) > 0 (exact when n <= 16).
+
+    Under the null both members of each pair come from the same source, so each difference's
+    sign is exchangeable.
+    """
+    d = np.asarray(differences, dtype=float)
+    if len(d) <= 16:
+        signs = 1 - 2 * ((np.arange(2 ** len(d))[:, None] >> np.arange(len(d))) & 1)
+    else:
+        signs = np.random.default_rng(seed).choice([-1.0, 1.0], size=(n_draws, len(d)))
+    return float(((signs * d).mean(axis=1) >= d.mean() - 1e-12).mean())
+
+
 def interval(draws: np.ndarray, level: float = 0.95) -> tuple[float, float]:
     alpha = (1 - level) / 2
     lo, hi = np.quantile(draws, [alpha, 1 - alpha])

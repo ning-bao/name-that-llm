@@ -5,6 +5,8 @@ seen before is appended to data/external/import_log.jsonl, which is never edited
 are rebuilt from that log into data/external/records.jsonl (kit schema v1.0), validated,
 and admitted or quarantined; admitted rows go to data/external/admitted.parquet in the
 competition's row format. An answer deleted or replaced in its file counts as withdrawn.
+Programmatic answers (data/external/api_log*.jsonl from collect_agent_platform.py,
+collect_anthropic.py and collect_codex.py) become records too, admitted as their own collection method.
 
 Finally each model's admitted text is compared with its official passages on length and
 typography. A large gap in curly vs straight quotes or em dashes usually means the copy
@@ -78,12 +80,12 @@ def main() -> None:
             if pid not in bank:
                 problems.append(f"{ref}: unknown prompt id {pid}; block skipped")
                 continue
-            if prompt_text.strip() != bank[pid]["prompt_text"]:
-                problems.append(f"{ref}: prompt {pid} text differs from the bank (the bank text is recorded)")
             if not answer.strip():
                 continue
+            if not collection.same_prompt(prompt_text, bank[pid]):
+                problems.append(f"{ref}: prompt {pid} text was edited; the text in the file is recorded as asked")
             entry = {"label": label, "prompt_id": pid, "sha256": hashlib.sha256(answer.strip().encode("utf-8")).hexdigest(),
-                     "answer": answer, "first_seen_utc": now, "file": ref}
+                     "answer": answer, "prompt_text": prompt_text.strip(), "first_seen_utc": now, "file": ref}
             current.add(collection.log_key(entry))
             if collection.log_key(entry) not in seen:
                 seen.add(collection.log_key(entry))
@@ -95,12 +97,14 @@ def main() -> None:
     log += new
 
     records = collection.build_records(log, headers, bank, current, args.eligibility)
+    api_log = collection.read_api_logs()
+    records += collection.api_records(api_log, bank, args.eligibility)
     collection.RECORDS_PATH.write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in records),
                                        encoding="utf-8")
     schema = json.loads(collection.SCHEMA_PATH.read_text(encoding="utf-8"))
     validator = Draft202012Validator(schema, format_checker=FormatChecker())
     schema_errors = [(r["record_id"], e.message) for r in records for e in validator.iter_errors(r)]
-    decisions = collection.admission(records)
+    decisions = collection.admission(records, collection.load_released())
     bad = decisions.record_id.isin({rid for rid, _ in schema_errors})
     decisions.loc[bad, "admitted"] = False
     decisions.loc[bad, "reasons"] = (decisions.loc[bad, "reasons"] + "; schema").str.lstrip("; ")
@@ -110,8 +114,8 @@ def main() -> None:
     out = OUTPUTS / "external_check" / datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")
     out.mkdir(parents=True, exist_ok=True)
     decisions.to_csv(out / "admission.csv", index=False)
-    print(f"{len(files)} answer files, {len(new)} new answers imported, {len(records)} records, "
-          f"{int(decisions.admitted.sum())} admitted, {len(schema_errors)} schema errors")
+    print(f"{len(files)} answer files, {len(new)} new answers imported, {len(api_log)} API answers, "
+          f"{len(records)} records, {int(decisions.admitted.sum())} admitted, {len(schema_errors)} schema errors")
     for message in problems:
         print(f"  ! {message}")
     for rid, message in schema_errors[:20]:
@@ -121,11 +125,12 @@ def main() -> None:
         return
 
     decisions["wave"] = decisions.prompt_id.map(lambda p: bank[p]["wave"])
-    counts = decisions.groupby(["wave", "target_label"]).agg(answers=("record_id", "size"),
-                                                             admitted=("admitted", "sum"))
+    decisions["source"] = decisions.interface.str.split(":").str[-1]
+    counts = decisions.groupby(["wave", "target_label", "source"]).agg(
+        answers=("record_id", "size"), admitted=("admitted", "sum"))
     counts.to_csv(out / "counts.csv")
     pd.set_option("display.width", 220)
-    print("\nAnswers and admitted rows by wave and model:")
+    print("\nAnswers and admitted rows by wave, model and interface:")
     print(counts.unstack("wave").fillna(0).astype(int).to_string())
     rejected = decisions.loc[~decisions.admitted, "reasons"].str.split("; ").explode()
     if len(rejected):
@@ -146,8 +151,10 @@ def main() -> None:
         if row.n < MIN_ROWS_FOR_WARNING:
             continue
         for mark in TYPOGRAPHY:
-            gap = row[mark] - official.loc[model, mark]
-            if abs(gap) >= 0.5:
+            off, ext = official.loc[model, mark], row[mark]
+            # A large gap, or a mark one side almost never uses that the other uses often (a fingerprint flip,
+            # such as em dashes in 40% of external Gemini answers when official Gemini has almost none).
+            if abs(ext - off) >= 0.5 or (min(off, ext) < 0.03 and max(off, ext) >= 0.15):
                 warnings.append(f"{model}: {mark} in {row[mark]:.0%} of external answers vs "
                                 f"{official.loc[model, mark]:.0%} of official passages")
     columns = [(side, c) for c in ["n", "median_words", *TYPOGRAPHY] for side in ("official", "external")]
@@ -156,7 +163,8 @@ def main() -> None:
     print("\nModels with answers: share of passages containing each mark (off = official, ext = external):")
     print(view.round(2).to_string())
     if warnings:
-        print("\nTypography gaps (check the copy path for smart-quote or autocorrect conversion):")
+        print("\nTypography gaps (pasted answers: check the copy path for smart-quote or autocorrect conversion; "
+              "API answers: a serving difference from the competition data):")
         print("\n".join(f"  ! {w}" for w in warnings))
     print(f"\nwrote {out}, {collection.RECORDS_PATH} and {collection.EXTERNAL_DIR / 'admitted.parquet'}")
 

@@ -70,3 +70,26 @@ def test_fit_score_uses_sample_weight():
     weights = np.r_[np.full(18, 10.0), np.full(18, 0.1)]
     scores = linear.fit_score(df, style, df.iloc[:18], style.iloc[:18], cfg, seed=0, sample_weight=weights)
     assert (linear.predict(scores[cfg[0].key]) == np.asarray(LABELS)).all()
+
+
+def test_fit_score_handles_two_class_training():
+    pair = [LABELS[3], LABELS[7]]
+    texts = [f"passage {i} about marker{j}x" for j in range(2) for i in range(6)]
+    df = pd.DataFrame({"text": texts, "model": [m for m in pair for _ in range(6)]})
+    style = style_features(df.text)
+    cfg = [c for c in linear.all_configs() if c.key == "word12|lr|C=10|raw_tf"]
+    scores = linear.fit_score(df, style, df, style, cfg, seed=0)[cfg[0].key]
+    assert np.isfinite(scores).sum(axis=1).tolist() == [2] * len(df)
+    assert (linear.predict(scores) == df.model.to_numpy()).all()
+
+
+def test_scale_ignores_labels_missing_from_training():
+    # A label without training rows scores -inf; the blend must still predict the others.
+    rng = np.random.default_rng(0)
+    scores = rng.normal(size=(20, len(LABELS)))
+    scores[:, 3] = -np.inf
+    s = linear.scale(scores)
+    assert np.isfinite(s) and s > 0
+    blended = linear.blend(scores, scores, 1.0, s, s)
+    assert not np.isnan(blended).any()
+    assert (linear.predict(blended) == np.asarray(LABELS)[scores.argmax(axis=1)]).all()
